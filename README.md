@@ -62,3 +62,5 @@ python -m unittest discover -s tests -v
 
 GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)、[從範本建立倉庫](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)。
 本地檔案完成不等於 GitHub 的 Template repository 已啟用；後者需倉庫管理者設定及核實。
+
+本版本採 [MIT 授權](LICENSE)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。

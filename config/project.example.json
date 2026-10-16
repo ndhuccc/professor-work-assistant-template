@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "project_name": "My Professor Assistant",
+  "locale": "zh-TW",
+  "timezone": "Asia/Taipei",
+  "owner": {
+    "display_name": "",
+    "github_account": ""
+  },
+  "courses": [],
+  "outputs": {
+    "public_dir": "workspace/public",
+    "private_dir": ""
+  },
+  "integrations": {
+    "github": "unverified",
+    "email": "unverified",
+    "calendar": "unverified",
+    "drive": "unverified",
+    "notion": "unverified",
+    "image_generation": "unverified",
+    "browser_preview": "unverified"
+  },
+  "external_write_policy": "confirm-concrete-change",
+  "logging": {
+    "backend": "local",
+    "external_destination": ""
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "template_version": "0.1.0",
+  "workflows": [
+    {
+      "id": "W01",
+      "skill": "course-status",
+      "title": "課程進度盤點",
+      "path": ".agents/skills/course-status/SKILL.md",
+      "example": "PR：盤點 Ch03 教材目前完成哪些 KP。",
+      "capabilities": [
+        "course"
+      ]
+    },
+    {
+      "id": "W02",
+      "skill": "lecture-notes",
+      "title": "來源轉講義",
+      "path": ".agents/skills/lecture-notes/SKILL.md",
+      "example": "依這份來源製作初學者講義，一個 KP 一個 Markdown。",
+      "capabilities": [
+        "course"
+      ]
+    },
+    {
+      "id": "W03",
+      "skill": "teaching-slides",
+      "title": "講義轉投影片",
+      "path": ".agents/skills/teaching-slides/SKILL.md",
+      "example": "把這份講義製作成可教學的 HTML 投影片。",
+      "capabilities": [
+        "course"
+      ]
+    },
+    {
+      "id": "W04",
+      "skill": "four-panel-comics",
+      "title": "簡報加入四格漫畫",
+      "path": ".agents/skills/four-panel-comics/SKILL.md",
+      "example": "逐一為簡報核心概念加入 16:9 四格漫畫。",
+      "capabilities": [
+        "image-generation"
+      ]
+    },
+    {
+      "id": "W05",
+      "skill": "diagram-interactive",
+      "title": "圖解與互動教材",
+      "path": ".agents/skills/diagram-interactive/SKILL.md",
+      "example": "用 HTML5 和 Canvas 製作可調整學習率的梯度下降教材。",
+      "capabilities": [
+        "browser-preview"
+      ]
+    },
+    {
+      "id": "W06",
+      "skill": "self-study-web",
+      "title": "自學指南與閱讀網頁",
+      "path": ".agents/skills/self-study-web/SKILL.md",
+      "example": "把這份講義轉成自學指南與手機閱讀網頁。",
+      "capabilities": [
+        "browser-preview"
+      ]
+    },
+    {
+      "id": "W07",
+      "skill": "assignment-design",
+      "title": "作業設計與匯入",
+      "path": ".agents/skills/assignment-design/SKILL.md",
+      "example": "根據這份教材設計作業，附評分標準。",
+      "capabilities": [
+        "course"
+      ]
+    },
+    {
+      "id": "W08",
+      "skill": "assignment-grading",
+      "title": "學生作業初評",
+      "path": ".agents/skills/assignment-grading/SKILL.md",
+      "example": "靜態初評指定學生 HW02 的指定繳交版本。",
+      "capabilities": [
+        "private-output"
+      ]
+    },
+    {
+      "id": "W09",
+      "skill": "assignment-quiz",
+      "title": "個人化理解測驗",
+      "path": ".agents/skills/assignment-quiz/SKILL.md",
+      "example": "依這份學生作業設計三題簡答理解測驗。",
+      "capabilities": [
+        "private-output"
+      ]
+    },
+    {
+      "id": "W10",
+      "skill": "research-review",
+      "title": "研究生進度與論文審查",
+      "path": ".agents/skills/research-review/SKILL.md",
+      "example": "對照教授上週建議，查核這週論文與實驗證據。",
+      "capabilities": [
+        "private-output"
+      ]
+    },
+    {
+      "id": "W11",
+      "skill": "admin-documents",
+      "title": "郵件期限與行政文件",
+      "path": ".agents/skills/admin-documents/SKILL.md",
+      "example": "整理這些邀請信的截止日與待填推薦表。",
+      "capabilities": [
+        "connected-source"
+      ]
+    },
+    {
+      "id": "W12",
+      "skill": "mission-log",
+      "title": "任務紀錄與交接",
+      "path": ".agents/skills/mission-log/SKILL.md",
+      "example": "整理這個任務的輸入輸出位置、狀態與下一步。",
+      "capabilities": []
+    },
+    {
+      "id": "W13",
+      "skill": "repo-publish",
+      "title": "GitHub 同步發布與技能維護",
+      "path": ".agents/skills/repo-publish/SKILL.md",
+      "example": "準備這批教材的 GitHub 變更與發布清單，先供我審閱。",
+      "capabilities": [
+        "github"
+      ]
+    }
+  ]
+}

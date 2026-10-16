@@ -1,0 +1,4 @@
+interface:
+  display_name: "作業設計與匯入"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $assignment-design to 作業設計與匯入。"

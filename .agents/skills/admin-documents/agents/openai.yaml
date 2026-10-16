@@ -1,0 +1,4 @@
+interface:
+  display_name: "郵件期限與行政文件"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $admin-documents to 郵件期限與行政文件。"

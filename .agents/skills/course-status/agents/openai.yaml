@@ -1,0 +1,4 @@
+interface:
+  display_name: "課程進度盤點"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $course-status to review course progress."

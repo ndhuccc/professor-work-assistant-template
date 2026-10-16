@@ -1,0 +1,4 @@
+interface:
+  display_name: "來源轉講義"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $lecture-notes to 來源轉講義。"

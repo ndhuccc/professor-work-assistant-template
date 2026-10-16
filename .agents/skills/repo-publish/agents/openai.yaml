@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub 同步發布與技能維護"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $repo-publish to GitHub 同步發布與技能維護。"

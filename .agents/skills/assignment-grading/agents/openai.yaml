@@ -1,0 +1,4 @@
+interface:
+  display_name: "學生作業初評"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $assignment-grading to 學生作業初評。"

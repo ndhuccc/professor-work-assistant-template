@@ -1,0 +1,4 @@
+interface:
+  display_name: "任務紀錄與交接"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $mission-log to 任務紀錄與交接。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "講義轉投影片"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $teaching-slides to 講義轉投影片。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究生進度與論文審查"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $research-review to 研究生進度與論文審查。"

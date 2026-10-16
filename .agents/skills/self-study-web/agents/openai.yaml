@@ -1,0 +1,4 @@
+interface:
+  display_name: "自學指南與閱讀網頁"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $self-study-web to 自學指南與閱讀網頁。"

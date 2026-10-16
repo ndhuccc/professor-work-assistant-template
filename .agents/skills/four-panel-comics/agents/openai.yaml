@@ -1,0 +1,4 @@
+interface:
+  display_name: "簡報加入四格漫畫"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $four-panel-comics to 簡報加入四格漫畫。"

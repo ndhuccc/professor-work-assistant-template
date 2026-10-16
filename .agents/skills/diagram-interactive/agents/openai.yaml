@@ -1,0 +1,4 @@
+interface:
+  display_name: "圖解與互動教材"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $diagram-interactive to 圖解與互動教材。"

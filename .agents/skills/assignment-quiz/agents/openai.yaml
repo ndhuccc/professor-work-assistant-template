@@ -1,0 +1,4 @@
+interface:
+  display_name: "個人化理解測驗"
+  short_description: "Evidence-based portable professor workflow"
+  default_prompt: "Use $assignment-quiz to 個人化理解測驗。"

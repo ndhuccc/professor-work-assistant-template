@@ -1,5 +1,6 @@
 """Offline structural checks. Does not authenticate, publish, or render artifacts."""
 import argparse
+import importlib.util
 import json
 import re
 import shutil
@@ -17,6 +18,8 @@ REQUIRED = (
     "templates/course-state.md", "templates/validation-report.md",
     "examples/demo-source.md", "examples/START-HERE.md",
     "scripts/bootstrap.py", "scripts/doctor.py", ".gitignore", ".gitattributes",
+    "scripts/create_course.py", "scripts/verify_bundle.py", "scripts/validate_labtube.py",
+    "config/source-bundle.json", "docs/PORTABILITY.md", "THIRD_PARTY_NOTICES.md",
 )
 ALLOWED_INTEGRATIONS = {"available", "unavailable", "unverified"}
 
@@ -151,19 +154,31 @@ def audit(root: Path, template: bool = False) -> tuple[list[str], list[str]]:
                 fields[key.strip()] = value.strip()
             if set(fields) != {"name", "description"} or fields.get("name") != slug or not fields.get("description"):
                 errors.append(f"Invalid skill metadata: {rel}")
-        if "TODO" in body or len(body.splitlines()) > 500:
+        if ("TODO" in body or len(body.splitlines()) > 500) and not (root / "vendor/original-entries" / slug / "SOURCE.md").exists():
             errors.append(f"Unfinished or overlong skill: {rel}")
-        if f"| {wid} |" not in index_text or f"../{rel}" not in index_text:
+        if f"| {wid} |" not in index_text or slug not in index_text:
             errors.append(f"Workflow index out of sync: {wid}")
         if not (target.parent / "agents/openai.yaml").is_file():
             errors.append(f"Missing agent UI metadata: {slug}")
+    for alias in manifest.get("aliases", []):
+        slug, target, rel = alias.get("skill"), alias.get("target"), alias.get("path")
+        expected = f".agents/skills/{slug}/SKILL.md"
+        if target not in seen_skills or slug in seen_skills or rel != expected or not (root/expected).is_file():
+            errors.append(f"Invalid compatibility alias: {slug}")
+        else:
+            registered.add(rel)
     actual = {p.relative_to(root).as_posix() for p in (root / ".agents/skills").glob("*/SKILL.md")}
     if actual != registered:
         errors.append("Registered workflows and skill directories differ")
     for path in root.rglob("*.md"):
         rel = path.relative_to(root)
-        if any(part in {".git", "workspace", "inputs", "outputs", "private"} for part in rel.parts):
+        if any(part in {".git", "workspace", "inputs", "outputs", "private", "vendor", "course-support", "integrations", "profiles"} for part in rel.parts):
             continue
+        # Full upstream examples contain documented external/optional links. Their
+        # bytes and local presence are checked by verify_bundle, not rewritten here.
+        if rel.parts[:2] == (".agents", "skills") and len(rel.parts)>3:
+            if rel.parts[2] in {"diagram-design", "view-from-text", "textbook-lecture-notes", "assignment-design", "assignment-grading", "assignment-quiz", "slides-to-four-panel-comics"}:
+                continue
         body = path.read_text(encoding="utf-8")
         if re.search(r"skill://(?:user|plugin)[^\s)]*|C:\\\\Users\\\\|libfile_[a-f0-9]+", body):
             errors.append(f"Nonportable private resource reference: {rel}")
@@ -223,17 +238,33 @@ def audit(root: Path, template: bool = False) -> tuple[list[str], list[str]]:
             errors.append(f"Sensitive/local-only path is tracked: {rel}")
     if not (root / "LICENSE").exists():
         warnings.append("LICENSE not selected; choose terms before distribution")
+    bundle_checker=root/"scripts/verify_bundle.py"
+    if bundle_checker.is_file():
+        try:
+            spec=importlib.util.spec_from_file_location("bundle_check",bundle_checker)
+            module=importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            bundle_errors,_=module.verify(root)
+            errors.extend(bundle_errors)
+        except (OSError,ValueError,KeyError) as exc:
+            errors.append(f"Cannot verify original source bundle: {exc}")
     return errors, warnings
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--template", action="store_true", help="Validate distributable template; local setup is optional")
+    parser.add_argument("--capabilities", action="store_true", help="Report local optional modules; never authenticate or install")
     args = parser.parse_args()
     if sys.version_info < (3, 10):
         print("FAIL: Python 3.10 or newer required")
         return 1
     errors, warnings = audit(Path(__file__).resolve().parent.parent, args.template)
+    if args.capabilities:
+        for name in ('PIL','numpy','matplotlib','yaml','pypdf','playwright'):
+            print(f"MODULE {name}: " + ('available' if importlib.util.find_spec(name) else 'not installed'))
+        if sys.version_info < (3,11):
+            warnings.append('Python 3.11+ is needed by original semester/site utilities using tomllib')
     for item in errors:
         print(f"FAIL: {item}")
     for item in warnings:

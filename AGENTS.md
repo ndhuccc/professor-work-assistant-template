@@ -12,6 +12,16 @@
 5. 課程工作先選定課程。從設定、當次明確指令或本對話有效選擇判定；有歧義時只問要處理哪門課。不可預設 PR 或 IDL，也不可混用不同課程的截止日、學生、模板及進度。
 6. 確認來源與輸出目的地。來源已有答案就先讀取，不重問使用者。先完成可獨立進行的工作，只詢問會影響結果的缺項。
 
+## 原始技能與課程工作根目錄（0.2.0）
+
+- 本版已內附原課程七項技能與完整支援資源。課程工作先讀 `.agents/skills/pr2026-course-assistant/SKILL.md` 與 [可攜執行說明](docs/PORTABILITY.md)，再選取原技能；六個舊通用名稱僅保留為相容入口。
+- 原技能所說的「Repo 根目錄」指當次選定的 **course_root**，不是永遠指本範本。既有課程使用自己的最新規範；新課程可執行 `python scripts/create_course.py --id DEMO --name 示範課程 --demo` 建立完整的本機示範工作區。
+- 執行原課程工具前先確認工作根目錄；不要把試算資料、正式學生資料或課程進度混入範本。原作者課號、配分、日期與網址不能當成新使用者設定。
+- 講義使用 `textbook-lecture-notes`；簡報島使用 `view-from-text`，其 v3 規格、產製工具、稽核器與圖形工具均已內附；漫畫使用 `slides-to-four-panel-comics`，含 JPEG 插頁程式。不能改用簡化流程略過原技能的正文與驗收。
+- 原始入口與逐檔來源在 `vendor/original-entries/` 及 `config/source-bundle.json`。執行 `python scripts/verify_bundle.py` 查核來源完整性；這不代表已生圖、已目視或已通過原生播放器驗證。
+- 研究審查與紀錄使用原名稱 `review-graduate-research`、`mission-log`；私人名冊、Notion／其他紀錄目的地由當前使用者設定。原私人附件不打包；可攜版重建範圍有明確來源說明。
+- LabTube 的資料契約與教師工具已內附，使用前讀 [整合說明](integrations/labtube/README.md)。本機驗證不會登入或改動正式服務。
+
 ## 共通執行契約
 
 - 使用設定的語言與時區；未設定時使用繁體中文與 Asia/Taipei。以初學者可懂的白話解釋術語。

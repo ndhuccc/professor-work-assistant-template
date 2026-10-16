@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EM 演算法 · Explainer sheet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f5f5; color: #2d3142; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .frame { max-width: 1320px; width: 100%; }
+    /* min-width == the viewBox width so the type ramp is never scaled down; the wrapper scrolls, not the page. */
+    .diagram-container { width: 100%; overflow-x: auto; }
+    svg { width: 100%; min-width: 1280px; display: block; }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="explainer-sheet-title explainer-sheet-desc">
+        <title id="explainer-sheet-title">EM 演算法：輪流解兩個較容易的問題</title>
+        <desc id="explainer-sheet-desc">Left, the E-step and M-step loop with a stopping test; right, one worked iteration on eight data points showing the responsibilities and the log-likelihood rising.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <text x="40" y="84" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="40" font-weight="600" fill="#2d3142" text-anchor="start" >EM 演算法：輪流解兩個較容易的問題</text>
+        <text x="40" y="112" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >Expectation–Maximization / Gaussian mixture model</text>
+        <text x="1240" y="112" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="500" fill="#4f5d75" text-anchor="end" >先估「誰負責」→ 再調「怎麼解釋資料」</text>
+        <line x1="40" y1="128" x2="1240" y2="128" stroke="#bfc0c0" stroke-width="1"/>
+        <line x1="484" y1="148" x2="484" y2="640" stroke="#bfc0c0" stroke-width="1"/>
+        <line x1="240" y1="208" x2="240" y2="248" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="240" y1="348" x2="240" y2="388" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="240" y1="476" x2="240" y2="516" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="336" y1="556" x2="392" y2="556" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <rect x="352" y="548" width="24" height="16" fill="#f5f5f5"/>
+        <text x="364" y="560" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="500" fill="#2d3142" text-anchor="middle" >是</text>
+        <path d="M144 556 L64 556 Q56 556 56 548 L56 306 Q56 298 64 298 L84 298" fill="none" stroke="#bf4520" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <rect x="86" y="548" width="24" height="16" fill="#f5f5f5"/>
+        <text x="98" y="560" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="500" fill="#2d3142" text-anchor="middle" >否</text>
+        <text x="56" y="626" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" ><tspan font-size="12">θ</tspan><tspan font-size="9" dy="-5">old</tspan><tspan font-size="12" dy="5"> ← θ</tspan><tspan font-size="9" dy="-5">new</tspan><tspan font-size="12" dy="5">，回到 E</tspan></text>
+        <rect x="84" y="148" width="312" height="60" rx="6" fill="#f5f5f5"/>
+        <rect x="84" y="148" width="312" height="60" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1" />
+        <text x="100" y="172" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="start" >輸入資料，初始化 θ<tspan font-size="12" dy="-5">(0)</tspan></text>
+        <text x="100" y="194" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >Observed X；隱藏群別 z；θ = {π, μ, σ²}</text>
+        <rect x="84" y="248" width="312" height="100" rx="6" fill="#f5f5f5"/>
+        <rect x="84" y="248" width="312" height="100" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1.4" />
+        <text x="100" y="272" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="start" >E 步：軟分群 Expectation</text>
+        <text x="100" y="297" font-family="'Geist Mono',ui-monospace,monospace" font-size="14" font-weight="500" fill="#2d3142" text-anchor="start" ><tspan font-size="14">r</tspan><tspan font-size="10" dy="3">nk</tspan><tspan font-size="14" dy="-3"> = P(z</tspan><tspan font-size="10" dy="3">n</tspan><tspan font-size="14" dy="-3"> = k | x</tspan><tspan font-size="10" dy="3">n</tspan><tspan font-size="14" dy="-3">, θ</tspan><tspan font-size="10" dy="-5">old</tspan><tspan font-size="14" dy="5">)</tspan></text>
+        <text x="100" y="320" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#2d3142" text-anchor="start" >固定參數，算每筆資料屬於各群的機率。</text>
+        <text x="100" y="338" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >保留全部可能群別，不先指定唯一答案。</text>
+        <rect x="84" y="388" width="312" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="84" y="388" width="312" height="88" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1" />
+        <text x="100" y="412" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="start" >M 步：加權更新 Maximization</text>
+        <text x="100" y="437" font-family="'Geist Mono',ui-monospace,monospace" font-size="14" font-weight="500" fill="#2d3142" text-anchor="start" ><tspan font-size="14">θ</tspan><tspan font-size="10" dy="-5">new</tspan><tspan font-size="14" dy="5"> = arg max</tspan><tspan font-size="10" dy="3">θ</tspan><tspan font-size="14" dy="-3"> Q(θ | θ</tspan><tspan font-size="10" dy="-5">old</tspan><tspan font-size="14" dy="5">)</tspan></text>
+        <text x="100" y="459" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#2d3142" text-anchor="start" >固定 r，以權重重估 π、μ、σ²。</text>
+        <polygon points="240,516 336,556 240,596 144,556" fill="#f5f5f5"/>
+        <polygon points="240,516 336,556 240,596 144,556" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="240" y="553" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="middle" >似然改善</text>
+        <text x="240" y="573" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="middle" >夠小？</text>
+        <rect x="392" y="528" width="68" height="56" rx="20" fill="#f5f5f5"/>
+        <rect x="392" y="528" width="68" height="56" rx="20" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1" />
+        <text x="426" y="553" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="middle" >停止</text>
+        <text x="426" y="571" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="middle" >Stop</text>
+        <text x="508" y="156" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="start" >用同一組 8 筆資料，看第一次 E → M</text>
+        <text x="508" y="178" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >X = {−2.4, −1.8, −1.2, −0.4, 0.6, 1.4, 2.0, 2.6}</text>
+        <text x="556" y="210" font-family="'Geist Mono',ui-monospace,monospace" font-size="14" font-weight="600" fill="#2d3142" text-anchor="start" ><tspan font-size="14">更新前 θ</tspan><tspan font-size="10" dy="-5">(0)</tspan></text>
+        <line x1="556" y1="220.0" x2="836" y2="220.0" stroke="#bfc0c0" stroke-width="1" stroke-dasharray="1,3"/>
+        <line x1="556" y1="300" x2="836" y2="300" stroke="#4f5d75" stroke-width="1"/>
+        <path d="M556.0 292.6 L558.8 291.8 L561.6 290.8 L564.4 289.9 L567.2 288.8 L570.0 287.7 L572.8 286.5 L575.6 285.2 L578.4 283.8 L581.2 282.3 L584.0 280.8 L586.8 279.2 L589.6 277.5 L592.4 275.7 L595.2 273.9 L598.0 272.0 L600.8 270.0 L603.6 267.9 L606.4 265.8 L609.2 263.7 L612.0 261.5 L614.8 259.3 L617.6 257.0 L620.4 254.8 L623.2 252.5 L626.0 250.2 L628.8 247.9 L631.6 245.7 L634.4 243.4 L637.2 241.2 L640.0 239.1 L642.8 236.9 L645.6 234.9 L648.4 232.9 L651.2 231.0 L654.0 229.1 L656.8 227.4 L659.6 225.7 L662.4 224.2 L665.2 222.7 L668.0 221.4 L670.8 220.2 L673.6 219.1 L676.4 218.1 L679.2 217.2 L682.0 216.5 L684.8 215.9 L687.6 215.4 L690.4 215.1 L693.2 214.9 L696.0 214.8 L698.8 214.9 L701.6 215.1 L704.4 215.4 L707.2 215.9 L710.0 216.5 L712.8 217.2 L715.6 218.1 L718.4 219.1 L721.2 220.2 L724.0 221.4 L726.8 222.7 L729.6 224.2 L732.4 225.7 L735.2 227.4 L738.0 229.1 L740.8 231.0 L743.6 232.9 L746.4 234.9 L749.2 236.9 L752.0 239.1 L754.8 241.2 L757.6 243.4 L760.4 245.7 L763.2 247.9 L766.0 250.2 L768.8 252.5 L771.6 254.8 L774.4 257.0 L777.2 259.3 L780.0 261.5 L782.8 263.7 L785.6 265.8 L788.4 267.9 L791.2 270.0 L794.0 272.0 L796.8 273.9 L799.6 275.7 L802.4 277.5 L805.2 279.2 L808.0 280.8 L810.8 282.3 L813.6 283.8 L816.4 285.2 L819.2 286.5 L822.0 287.7 L824.8 288.8 L827.6 289.9 L830.4 290.8 L833.2 291.8 L836.0 292.6" fill="none" stroke="#2d3142" stroke-width="2.4"/>
+        <path d="M556.0 292.8 L558.8 292.0 L561.6 291.1 L564.4 290.2 L567.2 289.2 L570.0 288.2 L572.8 287.0 L575.6 285.8 L578.4 284.6 L581.2 283.2 L584.0 281.9 L586.8 280.4 L589.6 278.9 L592.4 277.3 L595.2 275.7 L598.0 274.1 L600.8 272.4 L603.6 270.7 L606.4 269.0 L609.2 267.3 L612.0 265.6 L614.8 263.9 L617.6 262.2 L620.4 260.6 L623.2 259.0 L626.0 257.4 L628.8 255.9 L631.6 254.5 L634.4 253.2 L637.2 252.0 L640.0 250.9 L642.8 249.9 L645.6 249.0 L648.4 248.3 L651.2 247.7 L654.0 247.3 L656.8 247.0 L659.6 246.8 L662.4 246.8 L665.2 247.0 L668.0 247.3 L670.8 247.7 L673.6 248.3 L676.4 249.0 L679.2 249.9 L682.0 250.9 L684.8 252.0 L687.6 253.2 L690.4 254.5 L693.2 255.9 L696.0 257.4 L698.8 259.0 L701.6 260.6 L704.4 262.2 L707.2 263.9 L710.0 265.6 L712.8 267.3 L715.6 269.0 L718.4 270.7 L721.2 272.4 L724.0 274.1 L726.8 275.7 L729.6 277.3 L732.4 278.9 L735.2 280.4 L738.0 281.9 L740.8 283.2 L743.6 284.6 L746.4 285.8 L749.2 287.0 L752.0 288.2 L754.8 289.2 L757.6 290.2 L760.4 291.1 L763.2 292.0 L766.0 292.8 L768.8 293.5 L771.6 294.2 L774.4 294.8 L777.2 295.4 L780.0 295.9 L782.8 296.4 L785.6 296.8 L788.4 297.2 L791.2 297.5 L794.0 297.9 L796.8 298.1 L799.6 298.4 L802.4 298.6 L805.2 298.8 L808.0 298.9 L810.8 299.1 L813.6 299.2 L816.4 299.3 L819.2 299.4 L822.0 299.5 L824.8 299.6 L827.6 299.7 L830.4 299.7 L833.2 299.8 L836.0 299.8" fill="none" stroke="#4f5d75" stroke-width="1.4"/>
+        <path d="M556.0 299.8 L558.8 299.8 L561.6 299.7 L564.4 299.7 L567.2 299.6 L570.0 299.5 L572.8 299.4 L575.6 299.3 L578.4 299.2 L581.2 299.1 L584.0 298.9 L586.8 298.8 L589.6 298.6 L592.4 298.4 L595.2 298.1 L598.0 297.9 L600.8 297.5 L603.6 297.2 L606.4 296.8 L609.2 296.4 L612.0 295.9 L614.8 295.4 L617.6 294.8 L620.4 294.2 L623.2 293.5 L626.0 292.8 L628.8 292.0 L631.6 291.1 L634.4 290.2 L637.2 289.2 L640.0 288.2 L642.8 287.0 L645.6 285.8 L648.4 284.6 L651.2 283.2 L654.0 281.9 L656.8 280.4 L659.6 278.9 L662.4 277.3 L665.2 275.7 L668.0 274.1 L670.8 272.4 L673.6 270.7 L676.4 269.0 L679.2 267.3 L682.0 265.6 L684.8 263.9 L687.6 262.2 L690.4 260.6 L693.2 259.0 L696.0 257.4 L698.8 255.9 L701.6 254.5 L704.4 253.2 L707.2 252.0 L710.0 250.9 L712.8 249.9 L715.6 249.0 L718.4 248.3 L721.2 247.7 L724.0 247.3 L726.8 247.0 L729.6 246.8 L732.4 246.8 L735.2 247.0 L738.0 247.3 L740.8 247.7 L743.6 248.3 L746.4 249.0 L749.2 249.9 L752.0 250.9 L754.8 252.0 L757.6 253.2 L760.4 254.5 L763.2 255.9 L766.0 257.4 L768.8 259.0 L771.6 260.6 L774.4 262.2 L777.2 263.9 L780.0 265.6 L782.8 267.3 L785.6 269.0 L788.4 270.7 L791.2 272.4 L794.0 274.1 L796.8 275.7 L799.6 277.3 L802.4 278.9 L805.2 280.4 L808.0 281.9 L810.8 283.2 L813.6 284.6 L816.4 285.8 L819.2 287.0 L822.0 288.2 L824.8 289.2 L827.6 290.2 L830.4 291.1 L833.2 292.0 L836.0 292.8" fill="none" stroke="#4f5d75" stroke-width="1.4" stroke-dasharray="5,4"/>
+        <line x1="612.0" y1="300" x2="612.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="633.0" y1="300" x2="633.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="654.0" y1="300" x2="654.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="682.0" y1="300" x2="682.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="717.0" y1="300" x2="717.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="745.0" y1="300" x2="745.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="766.0" y1="300" x2="766.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="787.0" y1="300" x2="787.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="556.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >−4</text>
+        <text x="696.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >0</text>
+        <text x="836.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >4</text>
+        <text x="548" y="304" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >0</text>
+        <text x="548" y="224.0" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >0.2</text>
+        <text x="836" y="338" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >x</text>
+        <text x="556" y="344" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >μ = (−1.00, 1.00)</text>
+        <text x="556" y="360" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >σ² = (2.25, 2.25) ; π ≈ (0.50, 0.50)</text>
+        <text x="916" y="210" font-family="'Geist Mono',ui-monospace,monospace" font-size="14" font-weight="600" fill="#2d3142" text-anchor="start" ><tspan font-size="14">一次更新後 θ</tspan><tspan font-size="10" dy="-5">(1)</tspan></text>
+        <line x1="916" y1="220.0" x2="1196" y2="220.0" stroke="#bfc0c0" stroke-width="1" stroke-dasharray="1,3"/>
+        <line x1="916" y1="300" x2="1196" y2="300" stroke="#4f5d75" stroke-width="1"/>
+        <path d="M916.0 295.2 L918.8 294.6 L921.6 293.8 L924.4 293.0 L927.2 292.1 L930.0 291.1 L932.8 290.1 L935.6 288.9 L938.4 287.6 L941.2 286.3 L944.0 284.8 L946.8 283.3 L949.6 281.6 L952.4 279.9 L955.2 278.0 L958.0 276.1 L960.8 274.0 L963.6 271.9 L966.4 269.7 L969.2 267.4 L972.0 265.1 L974.8 262.7 L977.6 260.2 L980.4 257.7 L983.2 255.2 L986.0 252.7 L988.8 250.1 L991.6 247.6 L994.4 245.1 L997.2 242.6 L1000.0 240.2 L1002.8 237.8 L1005.6 235.4 L1008.4 233.2 L1011.2 231.0 L1014.0 229.0 L1016.8 227.0 L1019.6 225.1 L1022.4 223.4 L1025.2 221.7 L1028.0 220.2 L1030.8 218.8 L1033.6 217.6 L1036.4 216.5 L1039.2 215.5 L1042.0 214.6 L1044.8 213.9 L1047.6 213.3 L1050.4 212.8 L1053.2 212.5 L1056.0 212.3 L1058.8 212.2 L1061.6 212.3 L1064.4 212.5 L1067.2 212.8 L1070.0 213.3 L1072.8 213.9 L1075.6 214.6 L1078.4 215.4 L1081.2 216.4 L1084.0 217.5 L1086.8 218.7 L1089.6 220.1 L1092.4 221.6 L1095.2 223.2 L1098.0 224.9 L1100.8 226.7 L1103.6 228.6 L1106.4 230.6 L1109.2 232.7 L1112.0 234.9 L1114.8 237.2 L1117.6 239.5 L1120.4 241.9 L1123.2 244.3 L1126.0 246.8 L1128.8 249.3 L1131.6 251.8 L1134.4 254.3 L1137.2 256.7 L1140.0 259.2 L1142.8 261.6 L1145.6 264.0 L1148.4 266.4 L1151.2 268.6 L1154.0 270.8 L1156.8 273.0 L1159.6 275.0 L1162.4 277.0 L1165.2 278.9 L1168.0 280.6 L1170.8 282.3 L1173.6 283.9 L1176.4 285.4 L1179.2 286.8 L1182.0 288.1 L1184.8 289.3 L1187.6 290.4 L1190.4 291.4 L1193.2 292.4 L1196.0 293.2" fill="none" stroke="#2d3142" stroke-width="2.4"/>
+        <path d="M916.0 295.3 L918.8 294.7 L921.6 293.9 L924.4 293.1 L927.2 292.3 L930.0 291.3 L932.8 290.3 L935.6 289.2 L938.4 288.0 L941.2 286.7 L944.0 285.3 L946.8 283.9 L949.6 282.3 L952.4 280.7 L955.2 279.0 L958.0 277.2 L960.8 275.4 L963.6 273.5 L966.4 271.6 L969.2 269.6 L972.0 267.6 L974.8 265.5 L977.6 263.5 L980.4 261.5 L983.2 259.5 L986.0 257.6 L988.8 255.7 L991.6 253.9 L994.4 252.2 L997.2 250.6 L1000.0 249.2 L1002.8 247.8 L1005.6 246.6 L1008.4 245.6 L1011.2 244.7 L1014.0 244.0 L1016.8 243.6 L1019.6 243.3 L1022.4 243.1 L1025.2 243.2 L1028.0 243.5 L1030.8 244.0 L1033.6 244.6 L1036.4 245.5 L1039.2 246.5 L1042.0 247.7 L1044.8 249.0 L1047.6 250.5 L1050.4 252.0 L1053.2 253.7 L1056.0 255.5 L1058.8 257.4 L1061.6 259.3 L1064.4 261.3 L1067.2 263.3 L1070.0 265.3 L1072.8 267.3 L1075.6 269.3 L1078.4 271.3 L1081.2 273.3 L1084.0 275.2 L1086.8 277.0 L1089.6 278.8 L1092.4 280.5 L1095.2 282.2 L1098.0 283.7 L1100.8 285.2 L1103.6 286.6 L1106.4 287.9 L1109.2 289.1 L1112.0 290.2 L1114.8 291.2 L1117.6 292.2 L1120.4 293.1 L1123.2 293.8 L1126.0 294.6 L1128.8 295.2 L1131.6 295.8 L1134.4 296.4 L1137.2 296.8 L1140.0 297.2 L1142.8 297.6 L1145.6 298.0 L1148.4 298.2 L1151.2 298.5 L1154.0 298.7 L1156.8 298.9 L1159.6 299.1 L1162.4 299.2 L1165.2 299.3 L1168.0 299.5 L1170.8 299.5 L1173.6 299.6 L1176.4 299.7 L1179.2 299.7 L1182.0 299.8 L1184.8 299.8 L1187.6 299.9 L1190.4 299.9 L1193.2 299.9 L1196.0 299.9" fill="none" stroke="#4f5d75" stroke-width="1.4"/>
+        <path d="M916.0 299.9 L918.8 299.9 L921.6 299.9 L924.4 299.9 L927.2 299.8 L930.0 299.8 L932.8 299.8 L935.6 299.7 L938.4 299.7 L941.2 299.6 L944.0 299.5 L946.8 299.4 L949.6 299.3 L952.4 299.2 L955.2 299.0 L958.0 298.8 L960.8 298.6 L963.6 298.4 L966.4 298.1 L969.2 297.8 L972.0 297.5 L974.8 297.1 L977.6 296.7 L980.4 296.2 L983.2 295.7 L986.0 295.1 L988.8 294.4 L991.6 293.7 L994.4 292.8 L997.2 292.0 L1000.0 291.0 L1002.8 290.0 L1005.6 288.8 L1008.4 287.6 L1011.2 286.3 L1014.0 284.9 L1016.8 283.4 L1019.6 281.9 L1022.4 280.2 L1025.2 278.5 L1028.0 276.7 L1030.8 274.9 L1033.6 272.9 L1036.4 271.0 L1039.2 269.0 L1042.0 266.9 L1044.8 264.9 L1047.6 262.8 L1050.4 260.8 L1053.2 258.8 L1056.0 256.8 L1058.8 254.8 L1061.6 253.0 L1064.4 251.2 L1067.2 249.5 L1070.0 248.0 L1072.8 246.5 L1075.6 245.2 L1078.4 244.1 L1081.2 243.1 L1084.0 242.3 L1086.8 241.7 L1089.6 241.3 L1092.4 241.1 L1095.2 241.0 L1098.0 241.2 L1100.8 241.5 L1103.6 242.1 L1106.4 242.8 L1109.2 243.7 L1112.0 244.7 L1114.8 246.0 L1117.6 247.3 L1120.4 248.8 L1123.2 250.5 L1126.0 252.2 L1128.8 254.0 L1131.6 255.9 L1134.4 257.9 L1137.2 259.9 L1140.0 262.0 L1142.8 264.0 L1145.6 266.1 L1148.4 268.1 L1151.2 270.1 L1154.0 272.1 L1156.8 274.1 L1159.6 275.9 L1162.4 277.8 L1165.2 279.5 L1168.0 281.2 L1170.8 282.8 L1173.6 284.3 L1176.4 285.7 L1179.2 287.1 L1182.0 288.3 L1184.8 289.5 L1187.6 290.6 L1190.4 291.6 L1193.2 292.5 L1196.0 293.3" fill="none" stroke="#4f5d75" stroke-width="1.4" stroke-dasharray="5,4"/>
+        <line x1="972.0" y1="300" x2="972.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="993.0" y1="300" x2="993.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1014.0" y1="300" x2="1014.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1042.0" y1="300" x2="1042.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1077.0" y1="300" x2="1077.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1105.0" y1="300" x2="1105.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1126.0" y1="300" x2="1126.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <line x1="1147.0" y1="300" x2="1147.0" y2="308" stroke="#2d3142" stroke-width="1.2"/>
+        <text x="916.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >−4</text>
+        <text x="1056.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >0</text>
+        <text x="1196.0" y="324" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="middle" >4</text>
+        <text x="908" y="304" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >0</text>
+        <text x="908" y="224.0" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >0.2</text>
+        <text x="1196" y="338" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >x</text>
+        <text x="916" y="344" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >μ = (−0.96, 1.10)</text>
+        <text x="916" y="360" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >σ² = (1.86, 1.93) ; π ≈ (0.49, 0.51)</text>
+        <line x1="508" y1="376" x2="1240" y2="376" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="508" y="404" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#bf4520" text-anchor="start" >第一次 E：每個點的兩群責任 r<tspan font-size="12" dy="3">n1</tspan><tspan dy="-3"> + r</tspan><tspan font-size="12" dy="3">n2</tspan><tspan dy="-3"> = 1</tspan></text>
+        <text x="508" y="430" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >觀測 x<tspan font-size="9" dy="3">n</tspan></text>
+        <text x="508" y="452" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >■ 群 1 / □ 群 2</text>
+        <text x="508" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >r<tspan font-size="9" dy="3">n1</tspan></text>
+        <text x="616" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >−2.4</text>
+        <rect x="616" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="616" y="438" width="57.2" height="14" fill="#4f5d75"/>
+        <text x="616" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.89</text>
+        <text x="692" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >−1.8</text>
+        <rect x="692" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="692" y="438" width="53.2" height="14" fill="#4f5d75"/>
+        <text x="692" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.83</text>
+        <text x="768" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >−1.2</text>
+        <rect x="768" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="768" y="438" width="47.6" height="14" fill="#4f5d75"/>
+        <text x="768" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.74</text>
+        <text x="844" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >−0.4</text>
+        <rect x="844" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="844" y="438" width="37.6" height="14" fill="#4f5d75"/>
+        <text x="844" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.59</text>
+        <text x="920" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >0.6</text>
+        <rect x="920" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="920" y="438" width="23.7" height="14" fill="#4f5d75"/>
+        <text x="920" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.37</text>
+        <text x="996" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >1.4</text>
+        <rect x="996" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="996" y="438" width="14.3" height="14" fill="#4f5d75"/>
+        <text x="996" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.22</text>
+        <text x="1072" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >2.0</text>
+        <rect x="1072" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="1072" y="438" width="9.3" height="14" fill="#4f5d75"/>
+        <text x="1072" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.14</text>
+        <text x="1148" y="430" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >2.6</text>
+        <rect x="1148" y="438" width="64" height="14" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="1148" y="438" width="5.8" height="14" fill="#4f5d75"/>
+        <text x="1148" y="474" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#2d3142" text-anchor="start" >0.09</text>
+        <line x1="508" y1="490" x2="1240" y2="490" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="508" y="518" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="600" fill="#2d3142" text-anchor="start" >重複後，觀測對數似然不下降</text>
+        <text x="508" y="544" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="500" fill="#2d3142" text-anchor="start" ><tspan font-size="12">ℓ(θ) = Σ</tspan><tspan font-size="9" dy="3">n</tspan><tspan font-size="12" dy="-3"> log Σ</tspan><tspan font-size="9" dy="3">k</tspan><tspan font-size="12" dy="-3"> π</tspan><tspan font-size="9" dy="3">k</tspan><tspan font-size="12" dy="-3"> N(x</tspan><tspan font-size="9" dy="3">n</tspan><tspan font-size="12" dy="-3"> | μ</tspan><tspan font-size="9" dy="3">k</tspan><tspan font-size="12" dy="-3">, σ</tspan><tspan font-size="9" dy="3">k</tspan><tspan font-size="12" dy="-3">²)</tspan></text>
+        <text x="508" y="568" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" ><tspan font-size="11">ℓ</tspan><tspan font-size="8" dy="3">0</tspan><tspan font-size="11" dy="-3"> = −15.581 → ℓ</tspan><tspan font-size="8" dy="3">1</tspan><tspan font-size="11" dy="-3"> = −15.464</tspan></text>
+        <text x="508" y="590" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >標準精確 EM；小幅改善時停止。</text>
+        <line x1="916" y1="612" x2="1196" y2="612" stroke="#4f5d75" stroke-width="1"/>
+        <line x1="916" y1="612" x2="916" y2="532" stroke="#4f5d75" stroke-width="1"/>
+        <path d="M916.0 612.0 L934.7 605.9 L953.3 597.7 L972.0 583.2 L990.7 564.4 L1009.3 552.1 L1028.0 548.7 L1046.7 548.2 L1065.3 548.1 L1084.0 548.0 L1102.7 548.0 L1121.3 548.0 L1140.0 548.0 L1158.7 548.0 L1177.3 548.0 L1196.0 548.0" fill="none" stroke="#2d3142" stroke-width="2.4"/>
+        <text x="908" y="540" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="end" >ℓ</text>
+        <text x="1196" y="540" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="end" >−14.353</text>
+        <text x="916" y="628" font-family="'Geist Mono',ui-monospace,monospace" font-size="11" font-weight="400" fill="#4f5d75" text-anchor="start" >0</text>
+        <text x="1196" y="628" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="end" >15 次迭代</text>
+        <line x1="40" y1="660" x2="1240" y2="660" stroke="rgba(45,49,66,0.12)" stroke-width="1"/>
+        <text x="40" y="692" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="400" fill="#4f5d75" text-anchor="start" >曲線：粗實線＝混合密度；細實／虛線＝兩個 π<tspan font-size="9" dy="3">k</tspan><tspan dy="-3">N</tspan><tspan font-size="9" dy="3">k</tspan><tspan dy="-3">；短線＝資料。</tspan></text>
+        <text x="1240" y="692" font-family="'Geist','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="600" fill="#2d3142" text-anchor="end" >依賴初始化；可能停在局部解，不保證全域最優。</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

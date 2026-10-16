@@ -1,0 +1,5 @@
+# 深度學習實作環境(體積大,Codespaces / 本機需要時再安裝)
+# CPU 版安裝:pip install -r requirements-dl.txt --index-url https://download.pytorch.org/whl/cpu
+-r requirements.txt
+torch>=2.2
+torchvision>=0.17

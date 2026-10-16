@@ -1,0 +1,2771 @@
+{
+  "bundle_version": "0.2.0",
+  "sources": {
+    "pr": {
+      "repository": "ndhuccc/pr-2026-fall",
+      "commit": "4c66c650c78f4eee6cadd24137e87b9be0841462"
+    },
+    "idl": {
+      "repository": "ndhuccc/idl-2026-fall",
+      "commit": "fb7e2e363836674a8160576cb33bcc98cc5ae28e"
+    },
+    "labtube": {
+      "repository": "ndhuccc/LabTube",
+      "commit": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727"
+    }
+  },
+  "files": [
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/INVENTORY_FORMAT.md",
+      "source_blob_sha": "6cc9cefd5deeaf44e0714e6d3c41628d6a8560ac",
+      "destination": ".agents/skills/INVENTORY_FORMAT.md",
+      "bytes": 5555
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/LEVELS.md",
+      "source_blob_sha": "d7a7bd6a8372f1e21dfa61960ee1e078b80fa24b",
+      "destination": ".agents/skills/LEVELS.md",
+      "bytes": 8518
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/NARRATIVE.md",
+      "source_blob_sha": "88f945a1b2540ca02d848e4dad4b97aab503d29c",
+      "destination": ".agents/skills/NARRATIVE.md",
+      "bytes": 7852
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/assignment-design/SKILL.md",
+      "source_blob_sha": "b9b604c55cf01497b7883391f10e3e935e3c7da4",
+      "destination": ".agents/skills/assignment-design/SKILL.md",
+      "bytes": 16367,
+      "preserved_source": "vendor/original-entries/assignment-design/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "024418c3127ec4dc9d0d45b07028759f696cd3c9826fc9a75507eaae4262f0c7"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/assignment-design/build_labtube_import.py",
+      "source_blob_sha": "a694fe6365d7f3318b9dc1fc29de5101c9b87044",
+      "destination": ".agents/skills/assignment-design/build_labtube_import.py",
+      "bytes": 6920
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/assignment-design/check_assignments.py",
+      "source_blob_sha": "bcf9324158723ce9e736420fb64f3bdfdd8cf450",
+      "destination": ".agents/skills/assignment-design/check_assignments.py",
+      "bytes": 11844
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/assignment-grading/SKILL.md",
+      "source_blob_sha": "68a2899a3447396fe252a1f3bf3d228fcc40494b",
+      "destination": ".agents/skills/assignment-grading/SKILL.md",
+      "bytes": 9745,
+      "preserved_source": "vendor/original-entries/assignment-grading/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "aad459ef44b407c6f523f4cddadcfc9eb4dd99d42ef6043589b227c441948e5a"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/assignment-quiz/SKILL.md",
+      "source_blob_sha": "0e78684dba5a7363e0a396d5769c76490f574c9c",
+      "destination": ".agents/skills/assignment-quiz/SKILL.md",
+      "bytes": 12101,
+      "preserved_source": "vendor/original-entries/assignment-quiz/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "15e930f09d7d99cf3f83819bc5e22101d339fdf0df53d667913ae6c4d4ca6a27"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/SKILL.md",
+      "source_blob_sha": "65734d233f19e71faf03fac34d79e873a82cc1fa",
+      "destination": ".agents/skills/diagram-design/SKILL.md",
+      "bytes": 32846,
+      "preserved_source": "vendor/original-entries/diagram-design/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "b0242e033eae6513bb67019a6cf3f88c51dcc674d0f7fee10c99a06d8fd00c56"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture-dark.html",
+      "source_blob_sha": "435e2ec89742c71c7200027ceb2fe2d451f81649",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture-dark.html",
+      "bytes": 12036
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture-delta-dark.html",
+      "source_blob_sha": "0b1da51999f70de1564fc62f19a69a6d6131597e",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture-delta-dark.html",
+      "bytes": 20558
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture-delta-full.html",
+      "source_blob_sha": "c357942287806c29452b05899d517d57cae756cf",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture-delta-full.html",
+      "bytes": 22225
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture-delta.html",
+      "source_blob_sha": "c9dfc5fc042e9647a50f5a77a6bd4d7e18b3668a",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture-delta.html",
+      "bytes": 20459
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture-full.html",
+      "source_blob_sha": "e33a359c4ff7fd5e6a274f1c6e5bd763115e22a3",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture-full.html",
+      "bytes": 14981
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-architecture.html",
+      "source_blob_sha": "dee30d264a3fc2f9be21542237f1be4f2ac93911",
+      "destination": ".agents/skills/diagram-design/assets/example-architecture.html",
+      "bytes": 12099
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-animated.html",
+      "source_blob_sha": "706b31be945186ecc6a388651cfa376dcf2326f7",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-animated.html",
+      "bytes": 47875
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-dark.html",
+      "source_blob_sha": "69e1a2a6764540fb097cc756badd9918674240b6",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-dark.html",
+      "bytes": 31662
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-full.html",
+      "source_blob_sha": "da17392f07abd5bee6238a2749f6ea9412a4b668",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus-full.html",
+      "bytes": 34299
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus.html",
+      "source_blob_sha": "7559a84bcf4ebeee21d0b550ed77e951e681f641",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-campus.html",
+      "bytes": 31659
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-animated.html",
+      "source_blob_sha": "d89d3b5d876f8c0cb8780fdd1666023414c3d030",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-animated.html",
+      "bytes": 55593
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-dark.html",
+      "source_blob_sha": "f207674b33438222ea3b5193369007912737c708",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-dark.html",
+      "bytes": 39572
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-full.html",
+      "source_blob_sha": "bf8516527a95dc9c718bd13f239e0732e7a8a1b4",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop-full.html",
+      "bytes": 42146
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop.html",
+      "source_blob_sha": "f61d965ead18f222f6addeca2f2bef3cd990f950",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-coffee-shop.html",
+      "bytes": 39381
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-dark.html",
+      "source_blob_sha": "53a5e45f0894f834be4843d24a3da764424b2e29",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-dark.html",
+      "bytes": 28850
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-full.html",
+      "source_blob_sha": "f717c54e921af8166c2351492fa748cc180548b6",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-full.html",
+      "bytes": 31351
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-animated.html",
+      "source_blob_sha": "8c32c86e037fba9957c25a795691fa7583324d64",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-animated.html",
+      "bytes": 54978
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-dark.html",
+      "source_blob_sha": "0302fa0c7d08084c5442668a4253f67ac50ff627",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-dark.html",
+      "bytes": 39154
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-full.html",
+      "source_blob_sha": "592cab6a983f018a67c8817d84cd048196eebe7b",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse-full.html",
+      "bytes": 41540
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse.html",
+      "source_blob_sha": "cb79b797900d31cfb7c9a4b7148f2428b9df232f",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan-warehouse.html",
+      "bytes": 38780
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-axonometric-plan.html",
+      "source_blob_sha": "aa76f4118ac1851dab9f3b3ddcaecaaa3517c1ad",
+      "destination": ".agents/skills/diagram-design/assets/example-axonometric-plan.html",
+      "bytes": 28651
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bar-dark.html",
+      "source_blob_sha": "1489209d0eb0a3af28af4bad849b1c6e86806247",
+      "destination": ".agents/skills/diagram-design/assets/example-bar-dark.html",
+      "bytes": 8993
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bar-full.html",
+      "source_blob_sha": "c4533c7c7d42fb320af9b6a2b57afe0f9e6bfadc",
+      "destination": ".agents/skills/diagram-design/assets/example-bar-full.html",
+      "bytes": 11252
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bar.html",
+      "source_blob_sha": "7340852f39cfa684dd4dd02d1ec5d13266c0505f",
+      "destination": ".agents/skills/diagram-design/assets/example-bar.html",
+      "bytes": 8917
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-beeswarm-dark.html",
+      "source_blob_sha": "9746cf6b4db45a66f8c166abd8a446f895ca7617",
+      "destination": ".agents/skills/diagram-design/assets/example-beeswarm-dark.html",
+      "bytes": 32654
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-beeswarm-full.html",
+      "source_blob_sha": "19899cbdef3a4629e4136877f50f15e2ed0a5348",
+      "destination": ".agents/skills/diagram-design/assets/example-beeswarm-full.html",
+      "bytes": 36450
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-beeswarm.html",
+      "source_blob_sha": "0bf5c803d345685c50697c6d2324e92b002ef79a",
+      "destination": ".agents/skills/diagram-design/assets/example-beeswarm.html",
+      "bytes": 32180
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bubble-dark.html",
+      "source_blob_sha": "626f6e4d92ed8d3e5268ed75a41838ae18ba38ee",
+      "destination": ".agents/skills/diagram-design/assets/example-bubble-dark.html",
+      "bytes": 11428
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bubble-full.html",
+      "source_blob_sha": "3e322f51689e1b4450858af6dd6d76b5360541e6",
+      "destination": ".agents/skills/diagram-design/assets/example-bubble-full.html",
+      "bytes": 15124
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bubble.html",
+      "source_blob_sha": "484fb393b089e647d673d86d5ebd3d82f9b27ad1",
+      "destination": ".agents/skills/diagram-design/assets/example-bubble.html",
+      "bytes": 11335
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bump-dark.html",
+      "source_blob_sha": "01a085fe4469a11c730e9cbf8ad4827b02ea4c72",
+      "destination": ".agents/skills/diagram-design/assets/example-bump-dark.html",
+      "bytes": 12926
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bump-full.html",
+      "source_blob_sha": "fc1461a348b08780d8a798fe47392455ab5091af",
+      "destination": ".agents/skills/diagram-design/assets/example-bump-full.html",
+      "bytes": 16635
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-bump.html",
+      "source_blob_sha": "52a1b043f8cf436115733533025afff873179d63",
+      "destination": ".agents/skills/diagram-design/assets/example-bump.html",
+      "bytes": 12807
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-data-flow-dark.html",
+      "source_blob_sha": "22b75a35e6ecbfd5c4f6cd1526d83d4e735e3374",
+      "destination": ".agents/skills/diagram-design/assets/example-data-flow-dark.html",
+      "bytes": 12966
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-data-flow-full.html",
+      "source_blob_sha": "15c464697066845824aa9638794fae48a1fbf18b",
+      "destination": ".agents/skills/diagram-design/assets/example-data-flow-full.html",
+      "bytes": 15830
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-data-flow.html",
+      "source_blob_sha": "2c4a28f7d28fa39ee61c95e13b7fff66837ce76c",
+      "destination": ".agents/skills/diagram-design/assets/example-data-flow.html",
+      "bytes": 12798
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-datalake-dark.html",
+      "source_blob_sha": "e7a641004f3a627fb63dda37357bf4de49a6d4e7",
+      "destination": ".agents/skills/diagram-design/assets/example-datalake-dark.html",
+      "bytes": 24849
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-datalake-full.html",
+      "source_blob_sha": "4d4e639869e41d705d1e8b981ca568ac2746a58a",
+      "destination": ".agents/skills/diagram-design/assets/example-datalake-full.html",
+      "bytes": 28350
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-datalake.html",
+      "source_blob_sha": "1ce7e2704995287777069001b6082da799f9d8a9",
+      "destination": ".agents/skills/diagram-design/assets/example-datalake.html",
+      "bytes": 26405
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-db-schema-dark.html",
+      "source_blob_sha": "18d7c014c5eb87f6902efcfbfbefc670615c425f",
+      "destination": ".agents/skills/diagram-design/assets/example-db-schema-dark.html",
+      "bytes": 24740
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-db-schema-full.html",
+      "source_blob_sha": "2bbad9b0f18fee880a89c1ff41cbd2852739e065",
+      "destination": ".agents/skills/diagram-design/assets/example-db-schema-full.html",
+      "bytes": 27627
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-db-schema.html",
+      "source_blob_sha": "4bbb2d6f2516bbd515456029036516fafbd79b44",
+      "destination": ".agents/skills/diagram-design/assets/example-db-schema.html",
+      "bytes": 24523
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dependency-dark.html",
+      "source_blob_sha": "bbbfd2c177abecf87f2777acfcd1415be227a0b6",
+      "destination": ".agents/skills/diagram-design/assets/example-dependency-dark.html",
+      "bytes": 17822
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dependency-full.html",
+      "source_blob_sha": "c8faff05a14725142338bdff8fe9bd2901bcb443",
+      "destination": ".agents/skills/diagram-design/assets/example-dependency-full.html",
+      "bytes": 21122
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dependency.html",
+      "source_blob_sha": "8f040159be8a1c2e1811a0ec09c22dedd475d296",
+      "destination": ".agents/skills/diagram-design/assets/example-dependency.html",
+      "bytes": 17607
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-deployment-dark.html",
+      "source_blob_sha": "dd3c0d876ab0af864179c443ebc3d5932d0c5c62",
+      "destination": ".agents/skills/diagram-design/assets/example-deployment-dark.html",
+      "bytes": 13554
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-deployment-full.html",
+      "source_blob_sha": "dc04ed7df01e0d760f95330b9899e8c59e0346a8",
+      "destination": ".agents/skills/diagram-design/assets/example-deployment-full.html",
+      "bytes": 16827
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-deployment.html",
+      "source_blob_sha": "774e01454e643efd65b796909ad1d6866b631e12",
+      "destination": ".agents/skills/diagram-design/assets/example-deployment.html",
+      "bytes": 13448
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-integration-dark.html",
+      "source_blob_sha": "86b2e7b67bd9bbc943e9eae1414d34b48a80c4b6",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-integration-dark.html",
+      "bytes": 14745
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-integration-full.html",
+      "source_blob_sha": "d95f287565f1afa2b83fa208e218c9cdd3725d50",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-integration-full.html",
+      "bytes": 17262
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-integration.html",
+      "source_blob_sha": "9d20f230ffc87421079ecae01bfbbf3881a8646c",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-integration.html",
+      "bytes": 14714
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-security-matrix-dark.html",
+      "source_blob_sha": "f71aa8c86f52f1496840b4ed58d3e97d9d8ccd91",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-security-matrix-dark.html",
+      "bytes": 10279
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-security-matrix-full.html",
+      "source_blob_sha": "181dde242c08e33102022a849c0488ea6f8b58d5",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-security-matrix-full.html",
+      "bytes": 12601
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-dp-security-matrix.html",
+      "source_blob_sha": "6b69cf05de11e10fab6eb283a557c0f0bf52d86c",
+      "destination": ".agents/skills/diagram-design/assets/example-dp-security-matrix.html",
+      "bytes": 10905
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-er-dark.html",
+      "source_blob_sha": "a21c32e68cac11e37a31f1a1195fba79a49ea52c",
+      "destination": ".agents/skills/diagram-design/assets/example-er-dark.html",
+      "bytes": 14198
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-er-full.html",
+      "source_blob_sha": "8ceeec0903a1253c18963a855801d574994a7c3a",
+      "destination": ".agents/skills/diagram-design/assets/example-er-full.html",
+      "bytes": 17123
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-er.html",
+      "source_blob_sha": "5fd3bcf42c8dc37c18e7093a8b47ab88c6136bda",
+      "destination": ".agents/skills/diagram-design/assets/example-er.html",
+      "bytes": 14134
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-explainer-sheet.html",
+      "source_blob_sha": "94e897d2baa991309565ffb400801a39dbe6feb4",
+      "destination": ".agents/skills/diagram-design/assets/example-explainer-sheet.html",
+      "bytes": 31470
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-animated.html",
+      "source_blob_sha": "b57052458246af33ba441416ac780156d62f4fa4",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-animated.html",
+      "bytes": 53486
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-dark.html",
+      "source_blob_sha": "cba3faf4625fea05ca43b6db037bf273e54ea8a1",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-dark.html",
+      "bytes": 36043
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-full.html",
+      "source_blob_sha": "b04ca261b271114722b247b9d2eeb3b4ba60fe7f",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-ai-stack-full.html",
+      "bytes": 38911
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-ai-stack.html",
+      "source_blob_sha": "2f8066518f48a9161c8b33384d99cd91fea057fd",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-ai-stack.html",
+      "bytes": 36058
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-dark.html",
+      "source_blob_sha": "da38b5c36d44f9c957b60445863abec18a07f7ad",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-dark.html",
+      "bytes": 8543
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-full.html",
+      "source_blob_sha": "21c44a86602e0070a86b35063e2475e2441fa07c",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-full.html",
+      "bytes": 11447
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-keyboard-animated.html",
+      "source_blob_sha": "04cd068932af340c19da970bfeb057e7332345fe",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-keyboard-animated.html",
+      "bytes": 208294
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-keyboard-dark.html",
+      "source_blob_sha": "6c4a3ff654106387d6de0e3a946c832689f606d0",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-keyboard-dark.html",
+      "bytes": 180795
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-keyboard-full.html",
+      "source_blob_sha": "fa242d9f13e4f58440d1607ec57367f143a344c4",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-keyboard-full.html",
+      "bytes": 193684
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-keyboard.html",
+      "source_blob_sha": "cfebe94e795c9554970c8b9106d3b1778829350a",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-keyboard.html",
+      "bytes": 190868
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-phone-animated.html",
+      "source_blob_sha": "dd67f08331630f0ff45b1b27f33f38395f792039",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-phone-animated.html",
+      "bytes": 34616
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-phone-dark.html",
+      "source_blob_sha": "8808014dfcd8f6c899b3cbf2348320bfff2ca089",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-phone-dark.html",
+      "bytes": 17431
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-phone-full.html",
+      "source_blob_sha": "6e38feeeba9d47344585a6134609d43160858207",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-phone-full.html",
+      "bytes": 20048
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-phone.html",
+      "source_blob_sha": "c243788230decae29a1437c6dfb61717e3c4d47e",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-phone.html",
+      "bytes": 17302
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-unboxing-animated.html",
+      "source_blob_sha": "a14bd803fb3f648f67a125dafc2b531cd96e3b74",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-unboxing-animated.html",
+      "bytes": 34065
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-unboxing-dark.html",
+      "source_blob_sha": "b66cac1935ec107402c3cd8a3c32e2cd0094fb3e",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-unboxing-dark.html",
+      "bytes": 16707
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-unboxing-full.html",
+      "source_blob_sha": "9e60aaa7b1e8b27ce893aeef99686e491e375b44",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-unboxing-full.html",
+      "bytes": 19391
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded-unboxing.html",
+      "source_blob_sha": "1bfc7a444132ae744f145e4db10bb331a1085feb",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded-unboxing.html",
+      "bytes": 16644
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-exploded.html",
+      "source_blob_sha": "04c3d89236b048f12c89c2876af6a1d41ddc521d",
+      "destination": ".agents/skills/diagram-design/assets/example-exploded.html",
+      "bytes": 8724
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-fishbone-dark.html",
+      "source_blob_sha": "46e6c2fca4e6c3f948540271c7b119647bdf0158",
+      "destination": ".agents/skills/diagram-design/assets/example-fishbone-dark.html",
+      "bytes": 8675
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-fishbone-full.html",
+      "source_blob_sha": "d461dab269f68f14c0dc2ed48c63acd132b9f31f",
+      "destination": ".agents/skills/diagram-design/assets/example-fishbone-full.html",
+      "bytes": 11407
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-fishbone.html",
+      "source_blob_sha": "554a4ace4476e9983a284e90e8727c82f461b2a8",
+      "destination": ".agents/skills/diagram-design/assets/example-fishbone.html",
+      "bytes": 8648
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-flowchart-dark.html",
+      "source_blob_sha": "e918695855b7bec1f4e26854f004c9c590495023",
+      "destination": ".agents/skills/diagram-design/assets/example-flowchart-dark.html",
+      "bytes": 9446
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-flowchart-full.html",
+      "source_blob_sha": "42df4401f58ef784d9714742e50dabfe911efc3c",
+      "destination": ".agents/skills/diagram-design/assets/example-flowchart-full.html",
+      "bytes": 12295
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-flowchart.html",
+      "source_blob_sha": "cf9053045f852422949990caacb74b366f15d89a",
+      "destination": ".agents/skills/diagram-design/assets/example-flowchart.html",
+      "bytes": 9395
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-gantt-dark.html",
+      "source_blob_sha": "f2fef9e4edc65ccf3d1cfc161902bcf4cc74c511",
+      "destination": ".agents/skills/diagram-design/assets/example-gantt-dark.html",
+      "bytes": 10194
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-gantt-full.html",
+      "source_blob_sha": "c0d47865fe9086d6beb9107bea33ebd4f81abf63",
+      "destination": ".agents/skills/diagram-design/assets/example-gantt-full.html",
+      "bytes": 11895
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-gantt.html",
+      "source_blob_sha": "06d68820e688c38755584bcebd366a635689e4f7",
+      "destination": ".agents/skills/diagram-design/assets/example-gantt.html",
+      "bytes": 10072
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-heatmap-dark.html",
+      "source_blob_sha": "5e35f908f17a109557438e8d662ad2c819204927",
+      "destination": ".agents/skills/diagram-design/assets/example-heatmap-dark.html",
+      "bytes": 18248
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-heatmap-full.html",
+      "source_blob_sha": "5c917de2817e8715e5b5746e81815d4c34245a4c",
+      "destination": ".agents/skills/diagram-design/assets/example-heatmap-full.html",
+      "bytes": 22036
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-heatmap.html",
+      "source_blob_sha": "043b40f7562bff14e94e674da0777469119807f9",
+      "destination": ".agents/skills/diagram-design/assets/example-heatmap.html",
+      "bytes": 18108
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level-dark.html",
+      "source_blob_sha": "899cd54dcdceba3c92b60604bdddd1bf859fe206",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level-dark.html",
+      "bytes": 24080
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level-full.html",
+      "source_blob_sha": "d92aca58b97480d07fcb3f724c6600b0b8580c4f",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level-full.html",
+      "bytes": 28360
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level-vertical-dark.html",
+      "source_blob_sha": "a1cd5653dbc1f51fbe0d12c60d3fdd97d32a8827",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level-vertical-dark.html",
+      "bytes": 24854
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level-vertical-full.html",
+      "source_blob_sha": "396b913d02a308e4c3a24404d8c11a9be4753a13",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level-vertical-full.html",
+      "bytes": 28619
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level-vertical.html",
+      "source_blob_sha": "2892399bcc335ae8df8052c355ad4b646788850c",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level-vertical.html",
+      "bytes": 30391
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-high-level.html",
+      "source_blob_sha": "7ed148b77bff7801be31150f90aff96776baffc8",
+      "destination": ".agents/skills/diagram-design/assets/example-high-level.html",
+      "bytes": 26902
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-import-drawio.html",
+      "source_blob_sha": "429d716142aafbabfa49b9b6e31d817b63df5c68",
+      "destination": ".agents/skills/diagram-design/assets/example-import-drawio.html",
+      "bytes": 12079
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-import-excalidraw.html",
+      "source_blob_sha": "273a7e8f9ec0ffdd25ae960b4bb3f25e76b99c48",
+      "destination": ".agents/skills/diagram-design/assets/example-import-excalidraw.html",
+      "bytes": 7689
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-import-mermaid.html",
+      "source_blob_sha": "dc77361bc55f599c0d4ca2c1b980614d955ab78a",
+      "destination": ".agents/skills/diagram-design/assets/example-import-mermaid.html",
+      "bytes": 8105
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-it-state-dark.html",
+      "source_blob_sha": "69e7e485c32fbdf420f4dc7321400fa08a84e622",
+      "destination": ".agents/skills/diagram-design/assets/example-it-state-dark.html",
+      "bytes": 11992
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-it-state-full.html",
+      "source_blob_sha": "835afb113fbee9f3cfab74988d7bc37c6888caa5",
+      "destination": ".agents/skills/diagram-design/assets/example-it-state-full.html",
+      "bytes": 14223
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-it-state.html",
+      "source_blob_sha": "8481df94002b1e1ad15e41991b4a9363846f3305",
+      "destination": ".agents/skills/diagram-design/assets/example-it-state.html",
+      "bytes": 12498
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-journey-dark.html",
+      "source_blob_sha": "1111ff0d932aaec76087b8a9f2afdb520127e18d",
+      "destination": ".agents/skills/diagram-design/assets/example-journey-dark.html",
+      "bytes": 9153
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-journey-full.html",
+      "source_blob_sha": "df7d946355c10553f405841ca73dcc0ed9d4d951",
+      "destination": ".agents/skills/diagram-design/assets/example-journey-full.html",
+      "bytes": 11721
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-journey.html",
+      "source_blob_sha": "f09031f73c8b799c1386ceb2c01c9db716870fb2",
+      "destination": ".agents/skills/diagram-design/assets/example-journey.html",
+      "bytes": 9109
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-kanban-dark.html",
+      "source_blob_sha": "bf6643cc76b514cdc81c649cd42f305de70422c3",
+      "destination": ".agents/skills/diagram-design/assets/example-kanban-dark.html",
+      "bytes": 11036
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-kanban-full.html",
+      "source_blob_sha": "d7ee559ea32d3f56c9476fa5863467344b44c2b9",
+      "destination": ".agents/skills/diagram-design/assets/example-kanban-full.html",
+      "bytes": 13899
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-kanban.html",
+      "source_blob_sha": "4ed1e033b4c007509f615fabcd36090457cb6ae0",
+      "destination": ".agents/skills/diagram-design/assets/example-kanban.html",
+      "bytes": 10945
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-layers-dark.html",
+      "source_blob_sha": "c03f897714fd75a8e116ac0c4e016d3c73e9bf01",
+      "destination": ".agents/skills/diagram-design/assets/example-layers-dark.html",
+      "bytes": 6913
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-layers-full.html",
+      "source_blob_sha": "1779f0c6a04af9fe01705542cb6ad5eef76362f4",
+      "destination": ".agents/skills/diagram-design/assets/example-layers-full.html",
+      "bytes": 10023
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-layers.html",
+      "source_blob_sha": "92faaafc3b87cc0446e82d1a61dd9c2564a4ed21",
+      "destination": ".agents/skills/diagram-design/assets/example-layers.html",
+      "bytes": 6875
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-line-dark.html",
+      "source_blob_sha": "78d8bae57270d96afbded56512c434bcec0e87fa",
+      "destination": ".agents/skills/diagram-design/assets/example-line-dark.html",
+      "bytes": 7499
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-line-full.html",
+      "source_blob_sha": "2ec71a97705eb5a4c65929f60bd01879dbc6f14f",
+      "destination": ".agents/skills/diagram-design/assets/example-line-full.html",
+      "bytes": 10051
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-line.html",
+      "source_blob_sha": "e59922159af342ed8c9c65ab4ba7ef052c2cfac1",
+      "destination": ".agents/skills/diagram-design/assets/example-line.html",
+      "bytes": 7440
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-loop-dark.html",
+      "source_blob_sha": "ecad93f0701ab0f5fcff4f6b4f5a394b9fe36de5",
+      "destination": ".agents/skills/diagram-design/assets/example-loop-dark.html",
+      "bytes": 6821
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-loop-full.html",
+      "source_blob_sha": "cde9ee5be1b779f9c1530f37e37c611d4c0da346",
+      "destination": ".agents/skills/diagram-design/assets/example-loop-full.html",
+      "bytes": 9964
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-loop-terminal.html",
+      "source_blob_sha": "2e22273acb3910760c78b646c004678a4a9254a0",
+      "destination": ".agents/skills/diagram-design/assets/example-loop-terminal.html",
+      "bytes": 9993
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-loop.html",
+      "source_blob_sha": "c9d7ac5cbaff24216b0c4ebc7eb2e7978f04a7ab",
+      "destination": ".agents/skills/diagram-design/assets/example-loop.html",
+      "bytes": 6789
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-marimekko-dark.html",
+      "source_blob_sha": "5134a660a789907a84bcccd33aa71a4eb969d808",
+      "destination": ".agents/skills/diagram-design/assets/example-marimekko-dark.html",
+      "bytes": 13604
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-marimekko-full.html",
+      "source_blob_sha": "271ed6bd757bccecc1571b2b5d8e1d0f39277317",
+      "destination": ".agents/skills/diagram-design/assets/example-marimekko-full.html",
+      "bytes": 17040
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-marimekko.html",
+      "source_blob_sha": "6ea9884b836883612de54e040ba5f708b935fddd",
+      "destination": ".agents/skills/diagram-design/assets/example-marimekko.html",
+      "bytes": 13496
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-medallion-dark.html",
+      "source_blob_sha": "5019dbced2c923c4a7c10f814b1ffffb65729f42",
+      "destination": ".agents/skills/diagram-design/assets/example-medallion-dark.html",
+      "bytes": 13052
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-medallion-full.html",
+      "source_blob_sha": "69eee77f0fa99d662e0ba7db88ab0b4f1b69034a",
+      "destination": ".agents/skills/diagram-design/assets/example-medallion-full.html",
+      "bytes": 15894
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-medallion.html",
+      "source_blob_sha": "a75304d4e00b3bc15fdf60d7bfbedfc9347e5533",
+      "destination": ".agents/skills/diagram-design/assets/example-medallion.html",
+      "bytes": 12861
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-nested-dark.html",
+      "source_blob_sha": "bebcbdb01a0e149fdc1b8d08672338c41700de6d",
+      "destination": ".agents/skills/diagram-design/assets/example-nested-dark.html",
+      "bytes": 6735
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-nested-full.html",
+      "source_blob_sha": "911f53f1c16f6db8c11726bcf18668c6c5338137",
+      "destination": ".agents/skills/diagram-design/assets/example-nested-full.html",
+      "bytes": 9844
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-nested.html",
+      "source_blob_sha": "2b1413caf0a4d755c37c7670ec980b3c0f370e27",
+      "destination": ".agents/skills/diagram-design/assets/example-nested.html",
+      "bytes": 6854
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-org-chart-dark.html",
+      "source_blob_sha": "b1ebf40523af007f57afdedd1d9851005f842dc6",
+      "destination": ".agents/skills/diagram-design/assets/example-org-chart-dark.html",
+      "bytes": 11599
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-org-chart-full.html",
+      "source_blob_sha": "e0b3b5479154f0fa282a57dd7b6f072f9553bf9a",
+      "destination": ".agents/skills/diagram-design/assets/example-org-chart-full.html",
+      "bytes": 12049
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-org-chart.html",
+      "source_blob_sha": "5191b2a397ae48d4af680e9a942a1ea9bb899ace",
+      "destination": ".agents/skills/diagram-design/assets/example-org-chart.html",
+      "bytes": 11527
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-paved-road-animated.html",
+      "source_blob_sha": "526b5d3d1d0b83a3aab3db8b868a4727347ca592",
+      "destination": ".agents/skills/diagram-design/assets/example-paved-road-animated.html",
+      "bytes": 28321
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-polar-dark.html",
+      "source_blob_sha": "fcb1944f856779a42b65d3aa37d20c300e55cc05",
+      "destination": ".agents/skills/diagram-design/assets/example-polar-dark.html",
+      "bytes": 10447
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-polar-full.html",
+      "source_blob_sha": "e2967fc4a239a7fca3813f5f1e88044d35a3d08b",
+      "destination": ".agents/skills/diagram-design/assets/example-polar-full.html",
+      "bytes": 12653
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-polar.html",
+      "source_blob_sha": "bbe1e8c5d672f95cf731a90919ba6029e255fb51",
+      "destination": ".agents/skills/diagram-design/assets/example-polar.html",
+      "bytes": 10385
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-policy-trace-animated.html",
+      "source_blob_sha": "c36b415e296973e96a2177de45896ab94e65ac88",
+      "destination": ".agents/skills/diagram-design/assets/example-policy-trace-animated.html",
+      "bytes": 25465
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-process-dark.html",
+      "source_blob_sha": "502c89cadeb1bd7e091fdb5a003a873582cdb671",
+      "destination": ".agents/skills/diagram-design/assets/example-process-dark.html",
+      "bytes": 15033
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-process-full.html",
+      "source_blob_sha": "16fa0dd73a3bfff54cc65b5d6fea72d0abab8783",
+      "destination": ".agents/skills/diagram-design/assets/example-process-full.html",
+      "bytes": 17467
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-process.html",
+      "source_blob_sha": "8e72e9621578b6137d4a3d4ee4e339026d329f41",
+      "destination": ".agents/skills/diagram-design/assets/example-process.html",
+      "bytes": 14997
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-pyramid-dark.html",
+      "source_blob_sha": "b86fb668b43e469b3645c1303337c5329baf1629",
+      "destination": ".agents/skills/diagram-design/assets/example-pyramid-dark.html",
+      "bytes": 6682
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-pyramid-full.html",
+      "source_blob_sha": "140092656bc325d9654ddfdd57537ea5286efd3a",
+      "destination": ".agents/skills/diagram-design/assets/example-pyramid-full.html",
+      "bytes": 9731
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-pyramid.html",
+      "source_blob_sha": "51b5a382d609d28d9ca59a43058a5c57bfd645a9",
+      "destination": ".agents/skills/diagram-design/assets/example-pyramid.html",
+      "bytes": 6576
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-quadrant-consultant.html",
+      "source_blob_sha": "c8beafd1b65a72fda986ff0b1618f7a6cb4834bc",
+      "destination": ".agents/skills/diagram-design/assets/example-quadrant-consultant.html",
+      "bytes": 11881
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-quadrant-dark.html",
+      "source_blob_sha": "0d600cfa52a827e82db1bf2c9e89cf767a89bd7e",
+      "destination": ".agents/skills/diagram-design/assets/example-quadrant-dark.html",
+      "bytes": 6606
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-quadrant-full.html",
+      "source_blob_sha": "2834c5d1b27f1e4bf5435ba4296bfbe78455f4a8",
+      "destination": ".agents/skills/diagram-design/assets/example-quadrant-full.html",
+      "bytes": 9620
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-quadrant.html",
+      "source_blob_sha": "8cef09aeb021438fed5a897e965bbe2d9bd5ca03",
+      "destination": ".agents/skills/diagram-design/assets/example-quadrant.html",
+      "bytes": 6573
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-queue-animated.html",
+      "source_blob_sha": "e42358d1abdaea02de5a1aa6120db0ed7dfbdfde",
+      "destination": ".agents/skills/diagram-design/assets/example-queue-animated.html",
+      "bytes": 30003
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-radar-dark.html",
+      "source_blob_sha": "9ad78d503b8dd9423d990bb6d8f67537d13248e9",
+      "destination": ".agents/skills/diagram-design/assets/example-radar-dark.html",
+      "bytes": 7687
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-radar-full.html",
+      "source_blob_sha": "81ae22939929fc5494f2ab01bf37480188315ca9",
+      "destination": ".agents/skills/diagram-design/assets/example-radar-full.html",
+      "bytes": 10429
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-radar.html",
+      "source_blob_sha": "9e303522030e0a853cc2544cfc1e0effaffa4ab7",
+      "destination": ".agents/skills/diagram-design/assets/example-radar.html",
+      "bytes": 7863
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-ridgeline-dark.html",
+      "source_blob_sha": "ae9dab65626dcef0310faa9e193ad84b8b3ed2cc",
+      "destination": ".agents/skills/diagram-design/assets/example-ridgeline-dark.html",
+      "bytes": 10354
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-ridgeline-full.html",
+      "source_blob_sha": "7afd9653a753cd4d32af05473a7a488f6d6eedcb",
+      "destination": ".agents/skills/diagram-design/assets/example-ridgeline-full.html",
+      "bytes": 14273
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-ridgeline.html",
+      "source_blob_sha": "a2b620eb1931e53ae7ab9b55b61911aba8b4ab2f",
+      "destination": ".agents/skills/diagram-design/assets/example-ridgeline.html",
+      "bytes": 10281
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sankey-dark.html",
+      "source_blob_sha": "ee79097970665ded88500b6e16fc7f2ce03ed22a",
+      "destination": ".agents/skills/diagram-design/assets/example-sankey-dark.html",
+      "bytes": 8969
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sankey-full.html",
+      "source_blob_sha": "72d4b9bfd499b3a13a5ea059705fa9fddd7c886e",
+      "destination": ".agents/skills/diagram-design/assets/example-sankey-full.html",
+      "bytes": 11814
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sankey.html",
+      "source_blob_sha": "910c214f56f3383c3d80709949386f55b7678a00",
+      "destination": ".agents/skills/diagram-design/assets/example-sankey.html",
+      "bytes": 8921
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-scatter-dark.html",
+      "source_blob_sha": "c86ea32210441f7982167c71f2a9e591995b3cda",
+      "destination": ".agents/skills/diagram-design/assets/example-scatter-dark.html",
+      "bytes": 9525
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-scatter-full.html",
+      "source_blob_sha": "b6a2f7c6b1c824ee9a02fac02b259e42df0eb480",
+      "destination": ".agents/skills/diagram-design/assets/example-scatter-full.html",
+      "bytes": 11577
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-scatter.html",
+      "source_blob_sha": "11fc90d03c2919a1cc6058a4c7edc4184fdb5ba3",
+      "destination": ".agents/skills/diagram-design/assets/example-scatter.html",
+      "bytes": 9423
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence-dark.html",
+      "source_blob_sha": "9365d054ab6d77a3c87ee386cc019aa820dd9dee",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence-dark.html",
+      "bytes": 13794
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence-full.html",
+      "source_blob_sha": "a270dbc2264fe0564b39fce26801434a3e197ac1",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence-full.html",
+      "bytes": 18212
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence-oauth-dark.html",
+      "source_blob_sha": "7434166ece2a1c3682091d17b0fcebe27ab04a61",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence-oauth-dark.html",
+      "bytes": 12113
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence-oauth-full.html",
+      "source_blob_sha": "ffddee4a849d37300fdde2bf604c24239a593451",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence-oauth-full.html",
+      "bytes": 16581
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence-oauth.html",
+      "source_blob_sha": "ff48c14353ae716f2892e620e59c03fba9a0a3d0",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence-oauth.html",
+      "bytes": 14362
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-sequence.html",
+      "source_blob_sha": "070d7e68b127fc01d1c963582c1418ef1124bfee",
+      "destination": ".agents/skills/diagram-design/assets/example-sequence.html",
+      "bytes": 13723
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-slopegraph-dark.html",
+      "source_blob_sha": "0535a9eae6e4e952b62917ac6205f349fb216d34",
+      "destination": ".agents/skills/diagram-design/assets/example-slopegraph-dark.html",
+      "bytes": 10452
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-slopegraph-full.html",
+      "source_blob_sha": "456c19c1bb275aeef643ec5bd7b00700d2650535",
+      "destination": ".agents/skills/diagram-design/assets/example-slopegraph-full.html",
+      "bytes": 13992
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-slopegraph.html",
+      "source_blob_sha": "88f888af8b94b31f469b92a5de8e14ac6f73a195",
+      "destination": ".agents/skills/diagram-design/assets/example-slopegraph.html",
+      "bytes": 10370
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state-dark.html",
+      "source_blob_sha": "3f9b0236d62c14cafede9980f0b9ea7c8f185982",
+      "destination": ".agents/skills/diagram-design/assets/example-state-dark.html",
+      "bytes": 8698
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state-full.html",
+      "source_blob_sha": "423f24740ae5c2e2b52b23baf4c52dfefc2b5d41",
+      "destination": ".agents/skills/diagram-design/assets/example-state-full.html",
+      "bytes": 11623
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state-lifecycle-dark.html",
+      "source_blob_sha": "b30555ad082facbfff0c882ea897a81b3c3c8150",
+      "destination": ".agents/skills/diagram-design/assets/example-state-lifecycle-dark.html",
+      "bytes": 9633
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state-lifecycle-full.html",
+      "source_blob_sha": "48599fdae978349ad56cbc4190dd6c437bdb5f58",
+      "destination": ".agents/skills/diagram-design/assets/example-state-lifecycle-full.html",
+      "bytes": 12624
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state-lifecycle.html",
+      "source_blob_sha": "3c53a1d505a3b81c11cc9a2809463be7d4d4ad73",
+      "destination": ".agents/skills/diagram-design/assets/example-state-lifecycle.html",
+      "bytes": 10236
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-state.html",
+      "source_blob_sha": "223c40c5bc35fe0e19b2cdcc165df1e07eccbf1d",
+      "destination": ".agents/skills/diagram-design/assets/example-state.html",
+      "bytes": 8662
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-story-map-dark.html",
+      "source_blob_sha": "2815f1b5dc8c12a621759b3a4873915558536f14",
+      "destination": ".agents/skills/diagram-design/assets/example-story-map-dark.html",
+      "bytes": 12247
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-story-map-full.html",
+      "source_blob_sha": "463a28d7bf2dd9cec01bfac30ec9a3bc62c6552c",
+      "destination": ".agents/skills/diagram-design/assets/example-story-map-full.html",
+      "bytes": 15483
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-story-map.html",
+      "source_blob_sha": "b9e960e7d9aed25a089ba7db03f9249b5b75460c",
+      "destination": ".agents/skills/diagram-design/assets/example-story-map.html",
+      "bytes": 12186
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-streamgraph-dark.html",
+      "source_blob_sha": "1ae4ad39d908e795d30b10da43f7523443ad919a",
+      "destination": ".agents/skills/diagram-design/assets/example-streamgraph-dark.html",
+      "bytes": 13002
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-streamgraph-full.html",
+      "source_blob_sha": "83372bfc80c727fb9610ac3df86f80c5005284d0",
+      "destination": ".agents/skills/diagram-design/assets/example-streamgraph-full.html",
+      "bytes": 16442
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-streamgraph.html",
+      "source_blob_sha": "f7d1e9be0abd038d7dcae5bb1b0b2428930942dd",
+      "destination": ".agents/skills/diagram-design/assets/example-streamgraph.html",
+      "bytes": 12941
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-swimlane-dark.html",
+      "source_blob_sha": "2a7a3a8c37b46eea437a112883f9e31687878f66",
+      "destination": ".agents/skills/diagram-design/assets/example-swimlane-dark.html",
+      "bytes": 10580
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-swimlane-full.html",
+      "source_blob_sha": "106638df7ee3907570986da0468c80bb618c207f",
+      "destination": ".agents/skills/diagram-design/assets/example-swimlane-full.html",
+      "bytes": 13524
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-swimlane.html",
+      "source_blob_sha": "45aaa9635ccec074fb8ffa7e2c9ec2c689c4c375",
+      "destination": ".agents/skills/diagram-design/assets/example-swimlane.html",
+      "bytes": 10534
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-timeline-dark.html",
+      "source_blob_sha": "7b2c140c4cd2d05f12ebec9528b2293cdcad85b0",
+      "destination": ".agents/skills/diagram-design/assets/example-timeline-dark.html",
+      "bytes": 7390
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-timeline-full.html",
+      "source_blob_sha": "e0b53484f2d6869cd9c503e5a7618030b30ca28e",
+      "destination": ".agents/skills/diagram-design/assets/example-timeline-full.html",
+      "bytes": 10391
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-timeline.html",
+      "source_blob_sha": "e5399e49da9d9e30e19dfbfbceef32103eae0117",
+      "destination": ".agents/skills/diagram-design/assets/example-timeline.html",
+      "bytes": 7338
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree-block-decomposition-dark.html",
+      "source_blob_sha": "e90284d7e61e1ba73b6f6d1aa37adb12b8837f75",
+      "destination": ".agents/skills/diagram-design/assets/example-tree-block-decomposition-dark.html",
+      "bytes": 8303
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree-block-decomposition-full.html",
+      "source_blob_sha": "51390e3187516124fa29ae714646bd2e8a590569",
+      "destination": ".agents/skills/diagram-design/assets/example-tree-block-decomposition-full.html",
+      "bytes": 11639
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree-block-decomposition.html",
+      "source_blob_sha": "575d52078c4f0eaf9294e78216e13de8a66da6bf",
+      "destination": ".agents/skills/diagram-design/assets/example-tree-block-decomposition.html",
+      "bytes": 8224
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree-dark.html",
+      "source_blob_sha": "6cdbedd831986d0f16bc068b595ddab7673c6605",
+      "destination": ".agents/skills/diagram-design/assets/example-tree-dark.html",
+      "bytes": 11029
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree-full.html",
+      "source_blob_sha": "fb4e28f239ba3c95dac812e00e0aca37b0c07d2c",
+      "destination": ".agents/skills/diagram-design/assets/example-tree-full.html",
+      "bytes": 13990
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-tree.html",
+      "source_blob_sha": "e60c59d495f52e9b49e239c38c57293e00a0f087",
+      "destination": ".agents/skills/diagram-design/assets/example-tree.html",
+      "bytes": 10913
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-treemap-dark.html",
+      "source_blob_sha": "635ef35643989dffa6698a7a364d2732c0b217be",
+      "destination": ".agents/skills/diagram-design/assets/example-treemap-dark.html",
+      "bytes": 7651
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-treemap-full.html",
+      "source_blob_sha": "0f385bbf7839766a93ed5130ed07627221620bd4",
+      "destination": ".agents/skills/diagram-design/assets/example-treemap-full.html",
+      "bytes": 10737
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-treemap.html",
+      "source_blob_sha": "d04ae8223918c1abbc16ab3a750bd74095ae251f",
+      "destination": ".agents/skills/diagram-design/assets/example-treemap.html",
+      "bytes": 7579
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-uml-class-dark.html",
+      "source_blob_sha": "481bae4a477af355d22df19d658d3ab611e87080",
+      "destination": ".agents/skills/diagram-design/assets/example-uml-class-dark.html",
+      "bytes": 12400
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-uml-class-full.html",
+      "source_blob_sha": "c3716a2d682b137e791da912a59896c808009ab2",
+      "destination": ".agents/skills/diagram-design/assets/example-uml-class-full.html",
+      "bytes": 15679
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-uml-class.html",
+      "source_blob_sha": "94013df59239ae6c95fbc83c3cd7d9ecc62628c8",
+      "destination": ".agents/skills/diagram-design/assets/example-uml-class.html",
+      "bytes": 12355
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-venn-dark.html",
+      "source_blob_sha": "6fa75202f7d5f7395c6d1df9d5e09be70723f480",
+      "destination": ".agents/skills/diagram-design/assets/example-venn-dark.html",
+      "bytes": 6699
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-venn-full.html",
+      "source_blob_sha": "10081997e432de63595cd05856ed2483a62a70ba",
+      "destination": ".agents/skills/diagram-design/assets/example-venn-full.html",
+      "bytes": 9901
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-venn.html",
+      "source_blob_sha": "ac35a0570ac3912beb4c34a9b364b82015c6c100",
+      "destination": ".agents/skills/diagram-design/assets/example-venn.html",
+      "bytes": 5079
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-wardley-dark.html",
+      "source_blob_sha": "c7c2cfb82bc71ba4d4220afcbd14df4d5d7a69e6",
+      "destination": ".agents/skills/diagram-design/assets/example-wardley-dark.html",
+      "bytes": 8924
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-wardley-full.html",
+      "source_blob_sha": "c0523f5d8f420a5f4b55b907e3d2872f9204ea8d",
+      "destination": ".agents/skills/diagram-design/assets/example-wardley-full.html",
+      "bytes": 11344
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-wardley.html",
+      "source_blob_sha": "b7a131c2ac849b1801e7cab07ef3f5478d329007",
+      "destination": ".agents/skills/diagram-design/assets/example-wardley.html",
+      "bytes": 8881
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-waterfall-dark.html",
+      "source_blob_sha": "2e7d0275061ccc2264bde342ac936a36fc095808",
+      "destination": ".agents/skills/diagram-design/assets/example-waterfall-dark.html",
+      "bytes": 9844
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-waterfall-full.html",
+      "source_blob_sha": "9430ced261b08f09096bd49d46ece37059796827",
+      "destination": ".agents/skills/diagram-design/assets/example-waterfall-full.html",
+      "bytes": 11594
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/example-waterfall.html",
+      "source_blob_sha": "528420c4051f0e9a77f3c56a67ef551eec315ff1",
+      "destination": ".agents/skills/diagram-design/assets/example-waterfall.html",
+      "bytes": 9760
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/icons.html",
+      "source_blob_sha": "942041f988ec701b978fe71051d1de02dbf3343b",
+      "destination": ".agents/skills/diagram-design/assets/icons.html",
+      "bytes": 108545
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/index.html",
+      "source_blob_sha": "7ba6a3146bb9f879310c1c798c777b13e534ce0f",
+      "destination": ".agents/skills/diagram-design/assets/index.html",
+      "bytes": 20461
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/template-dark.html",
+      "source_blob_sha": "cc2652504cd282ead714ebc3f5c96adc76765ad8",
+      "destination": ".agents/skills/diagram-design/assets/template-dark.html",
+      "bytes": 4080
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/template-full.html",
+      "source_blob_sha": "07cbe6bd23b539d9f26f190cb0bfcd97c90aab45",
+      "destination": ".agents/skills/diagram-design/assets/template-full.html",
+      "bytes": 23154
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/template-motion.html",
+      "source_blob_sha": "0e3449e83fe0c7532b06255be819b063b107077b",
+      "destination": ".agents/skills/diagram-design/assets/template-motion.html",
+      "bytes": 20935
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/template-terminal.html",
+      "source_blob_sha": "dfd9384e5fd23d1bd82c39a1a724d7db78e665a9",
+      "destination": ".agents/skills/diagram-design/assets/template-terminal.html",
+      "bytes": 5481
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/assets/template.html",
+      "source_blob_sha": "054e5c34961dd79ea48d16fbeadc7f95d7d6ff22",
+      "destination": ".agents/skills/diagram-design/assets/template.html",
+      "bytes": 4202
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/animation.md",
+      "source_blob_sha": "150c71857ca47d04e9dba1ee6fe00246ba814012",
+      "destination": ".agents/skills/diagram-design/references/animation.md",
+      "bytes": 12437
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/doctor.md",
+      "source_blob_sha": "7c70105afc52fcd903f0eed8180331b20133b11b",
+      "destination": ".agents/skills/diagram-design/references/doctor.md",
+      "bytes": 5861
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/export-registry.md",
+      "source_blob_sha": "b150f0fb8b0c7a5a0194c40530c7f48aad741596",
+      "destination": ".agents/skills/diagram-design/references/export-registry.md",
+      "bytes": 6319
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/export.md",
+      "source_blob_sha": "d486a809af59207a907f2f7bf6c58882563fad16",
+      "destination": ".agents/skills/diagram-design/references/export.md",
+      "bytes": 21335
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/import-drawio.md",
+      "source_blob_sha": "18d4567831f2d96d98b91fce63f9367e7faeff4d",
+      "destination": ".agents/skills/diagram-design/references/import-drawio.md",
+      "bytes": 14077
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/import-excalidraw.md",
+      "source_blob_sha": "6287ac9c6ce361a94c09fe27e920fc4f9f427e9c",
+      "destination": ".agents/skills/diagram-design/references/import-excalidraw.md",
+      "bytes": 11238
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/import-mermaid.md",
+      "source_blob_sha": "e0d468f228994300be0b5ea27d1f13a5c03a9e5c",
+      "destination": ".agents/skills/diagram-design/references/import-mermaid.md",
+      "bytes": 10956
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/layout-budget.md",
+      "source_blob_sha": "460230ee3f78916ea10c99a5e4cbebfe0bba5519",
+      "destination": ".agents/skills/diagram-design/references/layout-budget.md",
+      "bytes": 4352
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/onboarding.md",
+      "source_blob_sha": "363139a06360fa50410f0c407b1e31ef194f08c2",
+      "destination": ".agents/skills/diagram-design/references/onboarding.md",
+      "bytes": 15107
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/output-spec.md",
+      "source_blob_sha": "fc2822eefece818d0c089a62578569a50a676047",
+      "destination": ".agents/skills/diagram-design/references/output-spec.md",
+      "bytes": 19415
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitive-annotation.md",
+      "source_blob_sha": "3b596cff2be31558f0e3afbffaec3307791606fe",
+      "destination": ".agents/skills/diagram-design/references/primitive-annotation.md",
+      "bytes": 1661
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitive-icons.md",
+      "source_blob_sha": "9a2287c0a863c49f5c8c901f4713418c8fb864e4",
+      "destination": ".agents/skills/diagram-design/references/primitive-icons.md",
+      "bytes": 105941
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitive-math-notation.md",
+      "source_blob_sha": "ef28be3f48f64ebd9c60d9f5b06b95d096a000b2",
+      "destination": ".agents/skills/diagram-design/references/primitive-math-notation.md",
+      "bytes": 6124
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitive-sketchy.md",
+      "source_blob_sha": "a279024571497ffb2549f54b0b8941e3fdf2aff7",
+      "destination": ".agents/skills/diagram-design/references/primitive-sketchy.md",
+      "bytes": 1700
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitive-terminal.md",
+      "source_blob_sha": "4d65ab32fe2206ad1e2c3c1cf3cf72df1d78301a",
+      "destination": ".agents/skills/diagram-design/references/primitive-terminal.md",
+      "bytes": 3915
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/primitives-core.md",
+      "source_blob_sha": "fdfd63818668ea8ffd631a3fbc300cc0efe91f02",
+      "destination": ".agents/skills/diagram-design/references/primitives-core.md",
+      "bytes": 12935
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/profiles.md",
+      "source_blob_sha": "ba8dccd9ca327ba7b4c2469fd58c99471f4fc214",
+      "destination": ".agents/skills/diagram-design/references/profiles.md",
+      "bytes": 14434
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/semantic-patterns.md",
+      "source_blob_sha": "637ba9db996656679ca36ed81f3c61bb5b68ccf5",
+      "destination": ".agents/skills/diagram-design/references/semantic-patterns.md",
+      "bytes": 16679
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/style-guide.md",
+      "source_blob_sha": "2336877b78b7af2633464ac5f8492dc51214aa81",
+      "destination": ".agents/skills/diagram-design/references/style-guide.md",
+      "bytes": 22309
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-architecture-delta.md",
+      "source_blob_sha": "e418fb6c75da90a306cf80a2def9aed4dcc2bb50",
+      "destination": ".agents/skills/diagram-design/references/type-architecture-delta.md",
+      "bytes": 14595
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-architecture.md",
+      "source_blob_sha": "9bab2084b1cceab9290792c1b0b794b3f9b93f22",
+      "destination": ".agents/skills/diagram-design/references/type-architecture.md",
+      "bytes": 5917
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-axonometric-plan.md",
+      "source_blob_sha": "e27283dd1daa843652923d9839b367894e640de3",
+      "destination": ".agents/skills/diagram-design/references/type-axonometric-plan.md",
+      "bytes": 7184
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-bar.md",
+      "source_blob_sha": "3654304041d5127a880ec3156ced2404b03fca73",
+      "destination": ".agents/skills/diagram-design/references/type-bar.md",
+      "bytes": 14056
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-data-flow.md",
+      "source_blob_sha": "dab7447ed6c64dd348350516f74a1a1ee8903096",
+      "destination": ".agents/skills/diagram-design/references/type-data-flow.md",
+      "bytes": 20858
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-db-schema.md",
+      "source_blob_sha": "e1ab89fd3492720ad7c19d57c2b8a20310c1615b",
+      "destination": ".agents/skills/diagram-design/references/type-db-schema.md",
+      "bytes": 4954
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-dependency.md",
+      "source_blob_sha": "3a01e1649f050e1f0752c8abeac8fcd5667e6519",
+      "destination": ".agents/skills/diagram-design/references/type-dependency.md",
+      "bytes": 4309
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-deployment.md",
+      "source_blob_sha": "e757a3aec0ee6fe6b634068cd426e4bb650ae55b",
+      "destination": ".agents/skills/diagram-design/references/type-deployment.md",
+      "bytes": 4295
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-dp-integration.md",
+      "source_blob_sha": "2da6f558e06c91fb2291f8a77e454390b6da552f",
+      "destination": ".agents/skills/diagram-design/references/type-dp-integration.md",
+      "bytes": 22057
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-dp-security-matrix.md",
+      "source_blob_sha": "4b099ec3853544e8518644871e15fd8db532374b",
+      "destination": ".agents/skills/diagram-design/references/type-dp-security-matrix.md",
+      "bytes": 19086
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-er.md",
+      "source_blob_sha": "5792e978f77b46ffd6fdfa7936fcea19db55fd6c",
+      "destination": ".agents/skills/diagram-design/references/type-er.md",
+      "bytes": 1531
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-explainer-sheet.md",
+      "source_blob_sha": "56923b5e9c44360c312a3fd5bdb91c1fff95c974",
+      "destination": ".agents/skills/diagram-design/references/type-explainer-sheet.md",
+      "bytes": 15640
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-exploded.md",
+      "source_blob_sha": "c7849d8ed3907ba204d350c5dcc7fb66df95703a",
+      "destination": ".agents/skills/diagram-design/references/type-exploded.md",
+      "bytes": 11157
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-fishbone.md",
+      "source_blob_sha": "c735730870a6d30224a57f7b370c9dbfdca31778",
+      "destination": ".agents/skills/diagram-design/references/type-fishbone.md",
+      "bytes": 5796
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-flowchart.md",
+      "source_blob_sha": "20960ca38ee28d8ab61d83477563eaa341b24860",
+      "destination": ".agents/skills/diagram-design/references/type-flowchart.md",
+      "bytes": 1722
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-gantt.md",
+      "source_blob_sha": "2fed6693e6773d52619381a41c3a9da4d214e7d4",
+      "destination": ".agents/skills/diagram-design/references/type-gantt.md",
+      "bytes": 2433
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-heatmap.md",
+      "source_blob_sha": "bdd3272ead9d1f59800319cb8e2fa9f3178a87c5",
+      "destination": ".agents/skills/diagram-design/references/type-heatmap.md",
+      "bytes": 7696
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-high-level.md",
+      "source_blob_sha": "1a34c9117e2dcdf6b239cd55024d4cc9feefab80",
+      "destination": ".agents/skills/diagram-design/references/type-high-level.md",
+      "bytes": 28325
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-it-state.md",
+      "source_blob_sha": "a1b1cec56fb61cc961c94f25edf80b730da5fe3a",
+      "destination": ".agents/skills/diagram-design/references/type-it-state.md",
+      "bytes": 29677
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-journey.md",
+      "source_blob_sha": "850d6bc76fb7531ef1476a943e220dff9c916b1e",
+      "destination": ".agents/skills/diagram-design/references/type-journey.md",
+      "bytes": 5123
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-kanban.md",
+      "source_blob_sha": "5bbec1cfa263ea189d967aa259ab422217568252",
+      "destination": ".agents/skills/diagram-design/references/type-kanban.md",
+      "bytes": 4531
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-layers.md",
+      "source_blob_sha": "fb3b436350fc4b2823a53974d35f9b52a30e4d21",
+      "destination": ".agents/skills/diagram-design/references/type-layers.md",
+      "bytes": 1570
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-line.md",
+      "source_blob_sha": "6781c247d4116d9e3a69f817323b96d4ec981418",
+      "destination": ".agents/skills/diagram-design/references/type-line.md",
+      "bytes": 43194
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-loop.md",
+      "source_blob_sha": "aaf2bce0d906cf4d02472f28bb290c75e63d067d",
+      "destination": ".agents/skills/diagram-design/references/type-loop.md",
+      "bytes": 12609
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-medallion.md",
+      "source_blob_sha": "63afec9a4da3e509e7574d123a49f1fd9644bea2",
+      "destination": ".agents/skills/diagram-design/references/type-medallion.md",
+      "bytes": 22226
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-nested.md",
+      "source_blob_sha": "ae2fa31ed1eee5dfd363f45526c4f902c970379f",
+      "destination": ".agents/skills/diagram-design/references/type-nested.md",
+      "bytes": 1363
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-org-chart.md",
+      "source_blob_sha": "c22ceaaebdb2839e9ebb9a902137e2c70ec54d77",
+      "destination": ".agents/skills/diagram-design/references/type-org-chart.md",
+      "bytes": 3101
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-polar.md",
+      "source_blob_sha": "e630b93b4c2ba695bfd49cab19897235ea1e0f6c",
+      "destination": ".agents/skills/diagram-design/references/type-polar.md",
+      "bytes": 7998
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-process.md",
+      "source_blob_sha": "aa63688c979d0acbd8856cc731549d95a45f0d42",
+      "destination": ".agents/skills/diagram-design/references/type-process.md",
+      "bytes": 28062
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-pyramid.md",
+      "source_blob_sha": "703f15aa549aa4624514a7ec35b8b38892415507",
+      "destination": ".agents/skills/diagram-design/references/type-pyramid.md",
+      "bytes": 1805
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-quadrant.md",
+      "source_blob_sha": "186399a6652af01db2a37ccddccd133410eaf0f5",
+      "destination": ".agents/skills/diagram-design/references/type-quadrant.md",
+      "bytes": 6256
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-radar.md",
+      "source_blob_sha": "a26fea65b2011afb06ff5dbdfa1f0d7ce1842650",
+      "destination": ".agents/skills/diagram-design/references/type-radar.md",
+      "bytes": 5626
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-sankey.md",
+      "source_blob_sha": "953e96ca7dad42ff4c01ff6d5c350fc7df6ca7d8",
+      "destination": ".agents/skills/diagram-design/references/type-sankey.md",
+      "bytes": 8975
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-scatter.md",
+      "source_blob_sha": "80c44fafab7618d2df961ccb6f44cbd7c66e16d4",
+      "destination": ".agents/skills/diagram-design/references/type-scatter.md",
+      "bytes": 20433
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-sequence.md",
+      "source_blob_sha": "0a26f9cb8d9146317ff5f589bbda2ebb8bc0887e",
+      "destination": ".agents/skills/diagram-design/references/type-sequence.md",
+      "bytes": 6798
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-state.md",
+      "source_blob_sha": "85b8cdda0544368ad79def4279ee6deb6e1e5208",
+      "destination": ".agents/skills/diagram-design/references/type-state.md",
+      "bytes": 1958
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-story-map.md",
+      "source_blob_sha": "391972ca360aa0080f80f8caf984a768344f02ee",
+      "destination": ".agents/skills/diagram-design/references/type-story-map.md",
+      "bytes": 4882
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-swimlane.md",
+      "source_blob_sha": "0c69373628d4c6fbfcdba4d2b6b0194dd46a6ffc",
+      "destination": ".agents/skills/diagram-design/references/type-swimlane.md",
+      "bytes": 994
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-timeline.md",
+      "source_blob_sha": "e0e8d9b65028d9315ceee453570146aad9030894",
+      "destination": ".agents/skills/diagram-design/references/type-timeline.md",
+      "bytes": 1091
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-tree.md",
+      "source_blob_sha": "439efd41c11dda59021cb68be70a3b1e6911dbfc",
+      "destination": ".agents/skills/diagram-design/references/type-tree.md",
+      "bytes": 1517
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-treemap.md",
+      "source_blob_sha": "a9471253587fc06d18c02cf0c77574875f534863",
+      "destination": ".agents/skills/diagram-design/references/type-treemap.md",
+      "bytes": 18304
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-uml-class.md",
+      "source_blob_sha": "0c8af2222106f532655b573eed56a0d2ea99f524",
+      "destination": ".agents/skills/diagram-design/references/type-uml-class.md",
+      "bytes": 4902
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-venn.md",
+      "source_blob_sha": "c93392c25aca21e5d19c97466e59b24161f38868",
+      "destination": ".agents/skills/diagram-design/references/type-venn.md",
+      "bytes": 1659
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-wardley.md",
+      "source_blob_sha": "0b76832640d8af38543675ad8d72a70c5b5ffdfb",
+      "destination": ".agents/skills/diagram-design/references/type-wardley.md",
+      "bytes": 5778
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/references/type-waterfall.md",
+      "source_blob_sha": "4b702e0248507638422e5f49eeceaf3698bcc8ee",
+      "destination": ".agents/skills/diagram-design/references/type-waterfall.md",
+      "bytes": 8987
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/scripts/drawio_extract.py",
+      "source_blob_sha": "295d44638f1d9612499115d5b86930ac58827969",
+      "destination": ".agents/skills/diagram-design/scripts/drawio_extract.py",
+      "bytes": 33749
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/scripts/excalidraw_extract.py",
+      "source_blob_sha": "c6386fac81fdf639dc76a39a00896633b34e8342",
+      "destination": ".agents/skills/diagram-design/scripts/excalidraw_extract.py",
+      "bytes": 26248
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/scripts/export_svg.py",
+      "source_blob_sha": "c245b5a4d5846163d6efc24880d18a06e356184d",
+      "destination": ".agents/skills/diagram-design/scripts/export_svg.py",
+      "bytes": 35159
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/scripts/mermaid_extract.py",
+      "source_blob_sha": "efcf1b2a70373e21aad004bbe08bb2e3b9126d6a",
+      "destination": ".agents/skills/diagram-design/scripts/mermaid_extract.py",
+      "bytes": 55268
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/diagram-design/scripts/self_check.py",
+      "source_blob_sha": "46182e2ca8db035ee9dd8f011a012880766760b9",
+      "destination": ".agents/skills/diagram-design/scripts/self_check.py",
+      "bytes": 19721
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/SKILL.md",
+      "source_blob_sha": "88ac8594d6b88bb83c868125a90d6c7269fc58f2",
+      "destination": ".agents/skills/slides-to-four-panel-comics/SKILL.md",
+      "bytes": 8773,
+      "preserved_source": "vendor/original-entries/slides-to-four-panel-comics/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "75ed475b9cc568040b38d70ca4e73c963dec76b7e1f0d13b93a72365dff12074"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/agents/openai.yaml",
+      "source_blob_sha": "e92cb37f8c3ab03a96c3f1552599f7f49a316af0",
+      "destination": ".agents/skills/slides-to-four-panel-comics/agents/openai.yaml",
+      "bytes": 552
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/assets/icon.svg",
+      "source_blob_sha": "48905061abd36fb9c456aa1e9135c6822d627ce8",
+      "destination": ".agents/skills/slides-to-four-panel-comics/assets/icon.svg",
+      "bytes": 1211
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/references/comic-prompt.md",
+      "source_blob_sha": "72e4e354e324e826c712330d1c3c25b073cb133f",
+      "destination": ".agents/skills/slides-to-four-panel-comics/references/comic-prompt.md",
+      "bytes": 1146
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/references/jbd-format.md",
+      "source_blob_sha": "da0c68a691f36f82cdac43434d118ea6dc36b21e",
+      "destination": ".agents/skills/slides-to-four-panel-comics/references/jbd-format.md",
+      "bytes": 2450
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/slides-to-four-panel-comics/scripts/insert_jbd_comics.py",
+      "source_blob_sha": "1c99237e61fe9d035b65112cb43bcfd481eb11e7",
+      "destination": ".agents/skills/slides-to-four-panel-comics/scripts/insert_jbd_comics.py",
+      "bytes": 9317
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/textbook-lecture-notes/SKILL.md",
+      "source_blob_sha": "4716d2c88c9e333cb9bfb7cbade64dfe5f34bf2b",
+      "destination": ".agents/skills/textbook-lecture-notes/SKILL.md",
+      "bytes": 29536,
+      "preserved_source": "vendor/original-entries/textbook-lecture-notes/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "cb27fbbf1c55b000bad21865256dcdc62da429a0b5ecb81775ea0e474df43fd6"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/textbook-lecture-notes/scripts/audit_lecture.py",
+      "source_blob_sha": "51b3dbf0ba7c54973b88c30b22bba43af3cb36ae",
+      "destination": ".agents/skills/textbook-lecture-notes/scripts/audit_lecture.py",
+      "bytes": 6457
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/textbook-lecture-notes/scripts/render_formula.py",
+      "source_blob_sha": "36d5d54c15c4dd09cbb0f395c96b564134e21ac0",
+      "destination": ".agents/skills/textbook-lecture-notes/scripts/render_formula.py",
+      "bytes": 3803
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/AI_AGENT_FILE_FORMAT_SPEC.md",
+      "source_blob_sha": "1952123ffb1ff69d8e4c0b069d0b7192c58f88fe",
+      "destination": ".agents/skills/view-from-text/AI_AGENT_FILE_FORMAT_SPEC.md",
+      "bytes": 34059
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/AUDIT_CHECKLIST.md",
+      "source_blob_sha": "876f9a117b42799a438897bf03dad1e9592d7564",
+      "destination": ".agents/skills/view-from-text/AUDIT_CHECKLIST.md",
+      "bytes": 26339
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/FIGURE_RECIPES.md",
+      "source_blob_sha": "a8c3b277a242f2bddf44ca54d2f975d4d632920a",
+      "destination": ".agents/skills/view-from-text/FIGURE_RECIPES.md",
+      "bytes": 5709
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/PRESENTATION_DESIGN_GUIDE.md",
+      "source_blob_sha": "4bbe4b58275701c574717dcbb31d9ddbdf6f7685",
+      "destination": ".agents/skills/view-from-text/PRESENTATION_DESIGN_GUIDE.md",
+      "bytes": 14127
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/SKILL.md",
+      "source_blob_sha": "6066b00be00cbb99f06f81c0004a2aab7369548b",
+      "destination": ".agents/skills/view-from-text/SKILL.md",
+      "bytes": 43085,
+      "preserved_source": "vendor/original-entries/view-from-text/SOURCE.md",
+      "adaptation": "YAML frontmatter normalized only; original body preserved.",
+      "adapted_sha256": "d575f727a75c8b3de353fcf64745d95b8ce363e08503947a63f6c1361776bfc1"
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/VISUAL_AND_LAYOUT_GUIDE.md",
+      "source_blob_sha": "4f1283d30a6edb7cb540e9322704a4d84f9ee769",
+      "destination": ".agents/skills/view-from-text/VISUAL_AND_LAYOUT_GUIDE.md",
+      "bytes": 20832
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/example-page-spec.json",
+      "source_blob_sha": "3b5987b8b653652929bab751b9696956e2ca82e0",
+      "destination": ".agents/skills/view-from-text/example-page-spec.json",
+      "bytes": 1086
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/jbd_figure.py",
+      "source_blob_sha": "cf85ab51cf42e08fdc4353aee26d988e8fb9c896",
+      "destination": ".agents/skills/view-from-text/jbd_figure.py",
+      "bytes": 6800
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/audit_deck.py",
+      "source_blob_sha": "f012c912046bdc7ad782fe40f24e698b2ef80367",
+      "destination": ".agents/skills/view-from-text/tools/audit_deck.py",
+      "bytes": 27895
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/README.md",
+      "source_blob_sha": "70e129e211e7abe611de8016b9e1946cfdcf040e",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/README.md",
+      "bytes": 1452
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/add_fig.py",
+      "source_blob_sha": "b53b26d8bd11d032512d13389c672cdc3781e47f",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/add_fig.py",
+      "bytes": 912
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/example_deck.py",
+      "source_blob_sha": "ae25a7bcff37565908cf898cc9dc67993368fe08",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/example_deck.py",
+      "bytes": 9248
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/fit.py",
+      "source_blob_sha": "54a435817396e79615db23cc1826a6c38e74e5cc",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/fit.py",
+      "bytes": 1546
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/flow.py",
+      "source_blob_sha": "29a36d07db4dc28b4237c52c783054fa7e30b46e",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/flow.py",
+      "bytes": 7596
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/deckkit/kit.py",
+      "source_blob_sha": "80e095fe309e950d4573cfa648b2f77b939dd724",
+      "destination": ".agents/skills/view-from-text/tools/deckkit/kit.py",
+      "bytes": 9320
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": ".agents/skills/view-from-text/tools/preview_deck.py",
+      "source_blob_sha": "6bb224cd7835ebb8b03f1c2e3a5898b37335cb72",
+      "destination": ".agents/skills/view-from-text/tools/preview_deck.py",
+      "bytes": 8809
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "scripts/build_docs.py",
+      "source_blob_sha": "3768f9f3152d7a1cf61b7c10544d38bc3b3fc6a9",
+      "destination": "course-support/scripts/build_docs.py",
+      "bytes": 11414
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "scripts/check_slides.py",
+      "source_blob_sha": "668841ca70e85b59028026634317d76bc40e5b18",
+      "destination": "course-support/scripts/check_slides.py",
+      "bytes": 12789
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "scripts/doctor.py",
+      "source_blob_sha": "2768f72bd8e9248ffda703fb5b805e8e335e3b2d",
+      "destination": "course-support/scripts/doctor.py",
+      "bytes": 14276
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "scripts/new_semester.py",
+      "source_blob_sha": "7654bc1eaa89bea1bb7608b42434fe2947ca47cf",
+      "destination": "course-support/scripts/new_semester.py",
+      "bytes": 6160
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "scripts/sync_nav.py",
+      "source_blob_sha": "328893a7c645e6850933d92e31cff3a542bdab73",
+      "destination": "course-support/scripts/sync_nav.py",
+      "bytes": 8220
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "AGENTS.md",
+      "source_blob_sha": "6e1ce0ad0b9c2348477469caf6f8d44499462227",
+      "destination": "course-support/AGENTS.md",
+      "bytes": 27987
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "LICENSE",
+      "source_blob_sha": "956fe72560e4b3f92fe935d5a84232f5f23d1ba8",
+      "destination": "course-support/LICENSE",
+      "bytes": 1401
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "requirements.txt",
+      "source_blob_sha": "1a1c8a0d4a391127bd6261c822119b3814fd0ae6",
+      "destination": "course-support/requirements.txt",
+      "bytes": 182
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "requirements-lecture.txt",
+      "source_blob_sha": "906d730e7902d30f2694b15e04a9fdca85c7570b",
+      "destination": "course-support/requirements-lecture.txt",
+      "bytes": 466
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "requirements-site.txt",
+      "source_blob_sha": "f5b84e04a95d5de390065dafae49b202fe28310e",
+      "destination": "course-support/requirements-site.txt",
+      "bytes": 159
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "requirements-dl.txt",
+      "source_blob_sha": "f7eddbc360e233a95ef90197ecfc702b9b37fb2f",
+      "destination": "course-support/requirements-dl.txt",
+      "bytes": 225
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "slides/FORMATS.md",
+      "source_blob_sha": "dfc872b5882e6de1bcd0e9336472f31eea6784de",
+      "destination": "course-support/slides/FORMATS.md",
+      "bytes": 3980
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "slides/README.md",
+      "source_blob_sha": "51bceb887c0597a565f92c0e85ea6e70bbb39f79",
+      "destination": "course-support/slides/README.md",
+      "bytes": 221
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "assignments/README.md",
+      "source_blob_sha": "aa6a970f19296bdb3735a76829a7e6f2a08615e7",
+      "destination": "course-support/assignments/README.md",
+      "bytes": 12615
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "assignments/ai-agent-prompt.md",
+      "source_blob_sha": "d1fee9b9c6cabf2fcf797266244e7176192e80b7",
+      "destination": "course-support/assignments/ai-agent-prompt.md",
+      "bytes": 13259
+    },
+    {
+      "source_repository": "ndhuccc/pr-2026-fall",
+      "source_ref": "4c66c650c78f4eee6cadd24137e87b9be0841462",
+      "source_path": "assignments/labtube.md",
+      "source_blob_sha": "3fb1eb161d05e578f48622ff2d4d6fa3a2188b99",
+      "destination": "course-support/assignments/labtube.md",
+      "bytes": 3140
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "services/contracts.py",
+      "source_blob_sha": "b0af78af493e07688576b37ac7ae078b077d272a",
+      "destination": "integrations/labtube/upstream/services/contracts.py"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "services/timeutil.py",
+      "source_blob_sha": "62cbca5de9e895f47f9cbe1dd003fcc82cbd1059",
+      "destination": "integrations/labtube/upstream/services/timeutil.py"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "services/scoring.py",
+      "source_blob_sha": "89cab994578f752760f57769e0196ccf6d34a7cc",
+      "destination": "integrations/labtube/upstream/services/scoring.py"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "tools/teacher/repo_check.py",
+      "source_blob_sha": "9d5644d3c4bc355b74a1d1edb7bd640c0ca3a6a1",
+      "destination": "integrations/labtube/upstream/tools/teacher/repo_check.py"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "tools/teacher/form_to_answers.py",
+      "source_blob_sha": "4e531d23beefc0205a19967e274bf80446579366",
+      "destination": "integrations/labtube/upstream/tools/teacher/form_to_answers.py"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "tools/teacher/schedule_repo_check.ps1",
+      "source_blob_sha": "c138e2903c9a41359bfa65584927cea8fc66c416",
+      "destination": "integrations/labtube/upstream/tools/teacher/schedule_repo_check.ps1"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "tools/teacher/README.md",
+      "source_blob_sha": "894b858b55c9f18de893c596226d95c9657297c5",
+      "destination": "integrations/labtube/upstream/tools/teacher/README.md"
+    },
+    {
+      "source_repository": "ndhuccc/LabTube",
+      "source_ref": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727",
+      "source_path": "services/__init__.py",
+      "source_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "integrations/labtube/upstream/services/__init__.py"
+    },
+    {
+      "source_repository": "ndhuccc/idl-2026-fall",
+      "source_ref": "fb7e2e363836674a8160576cb33bcc98cc5ae28e",
+      "source_path": ".agents/skills/assignment-design/build_labtube_import.py",
+      "source_blob_sha": "3897edaf4982fb096d5678b7b7f7aa73e7c9a23d",
+      "destination": "profiles/idl/overrides/build_labtube_import.py"
+    }
+  ],
+  "personal_entries": [
+    {
+      "skill": "pr2026-course-assistant",
+      "preserved_source": "vendor/original-entries/pr2026-course-assistant/SOURCE.md",
+      "source_sha256": "532a9497a5037afdef143d636101ee2879f90bca98286ead1180cb28a1795009",
+      "adaptation": "Account-specific routing and private destinations replaced by current-user configuration; unavailable historical references explicitly reconstructed."
+    },
+    {
+      "skill": "review-graduate-research",
+      "preserved_source": "vendor/original-entries/review-graduate-research/SOURCE.md",
+      "source_sha256": "bc9f69b8f13bd6c24b6aa005e7400f6cdb6ef36161752287ab408383a64a17cd",
+      "adaptation": "Account-specific routing and private destinations replaced by current-user configuration; unavailable historical references explicitly reconstructed."
+    },
+    {
+      "skill": "mission-log",
+      "preserved_source": "vendor/original-entries/mission-log/SOURCE.md",
+      "source_sha256": "b8e066548ab2d9c1bd8f2c1abdc763e06e6b2d0c9ad3c761956f70d6ccf51bc4",
+      "adaptation": "Account-specific routing and private destinations replaced by current-user configuration; unavailable historical references explicitly reconstructed."
+    }
+  ]
+}

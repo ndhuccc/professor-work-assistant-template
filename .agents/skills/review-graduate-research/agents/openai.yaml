@@ -1,0 +1,4 @@
+interface:
+  display_name: "review-graduate-research"
+  short_description: "Portable original professor assistant workflow"
+  default_prompt: "Use $review-graduate-research for the requested task."

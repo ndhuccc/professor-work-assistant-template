@@ -33,7 +33,7 @@ python scripts/doctor.py
 
 能閱讀與撰寫檔案的 Agent 可使用本機來源完成盤點、講義、HTML 教材、草稿與紀錄。
 GitHub、信箱、雲端硬碟、行事曆、Notion、瀏覽器及生圖能力取決於您所使用的 Agent 與自己的授權；下載倉庫不會自動取得這些服務。
-本範本不包含簡報島專有格式的完整 schema 或 LabTube 匯入契約；指定這兩種格式時須提供該版本的規格／可用範例，再依技能驗證，不編造格式。
+本版已包含原簡報島 v3 格式規格、原課程產製／稽核工具、JPEG 漫畫插頁工具，以及 LabTube 資料契約與本機驗證器。新使用者先讀 [可攜執行說明](docs/PORTABILITY.md)，建立自己的課程工作區後使用；格式版本仍需與實際編輯器／伺服器核對。
 未提供生圖工具時只交付漫畫分鏡與提示詞，不把提示詞稱為已生成漫畫。
 參見 [能力與降級方式](docs/CAPABILITIES.md)。
 
@@ -63,4 +63,6 @@ python -m unittest discover -s tests -v
 GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)、[從範本建立倉庫](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)。
 本地檔案完成不等於 GitHub 的 Template repository 已啟用；後者需倉庫管理者設定及核實。
 
-本版本採 [MIT 授權](LICENSE)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。
+本範本自行撰寫內容採 [MIT 授權](LICENSE)，匯入來源的授權與適用範圍見 [第三方聲明](THIRD_PARTY_NOTICES.md)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。
+
+版本 0.2.0：13 組程序路由到原技能；共有 19 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。

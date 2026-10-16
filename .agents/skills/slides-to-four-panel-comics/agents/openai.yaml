@@ -1,0 +1,16 @@
+interface:
+  display_name: 簡報核心概念四格漫畫
+  short_description: 讀取簡報核心概念，繪製可愛四格漫畫並安全插入對應次頁
+  default_prompt: Use $slides-to-four-panel-comics to extract core concepts from this
+    presentation, generate a cute 16:9 2×2 comic for each, and insert each comic immediately
+    after its corresponding content page without overlaps.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
+

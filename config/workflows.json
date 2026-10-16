@@ -1,11 +1,11 @@
 {
-  "template_version": "0.1.1",
+  "template_version": "0.2.0",
   "workflows": [
     {
       "id": "W01",
-      "skill": "course-status",
+      "skill": "pr2026-course-assistant",
       "title": "課程進度盤點",
-      "path": ".agents/skills/course-status/SKILL.md",
+      "path": ".agents/skills/pr2026-course-assistant/SKILL.md",
       "example": "PR：盤點 Ch03 教材目前完成哪些 KP。",
       "capabilities": [
         "course"
@@ -13,9 +13,9 @@
     },
     {
       "id": "W02",
-      "skill": "lecture-notes",
+      "skill": "textbook-lecture-notes",
       "title": "來源轉講義",
-      "path": ".agents/skills/lecture-notes/SKILL.md",
+      "path": ".agents/skills/textbook-lecture-notes/SKILL.md",
       "example": "依這份來源製作初學者講義，一個 KP 一個 Markdown。",
       "capabilities": [
         "course"
@@ -23,9 +23,9 @@
     },
     {
       "id": "W03",
-      "skill": "teaching-slides",
-      "title": "講義轉投影片",
-      "path": ".agents/skills/teaching-slides/SKILL.md",
+      "skill": "view-from-text",
+      "title": "講義轉簡報島投影片",
+      "path": ".agents/skills/view-from-text/SKILL.md",
       "example": "把這份講義製作成可教學的 HTML 投影片。",
       "capabilities": [
         "course"
@@ -33,9 +33,9 @@
     },
     {
       "id": "W04",
-      "skill": "four-panel-comics",
+      "skill": "slides-to-four-panel-comics",
       "title": "簡報加入四格漫畫",
-      "path": ".agents/skills/four-panel-comics/SKILL.md",
+      "path": ".agents/skills/slides-to-four-panel-comics/SKILL.md",
       "example": "逐一為簡報核心概念加入 16:9 四格漫畫。",
       "capabilities": [
         "image-generation"
@@ -43,9 +43,9 @@
     },
     {
       "id": "W05",
-      "skill": "diagram-interactive",
+      "skill": "diagram-design",
       "title": "圖解與互動教材",
-      "path": ".agents/skills/diagram-interactive/SKILL.md",
+      "path": ".agents/skills/diagram-design/SKILL.md",
       "example": "用 HTML5 和 Canvas 製作可調整學習率的梯度下降教材。",
       "capabilities": [
         "browser-preview"
@@ -93,9 +93,9 @@
     },
     {
       "id": "W10",
-      "skill": "research-review",
+      "skill": "review-graduate-research",
       "title": "研究生進度與論文審查",
-      "path": ".agents/skills/research-review/SKILL.md",
+      "path": ".agents/skills/review-graduate-research/SKILL.md",
       "example": "對照教授上週建議，查核這週論文與實驗證據。",
       "capabilities": [
         "private-output"
@@ -128,6 +128,38 @@
       "capabilities": [
         "github"
       ]
+    }
+  ],
+  "aliases": [
+    {
+      "skill": "course-status",
+      "target": "pr2026-course-assistant",
+      "path": ".agents/skills/course-status/SKILL.md"
+    },
+    {
+      "skill": "lecture-notes",
+      "target": "textbook-lecture-notes",
+      "path": ".agents/skills/lecture-notes/SKILL.md"
+    },
+    {
+      "skill": "teaching-slides",
+      "target": "view-from-text",
+      "path": ".agents/skills/teaching-slides/SKILL.md"
+    },
+    {
+      "skill": "four-panel-comics",
+      "target": "slides-to-four-panel-comics",
+      "path": ".agents/skills/four-panel-comics/SKILL.md"
+    },
+    {
+      "skill": "diagram-interactive",
+      "target": "diagram-design",
+      "path": ".agents/skills/diagram-interactive/SKILL.md"
+    },
+    {
+      "skill": "research-review",
+      "target": "review-graduate-research",
+      "path": ".agents/skills/research-review/SKILL.md"
     }
   ]
 }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "pr2026-course-assistant"
+  short_description: "Portable original professor assistant workflow"
+  default_prompt: "Use $pr2026-course-assistant for the requested task."

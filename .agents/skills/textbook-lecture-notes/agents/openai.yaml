@@ -1,0 +1,4 @@
+interface:
+  display_name: "textbook-lecture-notes"
+  short_description: "Portable original professor assistant workflow"
+  default_prompt: "Use $textbook-lecture-notes for the requested task."

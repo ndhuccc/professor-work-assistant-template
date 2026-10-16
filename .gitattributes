@@ -4,3 +4,10 @@
 *.py text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+
+# Preserve upstream bytes for the pinned-source integrity manifest.
+.agents/skills/** -text
+course-support/** -text
+integrations/labtube/upstream/** -text
+profiles/idl/overrides/** -text
+vendor/original-entries/** -text

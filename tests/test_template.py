@@ -49,9 +49,23 @@ class TemplateTests(unittest.TestCase):
         self.assertEqual(cfg.read_bytes(), before)
 
     def test_missing_skill_is_rejected(self):
-        (self.root / ".agents/skills/lecture-notes/SKILL.md").unlink()
+        (self.root / ".agents/skills/textbook-lecture-notes/SKILL.md").unlink()
         errors, _ = doctor.audit(self.root, template=True)
         self.assertTrue(any("Missing skill" in e for e in errors))
+
+    def test_modified_original_asset_is_rejected(self):
+        path=self.root / '.agents/skills/assignment-design/build_labtube_import.py'
+        path.write_bytes(path.read_bytes()+b'\n# unrecorded edit\n')
+        errors,_=doctor.audit(self.root,template=True)
+        self.assertTrue(any('Upstream byte mismatch' in e for e in errors))
+
+    def test_alias_target_must_exist(self):
+        path=self.root/'config/workflows.json'
+        data=json.loads(path.read_text(encoding='utf-8'))
+        data['aliases'][0]['target']='not-installed'
+        path.write_text(json.dumps(data),encoding='utf-8')
+        errors,_=doctor.audit(self.root,template=True)
+        self.assertTrue(any('Invalid compatibility alias' in e for e in errors))
 
     def test_broken_relative_link_is_rejected(self):
         path = self.root / "README.md"

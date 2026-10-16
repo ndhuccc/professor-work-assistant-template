@@ -1,0 +1,9 @@
+# 講義製作工具(textbook-lecture-notes 技能使用)
+# 不屬於課程基本環境與 CI,按需安裝:pip install -r requirements-lecture.txt
+# 公式圖片另需:python -m playwright install chromium
+
+pypdf>=4.0          # 擷取教科書 PDF 文字
+playwright>=1.45    # KaTeX 公式 → PNG(render_formula.py)
+matplotlib>=3.8     # 幾何、函數、統計圖
+numpy>=1.26
+pillow>=10.0        # 簡報預覽縮圖(view-from-text 的 preview_deck.py --sheets)

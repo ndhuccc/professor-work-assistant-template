@@ -25,5 +25,14 @@
   "logging": {
     "backend": "local",
     "external_destination": ""
+  },
+  "research": {
+    "roster_path": "",
+    "criteria_path": "",
+    "prior_reviews_path": ""
+  },
+  "labtube": {
+    "base_url": "",
+    "course_mappings": []
   }
 }

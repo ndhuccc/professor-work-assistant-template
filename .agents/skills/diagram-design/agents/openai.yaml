@@ -1,0 +1,4 @@
+interface:
+  display_name: "diagram-design"
+  short_description: "Portable original professor assistant workflow"
+  default_prompt: "Use $diagram-design for the requested task."

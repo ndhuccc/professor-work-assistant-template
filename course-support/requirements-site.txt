@@ -1,0 +1,4 @@
+# 課程網站建置(GitHub Actions 使用)
+mkdocs>=1.6,<2  # MkDocs 2.0 不相容 Material 主題,先鎖在 1.x
+mkdocs-material>=9.5
+pymdown-extensions>=10.0

@@ -1,21 +1,11 @@
 ---
 name: lecture-notes
-description: "Portable workflow for 來源轉講義. Use when the user requests 依這份來源製作初學者講義，一個 KP 一個 Markdown。"
+description: "Compatibility alias for textbook-lecture-notes; use for existing lecture-notes invocations."
 ---
 
-# 來源轉 Markdown 講義
+# lecture-notes 相容入口
 
-## 輸入
-PDF、網頁、文字或筆記；學習者程度、範圍及輸出粒度。從當次指令取得；無法判斷的程度先提出假設，必要時只問一項。
-
-## 程序
-1. 讀 AGENTS.md 與 docs/QUALITY.md。讀完指定範圍，確認頁數／段落與文字擷取品質；掃描 PDF 無可讀文字時使用可用 OCR，否則請求可讀來源並標示未覆蓋頁。
-2. 建立來源盤點：定義、前提、符號、公式、推導、例子、圖表與練習；每項有來源定位。
-3. 規劃學習程度、先備知識、知識地圖、因果鏈與 KP 清單；複雜批次先供審閱，已有明確核准則繼續。
-4. 每個 KP 依「問題與動機 → 直覺例子 → 定義符號 → 分步推導 → 數值例子 → 常見誤解 → 自我檢查」撰寫。先用白話再介紹中英術語；不可用比喻取代必要假設。
-5. 以 Markdown 為來源主檔，LaTeX 公式正確；一個 KP 一檔。補充例子標示為補充，來源中的推導不可無聲省略。
-6. 實算數值、核對維度與前提，驗證所有圖片相對連結，產出來源覆蓋表與驗證報告。
-
-## 輸出與驗收
-`kpNN-lecture.md`、覆蓋表、來源紀錄、驗證報告。檢查內容完整、定義可追蹤、圖片存在、數學一致。
-無來源或未完成閱讀不能以猜測補齊；跨 KP 概念用連結指回定義，避免無解釋術語。
+完整讀取 [原始技能](../textbook-lecture-notes/SKILL.md)，依其全部流程及相依資源執行，不以本入口取代原規範。
+先讀根目錄 AGENTS.md 與 docs/PORTABILITY.md，確認 course_root、來源及私人輸出位置。
+舊名稱保留供相容；正式回報使用實際執行的原技能名稱。
+使用者明確要求 HTML、互動網頁或其他格式時，先核對實際格式工具及使用者指定規格；不得假稱 JBD 工具能處理任意格式。

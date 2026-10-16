@@ -1,20 +1,11 @@
 ---
 name: diagram-interactive
-description: "Portable workflow for 圖解與互動教材. Use when the user requests 用 HTML5 和 Canvas 製作可調整學習率的梯度下降教材。"
+description: "Compatibility alias for diagram-design; use for existing diagram-interactive invocations."
 ---
 
-# 圖解與 HTML5 互動教材
+# diagram-interactive 相容入口
 
-## 輸入
-要解釋的概念、來源、讀者程度，以及要讓讀者觀察的因果關係。
-
-## 程序
-1. 讀 AGENTS.md、docs/QUALITY.md。把觀念拆為可獨立理解的單元；先釐清圖要回答的問題及必要假設。
-2. 精確數據／公式用 SVG、Canvas 或標準繪圖工具；拓樸與時序可用適量 Mermaid；不使用生成圖片承載必須精確的數據圖。
-3. 互動需求採 HTML5、CSS、原生 JS，提供有意義的參數、即時結果、重設與簡明說明。每項控制說明它改變什麼，預設值可重現。
-4. 分開計算模型與繪圖，使用同一份計算結果驅動數字與圖形。數值例子自行驗算，處理極端值、零值及不合法輸入。
-5. 保留足夠邊距、固定圖例與清楚箭頭；顏色之外也用標籤區分。Canvas 在尺寸／DPR 改變後重新量測與繪製。
-6. 依品質規範驗證公式、縮放、按鈕及狀態；沒有瀏覽器就只回報靜態檢查，不能假稱已操作。
-
-## 輸出與驗收
-可開啟 HTML／SVG 或圖片、來源說明、操作示例、驗證報告。網站對外部署另走 W13；本流程不自動託管。
+完整讀取 [原始技能](../diagram-design/SKILL.md)，依其全部流程及相依資源執行，不以本入口取代原規範。
+先讀根目錄 AGENTS.md 與 docs/PORTABILITY.md，確認 course_root、來源及私人輸出位置。
+舊名稱保留供相容；正式回報使用實際執行的原技能名稱。
+使用者明確要求 HTML、互動網頁或其他格式時，先核對實際格式工具及使用者指定規格；不得假稱 JBD 工具能處理任意格式。

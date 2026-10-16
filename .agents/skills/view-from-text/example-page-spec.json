@@ -1,0 +1,31 @@
+{
+  "label": "Example page",
+  "nodes": [
+    {
+      "id": "example-title",
+      "type": "text",
+      "name": "Title",
+      "sceneId": "placeholder",
+      "transform": { "x": 100, "y": 60, "scaleX": 1, "scaleY": 1, "rotation": 0 },
+      "width": 1080,
+      "height": 90,
+      "zIndex": 1,
+      "locked": false,
+      "style": { "fill": "transparent", "stroke": "transparent", "textColor": "#f5f1e9", "fontSize": 48, "radius": 0, "fontWeight": 700 },
+      "text": "**Example title**"
+    },
+    {
+      "id": "example-body",
+      "type": "text",
+      "name": "Body",
+      "sceneId": "placeholder",
+      "transform": { "x": 100, "y": 170, "scaleX": 1, "scaleY": 1, "rotation": 0 },
+      "width": 1080,
+      "height": 200,
+      "zIndex": 1,
+      "locked": false,
+      "style": { "fill": "transparent", "stroke": "transparent", "textColor": "#b7b0a5", "fontSize": 22, "radius": 0 },
+      "text": "This is a minimal, valid page spec — paste this whole file into JianBauDau's \"Import Scene\" dialog (Scene mode → right-click → Import Scene) to try it."
+    }
+  ]
+}

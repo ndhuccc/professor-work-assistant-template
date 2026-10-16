@@ -1,0 +1,4 @@
+interface:
+  display_name: "view-from-text"
+  short_description: "Portable original professor assistant workflow"
+  default_prompt: "Use $view-from-text for the requested task."

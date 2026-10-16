@@ -1,0 +1,10 @@
+# 課程基本環境(CI 與一般作業使用,體積小)
+numpy>=1.26
+matplotlib>=3.8
+pytest>=8.0
+
+# Notebook 執行與驗證
+jupyter>=1.0
+nbconvert>=7.0
+nbformat>=5.9
+ipykernel>=6.0

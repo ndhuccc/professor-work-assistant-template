@@ -21,6 +21,17 @@ python scripts/doctor.py
 5. 在本機設定填入您自己的課程與輸出位置，然後用自然語言交辦。
 課程設定範例在 [設定說明](docs/SETUP.md)，所有工作入口在 [流程索引](docs/WORKFLOWS.md)。
 
+## 建立新課程
+
+正式課程與本範本使用各自獨立的 Git 倉庫，請選本專案之外、也不在其他 Git 工作樹內的新目錄。從本範本根目錄執行，例如同層的 `YOUR-COURSE`：
+
+```sh
+python scripts/create_course.py --id YOUR-COURSE --name "課程名稱" --destination ../YOUR-COURSE
+```
+
+接著切到回傳的課程目錄，請 Agent 依其 `GITHUB_SETUP.md` 逐步協助本機建置、Git 初始提交、建立空白 GitHub Repo、推送與查核 Actions。新課附推送時的 **Course checks** 及需另行設定、手動啟動的 Pages 部署流程；建立檔案不代表已建立遠端或網站。
+完整步驟見 [獨立課程建立指南](docs/NEW-COURSE.md)。只有明確 `--demo` 的合成試跑才預設放入 `workspace/courses/`，不作正式課程 Repo。
+
 ## 可以如何交辦
 
 - 「先列出目前可執行的工作程序，以及需要額外工具的部分。」

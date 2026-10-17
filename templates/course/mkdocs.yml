@@ -1,0 +1,17 @@
+site_name: @@SITE_NAME@@
+site_url: @@SITE_URL@@
+docs_dir: .site_src
+site_dir: site
+theme:
+  name: material
+  language: zh-TW
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

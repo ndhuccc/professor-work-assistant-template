@@ -6,7 +6,7 @@
       "skill": "pr2026-course-assistant",
       "title": "課程進度盤點",
       "path": ".agents/skills/pr2026-course-assistant/SKILL.md",
-      "example": "PR：盤點 Ch03 教材目前完成哪些 KP。",
+      "example": "為指定課程盤點進度，或在本專案外建立獨立課程目錄並逐步設定 GitHub Repo 與 Actions。",
       "capabilities": [
         "course"
       ],

@@ -9,7 +9,7 @@ description: "Route course work to the original lecture, JianBauDau, diagram, as
 
 1. 先讀根目錄 AGENTS.md、config/project.local.json、config/workflows.json、docs/PORTABILITY.md。選擇當次明確指定的課程；有歧義只問課程，不預設 PR、IDL 或任何學號前綴。
 2. 對既有課程讀取該課最新 AGENTS.md、COURSE_STATE.md、schedule.md、syllabus.md，記錄 branch／commit。重新發現該課 .agents/skills，不把範本快照當成目前進度。
-3. 沒有課程工作副本時，可先做來源盤點。使用者要開始新課程時執行 `python scripts/create_course.py --id DEMO --name 示範課程`，建立忽略追蹤的完整課程工作區，再以回傳的 course_root 執行工具。不要在範本本身寫入正式課程資料。
+3. 沒有課程工作副本時，可先做來源盤點。正式新課先讀 docs/NEW-COURSE.md，引導選本專案及其他 Git 工作樹外的新目錄，以 `python scripts/create_course.py --id YOUR-COURSE --name "課程名稱" --destination ../YOUR-COURSE` 建立。切到回傳的 course_root，依其 GITHUB_SETUP.md 逐步引導建置、獨立 Git、空白 GitHub Repo、推送與相同 commit 的 Actions；Pages 另行設定及核准，各階段如實記錄。--demo 僅供本專案內合成試跑，不可用來建立正式課程 Repo；不覆寫或搬動舊工作區。
 4. 原始技能中的「Repo 根目錄」一律指所選 course_root，並讀取該工作區內的技能／相依規格。授權讀取既有遠端不等於已取得可執行的本機工作副本。
 5. 依程序載入原始技能：講義用 textbook-lecture-notes；簡報島用 view-from-text；圖解用 diagram-design；作業用 assignment-design；作業初評用 assignment-grading；三題理解測驗用 assignment-quiz；四格漫畫用 slides-to-four-panel-comics。
 6. 教材先決定程度、章級／KP 級知識地圖、因果鏈、來源盤點與批次規劃。原技能要求先審閱規劃時照做；當次已明確核准或指示直接做時不重問。沒有使用者明確同意不派子代理。

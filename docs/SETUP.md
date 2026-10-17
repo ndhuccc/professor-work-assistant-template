@@ -22,6 +22,8 @@
 分支需依實際倉庫設定，不確定時先查核，不能將 main 當成已核實結果。
 不同課程各自記錄狀態、時程、規範與版本。新增課程不需要改寫技能。
 
+正式新課的 `local_root` 必須是本專案及其他 Git 工作樹外的獨立目錄；建議與 professor-assistent 同層。使用 `create_course.py --destination` 建立後，依 [新課指南](NEW-COURSE.md) 及課程內的 GITHUB_SETUP.md 逐步設定 GitHub 與 Actions，再把實際路徑、owner/repo、分支寫回本機設定。`workspace/courses/` 只用於明確 `--demo` 的合成試跑，不能當成正式課程 Repo。
+
 `outputs.public_dir` 代表「可供公開審閱的草稿目錄」，不代表已公開或已授權發布。
 `outputs.private_dir` 需填入使用者明確指定、位於所有已知 Git 工作樹以外的私人目錄，才可儲存評語、成績、推薦資料與學生測驗。
 workspace/private 只是初始化占位目錄，不是合格的評閱目的地。檢查工具只能協助查核，無法替代使用者指定位置或確認雲端同步權限。

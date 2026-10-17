@@ -21,7 +21,8 @@
 ## 原始技能與課程工作根目錄（0.4.0）
 
 - 本版已內附原課程七項技能與完整支援資源。課程工作先讀 `.agents/skills/pr2026-course-assistant/SKILL.md` 與 [可攜執行說明](docs/PORTABILITY.md)，再選取原技能；六個舊通用名稱僅保留為相容入口。
-- 原技能所說的「Repo 根目錄」指當次選定的 **course_root**，不是永遠指本範本。既有課程使用自己的最新規範；新課程可執行 `python scripts/create_course.py --id DEMO --name 示範課程 --demo` 建立完整的本機示範工作區。
+- 原技能所說的「Repo 根目錄」指當次選定的 **course_root**，不是永遠指本範本。既有課程使用自己的最新規範。正式新課先讀 [獨立課程建立指南](docs/NEW-COURSE.md)，引導使用者選擇本專案及其他 Git 工作樹之外的新目錄，以 `create_course.py --destination` 建立；禁止把正式課程放進本專案的 workspace 或用 `--demo` 繞過限制。
+- 新課建立後切到實際 course_root，依附帶的 GITHUB_SETUP.md 逐步引導本機建置、Git 初始化、空白 GitHub Repo、推送、相同 commit 的 Actions 及選用 Pages。各階段分別核實，建立器不會自動初始化 Git 或建立遠端；具體外部操作仍依當次授權。`--demo` 僅供本專案內合成試跑，不作正式 Repo。
 - 執行原課程工具前先確認工作根目錄；不要把試算資料、正式學生資料或課程進度混入範本。原作者課號、配分、日期與網址不能當成新使用者設定。
 - 講義使用 `textbook-lecture-notes`；簡報島使用 `view-from-text`，其 v3 規格、產製工具、稽核器與圖形工具均已內附；漫畫使用 `slides-to-four-panel-comics`，含 JPEG 插頁程式。不能改用簡化流程略過原技能的正文與驗收。
 - 原始入口與逐檔來源在 `vendor/original-entries/` 及 `config/source-bundle.json`。執行 `python scripts/verify_bundle.py` 查核來源完整性；這不代表已生圖、已目視或已通過原生播放器驗證。

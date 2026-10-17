@@ -6,8 +6,8 @@
 ## 第一次執行
 
 1. 讀 AGENTS.md，執行 `python scripts/bootstrap.py`。
-2. 執行 `python scripts/create_course.py --id DEMO --name 示範課程`。預設建立 workspace/courses/DEMO，複製完整七項技能與共用資源、原檢查工具、格式規格、需求檔及合成示例；不含原作者課程進度、學生名冊或正式作業。
-3. 在回傳的 course_root 內執行工具。建立後可把該路徑加入 config/project.local.json 的 courses 設定；Agent 也可直接使用本次輸出的明確目錄，不需修改全域設定。
+2. 正式課程先依 [獨立課程建立指南](NEW-COURSE.md) 選擇本專案及其他 Git 工作樹外的新目錄，執行 `python scripts/create_course.py --id YOUR-COURSE --name "課程名稱" --destination ../YOUR-COURSE`。複製完整七項技能、共用資源、檢查工具、格式規格、需求檔及可建置的網站骨架；不帶入原作者課程進度、學生名冊或正式作業。只有明確加 `--demo` 的合成試跑才預設建立 workspace/courses/DEMO，不附發布 workflow，也不作正式 Repo。
+3. 在回傳的 course_root 內執行工具，依其 GITHUB_SETUP.md 逐步建置、初始化獨立 Git、建立空白 GitHub Repo、推送並查核同一 commit 的 Actions；Pages 另行設定與核准。把已核實路徑加入 config/project.local.json 的 courses 設定，保留其他課程。建立器不初始化 Git、不建立遠端或變更全域設定。
 4. 貼上文本可先執行純文字盤點；PDF、圖像、公式預覽依需求安裝 `python -m pip install -r requirements-lecture.txt`。安裝屬環境修改，先依使用者授權執行。
 5. 原始投影片格式與所有稽核器已隨附。圖像生成與原生簡報島播放器仍由下載者自己的環境提供，缺少時誠實列未執行。
 

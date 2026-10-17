@@ -1,6 +1,7 @@
 # 課程工作區 Agent 規範
 
 這是由教授助理範本產生的課程工作副本。原始技能中的 Repo 根目錄指本目錄。
+正式課程應位於教授助理範本及其他 Git 工作樹之外，獨立管理版本。若有 GITHUB_SETUP.md，初次使用先逐步引導本機建置、Git 初始化、空白 GitHub Repo、推送及 Actions；Pages 另行核准。若 course.json 的 synthetic_demo 為 true，本目錄僅為合成試跑，不在此建立正式課程 Repo。
 先讀 COURSE_STATE.md、schedule.md、syllabus.md、course.json 及 .agents/skills 中本次技能的完整文件。
 個人設定、正式期限、評分與對學生操作以當前教師核准為準；原來源文件的課號、日期、名稱、權重與網址是來源脈絡，不能默認套用。
 預設一個 KP 一份 Markdown 講義、一份真正 JBD v3 簡報；命名可用 lecNN-kpNN-主題，維持來源對照。

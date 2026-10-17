@@ -21,15 +21,17 @@
 ## 執行程序
 
 1. 讀本機設定（若有），確認目前課程與 `course_root`。對既有課程讀其最新 AGENTS、COURSE_STATE、schedule、syllabus 與技能，不以範本舊快照當作該課現況。
-2. 新課分支先讀 [設定說明](../docs/SETUP.md)，從範本根目錄執行必要初始化：
+2. 新課分支先讀 [設定說明](../docs/SETUP.md) 及 [獨立課程建立指南](../docs/NEW-COURSE.md)。引導使用者選本專案及其他 Git 工作樹之外的新目錄；建議與本專案同層，已有明確選擇就沿用。從範本根目錄執行：
 
    ```sh
    python scripts/bootstrap.py
    python scripts/doctor.py
-   python scripts/create_course.py --id YOUR-COURSE --name YourCourse
+   python scripts/create_course.py --id YOUR-COURSE --name "課程名稱" --destination ../YOUR-COURSE
    ```
 
-   讀回實際 course_root；目錄已存在就保留並改新目的地，不覆寫。建立的示範講義、example.invalid 網址與待設定規準均需標記；正式日期與評分尚未配置，工具不會建立 GitHub Repo。`--demo` 只用於合成試跑。
+   讀回實際 course_root；目錄已存在就保留並改新目的地，不覆寫。正式課程必填 --destination，範本內及其他 Git 工作樹內的路徑會被拒絕。正式日期、評分、授權及 example.invalid 網址仍待設定；工具不初始化 Git、不建立遠端。只有明確 --demo 的合成試跑才可放 workspace/courses/，不得藉此繞過正式課程限制。
+
+   接著切到新課程目錄，讀取其 GITHUB_SETUP.md，結合 W13 逐步引導：本機建置與審閱 → 獨立 Git 與初始提交 → 空白 GitHub Repo → 遠端及推送 → 同一 commit 的 Course checks → 選用 Pages。新骨架內含可建置的網站、推送檢查與手動部署 workflow。每階段讀回驗證再繼續；缺資訊只問當前步驟所需項目，缺外部授權先完成本機成果，不自行發布。最後把已核實路徑與遠端寫回本機設定。
 3. 盤點分支建立「單元／KP → 來源 → 講義 → 簡報 → 圖資 → 衍生版 → 稽核 → 發布」清單。依實際檔案、圖連結、測試紀錄與遠端版本判斷狀態，不只依 COURSE_STATE 的自述。
 4. 分別標示未開始、草稿、待補圖、待審、檢查通過、目視待驗、已提交、已部署及阻礙。檔案存在不代表已驗收；遠端 commit 存在不代表網站已更新。
 5. 修改時程／課綱／公告時，先找正式日期來源、假日、作業與考試依賴，列出受影響的項目、時區與學生可見內容。缺正式決定只產生草稿，不代訂期限、分組或配分。
@@ -46,7 +48,7 @@
 ## 輸出與驗收
 
 - 課程／分支／版本及查核時間明確，所有要求的單元／KP 均列狀態與證據。
-- 新課工作區位置可讀、七項原課程技能及支援資源完整；正式政策缺項清楚，無原作者帳號／日期預設。
+- 正式新課位於範本與其他 Git 工作樹外，七項原技能、支援資源、網站骨架、GITHUB_SETUP.md 與 Actions workflow 完整；示範模式明確區分。Git、遠端、Actions、Pages 及目視各自有狀態與證據，無原作者帳號／日期預設。
 - 課務草稿前後差異、影響清單及必要決策完整；已更新來源與課程狀態互相一致。
 - 發布與封存狀態有對應讀回證據；本次未建置、未目視或未部署的項目明列。
 

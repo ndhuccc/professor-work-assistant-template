@@ -24,6 +24,9 @@ REQUIRED = (
     "workflows/onlinequiz-question-bank.md", "integrations/onlinequiz/README.md",
     "docs/ONLINEQUIZ-INTEGRATION.md",
     "scripts/read_workflow.py",
+    "docs/NEW-COURSE.md", "templates/course/GITHUB_SETUP.md",
+    "templates/course/mkdocs.yml", "templates/course/workflows/check-course.yml",
+    "templates/course/workflows/deploy-site.yml",
 )
 ALLOWED_INTEGRATIONS = {"available", "unavailable", "unverified"}
 

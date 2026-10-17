@@ -43,7 +43,9 @@ GitHub、信箱、雲端硬碟、行事曆、Notion、瀏覽器及生圖能力�
 |---|---|
 | [AGENTS.md](AGENTS.md) | Agent 啟動、路由、共同規範 |
 | [docs/WORKFLOWS.md](docs/WORKFLOWS.md) | 人可閱讀的 14 項程序 |
-| [config/workflows.json](config/workflows.json) | Agent／腳本可讀取的流程清單 |
+| [config/workflows.json](config/workflows.json) | 程序、workflow_path 與原技能的機器可讀路由 |
+| [workflows/](workflows/) | 七份端到端流程，涵蓋 W01–W14 的輸入、分支、確認與驗收 |
+| [scripts/read_workflow.py](scripts/read_workflow.py) | 依程序 ID／技能名／別名讀入完整流程及原主技能 |
 | `.agents/skills/*/SKILL.md` | 每項任務的輸入、步驟、輸出與驗收 |
 | [docs/QUALITY.md](docs/QUALITY.md) | 來源、公式、版面與互動稽核 |
 | [docs/PUBLISHING.md](docs/PUBLISHING.md) | 建立 GitHub 範本及發布前確認 |
@@ -65,7 +67,7 @@ GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositori
 
 本範本自行撰寫內容採 [MIT 授權](LICENSE)，匯入來源的授權與適用範圍見 [第三方聲明](THIRD_PARTY_NOTICES.md)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。
 
-版本 0.3.1：14 組程序路由到原技能；共有 20 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
+版本 0.4.0：14 組程序路由到原技能；共有 20 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
 
 ## OnlineQuiz 命題（W14）
 
@@ -76,3 +78,14 @@ GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositori
 首次使用先讀 [OnlineQuiz 整合說明](integrations/onlinequiz/README.md)。正式匯入需自己的教師站台與具體核准；GitHub Repo 是程式來源，不是線上題庫資料庫。版本範圍與驗證結果見 [整合報告](docs/ONLINEQUIZ-INTEGRATION.md)。
 
 0.3.1 已同步 OnlineQuiz 計分修正與 60 秒預設：未作答 0 分，單選全對才得滿分，多選保留部分給分；詳整合說明。
+
+## 0.4.0 完整流程入口
+
+六份新增程序連同既有 OnlineQuiz，形成七份端到端文件；W01–W14 每項都有 workflow_path，別名也走正式程序。對 Agent 說「請依 W02 程序，讀入完整流程與原技能後開始規劃」，或在範本根目錄執行：
+
+```sh
+python scripts/read_workflow.py W02
+python scripts/read_workflow.py lecture-notes --json
+```
+
+這會輸出兩份完整文件，供 Agent 實際閱讀，並不執行命題、評分或外部操作。所有流程連結及角色分工見 [工作程序索引](docs/WORKFLOWS.md)，本版完整性驗證見 [流程補齊紀錄](docs/WORKFLOW-COMPLETENESS.md)。

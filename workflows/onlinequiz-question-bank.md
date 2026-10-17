@@ -1,6 +1,8 @@
 # OnlineQuiz 命題與題庫匯入程序
 
-範本整合版：0.3.1；來源增補包：1.0；查核：2026-10-17，Asia/Taipei。
+主要程序：W14；主技能：[bloom-exam-designer](../.agents/skills/bloom-exam-designer/SKILL.md)。紀錄與發布另依 [W12／W13](repo-maintenance.md)，不將加入流程視為正式題庫匯入授權。
+
+範本整合版：0.4.0；來源增補包：1.0；查核：2026-10-17，Asia/Taipei。
 所有 scripts/ 指令均從本範本根目錄執行；產出寫到使用者核准、Git 工作樹以外的教師私人目錄。
 範圍：教授工作助理的一般課堂測驗。若指定 PR／IDL，另讀該課最新規範；不混用學生個人化三題簡答的 assignment-quiz 程序。
 

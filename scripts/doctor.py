@@ -23,6 +23,7 @@ REQUIRED = (
     "scripts/prepare_onlinequiz_bank.py", "scripts/validate_onlinequiz_bank.py",
     "workflows/onlinequiz-question-bank.md", "integrations/onlinequiz/README.md",
     "docs/ONLINEQUIZ-INTEGRATION.md",
+    "scripts/read_workflow.py",
 )
 ALLOWED_INTEGRATIONS = {"available", "unavailable", "unverified"}
 
@@ -103,6 +104,37 @@ def markdown_links(text: str) -> list[str]:
     return re.findall(r"!?\[[^\]\n]*\]\(([^\s)]+)\)", clean)
 
 
+def workflow_errors(root: Path, entries: list, index_text: str) -> list[str]:
+    """Check every route's process document, primary skill and catalog link."""
+    root = Path(root).resolve()
+    errors, registered = [], set()
+    index_links = set(markdown_links(index_text))
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue  # The manifest validator reports malformed entries.
+        wid, slug, rel = entry.get('id'), entry.get('skill'), entry.get('workflow_path')
+        if not isinstance(rel, str) or not re.fullmatch(r'workflows/[a-z0-9]+(?:-[a-z0-9]+)*\.md', rel):
+            errors.append(f'Invalid workflow path: {wid}: {rel}')
+            continue
+        registered.add(rel)
+        target = root / rel
+        if not target.is_file() or target.is_symlink() or not target.resolve().is_relative_to(root / 'workflows'):
+            errors.append(f'Missing or unsafe workflow document: {wid}: {rel}')
+            continue
+        body = target.read_text(encoding='utf-8')
+        if not isinstance(wid, str) or not re.search(r'(?<![A-Z0-9])' + re.escape(wid) + r'(?![A-Z0-9])', body):
+            errors.append(f'Workflow document lacks route id: {wid}: {rel}')
+        expected = f'../.agents/skills/{slug}/SKILL.md'
+        if expected not in markdown_links(body):
+            errors.append(f'Workflow document lacks primary skill link: {wid}: {rel}')
+        if '../' + rel not in index_links:
+            errors.append(f'Workflow catalog lacks document link: {wid}: {rel}')
+    actual = {p.relative_to(root).as_posix() for p in (root / 'workflows').glob('*.md') if p.is_file()}
+    for path in sorted(actual - registered):
+        errors.append('Unindexed workflow document: ' + path)
+    return errors
+
+
 def audit(root: Path, template: bool = False) -> tuple[list[str], list[str]]:
     root = root.resolve()
     errors, warnings = [], []
@@ -163,6 +195,7 @@ def audit(root: Path, template: bool = False) -> tuple[list[str], list[str]]:
             errors.append(f"Workflow index out of sync: {wid}")
         if not (target.parent / "agents/openai.yaml").is_file():
             errors.append(f"Missing agent UI metadata: {slug}")
+    errors.extend(workflow_errors(root, entries, index_text))
     for alias in manifest.get("aliases", []):
         slug, target, rel = alias.get("skill"), alias.get("target"), alias.get("path")
         expected = f".agents/skills/{slug}/SKILL.md"

@@ -8,11 +8,17 @@
 1. 讀取 [使用說明](README.md)、[流程索引](docs/WORKFLOWS.md) 與 [能力表](docs/CAPABILITIES.md)。
 2. 若 `config/project.local.json` 存在，讀取目前使用者的設定；否則可執行 `python scripts/bootstrap.py`，只建立本機設定及忽略追蹤的工作目錄。不要自動連線、安裝套件或發布。
 3. 執行 `python scripts/doctor.py`；無法執行時，人工檢查相同項目並標示未執行。
-4. 依 [機器可讀索引](config/workflows.json) 選取技能，完整讀取對應 `SKILL.md` 及它要求的參考文件。
+4. 依 [機器可讀索引](config/workflows.json) 選取 W01–W14；別名先解析到正式程序。從範本根目錄執行 `python scripts/read_workflow.py W02`（換成當次 ID／技能名／別名），實際讀入 `workflow_path` 的完整流程，再讀 `path` 的原主技能與所需參考。工具只讀檔、不執行工作；不能只看檔名或摘要就跳過流程。無 Python 時手動按此順序完整讀檔並標示工具未執行。
 5. 課程工作先選定課程。從設定、當次明確指令或本對話有效選擇判定；有歧義時只問要處理哪門課。不可預設 PR 或 IDL，也不可混用不同課程的截止日、學生、模板及進度。
 6. 確認來源與輸出目的地。來源已有答案就先讀取，不重問使用者。先完成可獨立進行的工作，只詢問會影響結果的缺項。
 
-## 原始技能與課程工作根目錄（0.3.1）
+## 流程載入與完成條件
+
+- 每項 W01–W14 必須有 workflow_path；流程可能共用，但都要列自己的編號並直接連結原主技能。讀入後依當次分支載入需要的其他技能，不自動執行整份文件的全部動作。
+- reader 輸出完整流程與主技能後，依流程核對輸入、步驟、確認節點、產物、驗收及失敗交接；原技能的專業規格仍需遵守。選定範圍及讀入文件路徑記在任務紀錄／交付摘要。
+- 新增程序須同步本入口、config/workflows.json、docs/WORKFLOWS.md、workflow 文件及適用測試。doctor 會拒絕缺路徑、文件遺失、編號／主技能連結缺漏、索引缺連結及未索引流程。
+
+## 原始技能與課程工作根目錄（0.4.0）
 
 - 本版已內附原課程七項技能與完整支援資源。課程工作先讀 `.agents/skills/pr2026-course-assistant/SKILL.md` 與 [可攜執行說明](docs/PORTABILITY.md)，再選取原技能；六個舊通用名稱僅保留為相容入口。
 - 原技能所說的「Repo 根目錄」指當次選定的 **course_root**，不是永遠指本範本。既有課程使用自己的最新規範；新課程可執行 `python scripts/create_course.py --id DEMO --name 示範課程 --demo` 建立完整的本機示範工作區。

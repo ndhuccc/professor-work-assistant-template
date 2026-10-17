@@ -1,5 +1,5 @@
 {
-  "template_version": "0.3.1",
+  "template_version": "0.4.0",
   "workflows": [
     {
       "id": "W01",
@@ -9,7 +9,8 @@
       "example": "PR：盤點 Ch03 教材目前完成哪些 KP。",
       "capabilities": [
         "course"
-      ]
+      ],
+      "workflow_path": "workflows/course-management.md"
     },
     {
       "id": "W02",
@@ -19,7 +20,8 @@
       "example": "依這份來源製作初學者講義，一個 KP 一個 Markdown。",
       "capabilities": [
         "course"
-      ]
+      ],
+      "workflow_path": "workflows/course-materials.md"
     },
     {
       "id": "W03",
@@ -29,7 +31,8 @@
       "example": "把這份講義製作成可教學的 HTML 投影片。",
       "capabilities": [
         "course"
-      ]
+      ],
+      "workflow_path": "workflows/course-materials.md"
     },
     {
       "id": "W04",
@@ -39,7 +42,8 @@
       "example": "逐一為簡報核心概念加入 16:9 四格漫畫。",
       "capabilities": [
         "image-generation"
-      ]
+      ],
+      "workflow_path": "workflows/course-materials.md"
     },
     {
       "id": "W05",
@@ -49,7 +53,8 @@
       "example": "用 HTML5 和 Canvas 製作可調整學習率的梯度下降教材。",
       "capabilities": [
         "browser-preview"
-      ]
+      ],
+      "workflow_path": "workflows/course-materials.md"
     },
     {
       "id": "W06",
@@ -59,7 +64,8 @@
       "example": "把這份講義轉成自學指南與手機閱讀網頁。",
       "capabilities": [
         "browser-preview"
-      ]
+      ],
+      "workflow_path": "workflows/course-materials.md"
     },
     {
       "id": "W07",
@@ -69,7 +75,8 @@
       "example": "根據這份教材設計作業，附評分標準。",
       "capabilities": [
         "course"
-      ]
+      ],
+      "workflow_path": "workflows/assignment-labtube.md"
     },
     {
       "id": "W08",
@@ -79,7 +86,8 @@
       "example": "靜態初評指定學生 HW02 的指定繳交版本。",
       "capabilities": [
         "private-output"
-      ]
+      ],
+      "workflow_path": "workflows/assignment-labtube.md"
     },
     {
       "id": "W09",
@@ -89,7 +97,8 @@
       "example": "依這份學生作業設計三題簡答理解測驗。",
       "capabilities": [
         "private-output"
-      ]
+      ],
+      "workflow_path": "workflows/assignment-labtube.md"
     },
     {
       "id": "W10",
@@ -99,7 +108,8 @@
       "example": "對照教授上週建議，查核這週論文與實驗證據。",
       "capabilities": [
         "private-output"
-      ]
+      ],
+      "workflow_path": "workflows/research-review.md"
     },
     {
       "id": "W11",
@@ -109,7 +119,8 @@
       "example": "整理這些邀請信的截止日與待填推薦表。",
       "capabilities": [
         "connected-source"
-      ]
+      ],
+      "workflow_path": "workflows/admin-documents.md"
     },
     {
       "id": "W12",
@@ -117,7 +128,8 @@
       "title": "任務紀錄與交接",
       "path": ".agents/skills/mission-log/SKILL.md",
       "example": "整理這個任務的輸入輸出位置、狀態與下一步。",
-      "capabilities": []
+      "capabilities": [],
+      "workflow_path": "workflows/repo-maintenance.md"
     },
     {
       "id": "W13",
@@ -127,7 +139,8 @@
       "example": "準備這批教材的 GitHub 變更與發布清單，先供我審閱。",
       "capabilities": [
         "github"
-      ]
+      ],
+      "workflow_path": "workflows/repo-maintenance.md"
     },
     {
       "id": "W14",
@@ -137,7 +150,8 @@
       "example": "OnlineQuiz：根據這份教材，依 Bloom 層次設計 10 題，先提供命題藍圖與待審題庫。",
       "capabilities": [
         "private-output"
-      ]
+      ],
+      "workflow_path": "workflows/onlinequiz-question-bank.md"
     }
   ],
   "aliases": [

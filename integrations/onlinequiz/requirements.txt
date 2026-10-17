@@ -1,0 +1,2 @@
+# Optional native schema validation only. Offline preparation uses stdlib.
+pydantic>=2,<3

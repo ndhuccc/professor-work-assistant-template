@@ -34,3 +34,5 @@ IDL 的上游轉檔器只有示範課號文字不同，原版差異檔保存在 
 
 LabTube 完整資料驗證器與教師端查核工具位於 integrations/labtube；先讀其 README。
 郵件、Notion、Drive、GitHub、生圖與播放器使用目前 Agent 環境的工具，不能把可讀規範當成已連線或已完成。
+
+OnlineQuiz 的第八項原技能 bloom-exam-designer 為 W14，保留完整正文與兩份參考資料，另見 integrations/onlinequiz/README.md。create_course.py 仍複製原課程七項工具；W14 從本範本根目錄執行，不需要改動課程副本。

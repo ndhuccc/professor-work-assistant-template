@@ -11,3 +11,4 @@ course-support/** -text
 integrations/labtube/upstream/** -text
 profiles/idl/overrides/** -text
 vendor/original-entries/** -text
+integrations/onlinequiz/** -text

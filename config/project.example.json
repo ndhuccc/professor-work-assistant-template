@@ -19,7 +19,8 @@
     "drive": "unverified",
     "notion": "unverified",
     "image_generation": "unverified",
-    "browser_preview": "unverified"
+    "browser_preview": "unverified",
+    "onlinequiz": "unverified"
   },
   "external_write_policy": "confirm-concrete-change",
   "logging": {
@@ -34,5 +35,10 @@
   "labtube": {
     "base_url": "",
     "course_mappings": []
+  },
+  "onlinequiz": {
+    "base_url": "",
+    "repository": "",
+    "local_root": ""
   }
 }

@@ -12,7 +12,7 @@
 5. 課程工作先選定課程。從設定、當次明確指令或本對話有效選擇判定；有歧義時只問要處理哪門課。不可預設 PR 或 IDL，也不可混用不同課程的截止日、學生、模板及進度。
 6. 確認來源與輸出目的地。來源已有答案就先讀取，不重問使用者。先完成可獨立進行的工作，只詢問會影響結果的缺項。
 
-## 原始技能與課程工作根目錄（0.2.0）
+## 原始技能與課程工作根目錄（0.3.0）
 
 - 本版已內附原課程七項技能與完整支援資源。課程工作先讀 `.agents/skills/pr2026-course-assistant/SKILL.md` 與 [可攜執行說明](docs/PORTABILITY.md)，再選取原技能；六個舊通用名稱僅保留為相容入口。
 - 原技能所說的「Repo 根目錄」指當次選定的 **course_root**，不是永遠指本範本。既有課程使用自己的最新規範；新課程可執行 `python scripts/create_course.py --id DEMO --name 示範課程 --demo` 建立完整的本機示範工作區。
@@ -21,6 +21,11 @@
 - 原始入口與逐檔來源在 `vendor/original-entries/` 及 `config/source-bundle.json`。執行 `python scripts/verify_bundle.py` 查核來源完整性；這不代表已生圖、已目視或已通過原生播放器驗證。
 - 研究審查與紀錄使用原名稱 `review-graduate-research`、`mission-log`；私人名冊、Notion／其他紀錄目的地由當前使用者設定。原私人附件不打包；可攜版重建範圍有明確來源說明。
 - LabTube 的資料契約與教師工具已內附，使用前讀 [整合說明](integrations/labtube/README.md)。本機驗證不會登入或改動正式服務。
+
+## OnlineQuiz 命題與匯入（W14）
+
+教授說「OnlineQuiz：」「測驗命題：」，或提供主題、文本、教材檔／網址要求 Bloom 命題與匯入時，讀取 `.agents/skills/bloom-exam-designer/SKILL.md` 及 [完整工作程序](workflows/onlinequiz-question-bank.md)。原命題技能與兩份參考文件均已內附；不能只依摘要命題。
+命題、轉檔、離線驗證與實際資料庫匯入分別記錄狀態。含正解 JSON、教師版與品質報告放使用者核准且不在 Git 工作樹的私人目錄。單題計時、計分差異、學生版無答案、選項打亂與部分匯入處置依工作程序執行。正式匯入需站台、題庫版本、實際檔案 SHA 與具體核准；加入本範本不代表已授權命題或匯入。
 
 ## 共通執行契約
 

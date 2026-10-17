@@ -1,6 +1,6 @@
 # 原始技能與工作程序
 
-先讀 AGENTS.md，再讀 config/workflows.json 指定的完整技能。版本 0.2.0 保留原課程七項技能及三個個人工作入口的原名稱，並保留六個舊名稱作相容入口。
+先讀 AGENTS.md，再讀 config/workflows.json 指定的完整技能。版本 0.3.0 保留原課程七項技能及三個個人工作入口的原名稱，並保留六個舊名稱作相容入口。
 
 | 編號 | 實際技能 | 用途 |
 |---|---|---|
@@ -17,6 +17,7 @@
 | W11 | `admin-documents` | 郵件期限與行政文件 |
 | W12 | `mission-log` | 任務紀錄與交接 |
 | W13 | `repo-publish` | GitHub 同步發布與技能維護 |
+| W14 | `bloom-exam-designer` | Bloom 命題與 OnlineQuiz 題庫匯入 |
 
 原課程七項技能與全部相依資源在 .agents/skills；根目錄共用 LEVELS.md、NARRATIVE.md、INVENTORY_FORMAT.md 也保留。
 原版 skill 入口保存在 vendor/original-entries，各檔來源版本與完整性記於 config/source-bundle.json。
@@ -24,3 +25,5 @@
 教材使用 W01 → W02 → W03 → W04 → 稽核 → W13；紀錄使用 W12。W05、W06 視需要加入。
 課程維護／封存結合 W01、W11、W12、W13；考試與專題結合 W07–W09。
 外部更動必須依使用者具體授權執行及讀回；流程選取不代表已連線或已發布。
+
+W14 處理一般課堂選擇測驗；先讀 [OnlineQuiz 工作程序](../workflows/onlinequiz-question-bank.md)，呼叫內附原命題技能。W09 仍處理指定學生作業的個人化簡答理解測驗；兩者用途及匯入格式不同。

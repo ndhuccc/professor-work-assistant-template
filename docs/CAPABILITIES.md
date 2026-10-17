@@ -14,3 +14,5 @@
 範本不會替 Agent 安裝外部服務、不內含憑證，也不會自動定期執行。
 排程須由使用者明確指定來源、範圍、頻率、時區與動作，再使用當前環境的排程功能；沒有該能力時如實回報。
 `doctor.py` 的 PASS 是本機結構驗證；外部能力標記仍需實測。不要以 CLI 已安裝推論帳號已登入或可推送。
+
+OnlineQuiz W14：Bloom 技能與 prepare_onlinequiz_bank.py 已內附；離線轉檔僅需 Python 標準函式庫。validate_onlinequiz_bank.py 使用內附原驗證碼，需 Pydantic 2，不需 Django；通過不代表答案、Bloom 層次、KaTeX 或正式服務已驗證。實際匯入依目前站台工具與教師授權執行。

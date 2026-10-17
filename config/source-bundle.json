@@ -1,5 +1,5 @@
 {
-  "bundle_version": "0.2.0",
+  "bundle_version": "0.3.0",
   "sources": {
     "pr": {
       "repository": "ndhuccc/pr-2026-fall",
@@ -12,6 +12,14 @@
     "labtube": {
       "repository": "ndhuccc/LabTube",
       "commit": "6080b9ce7acf706d48223b860d6f1ac1c7c0f727"
+    },
+    "bloom": {
+      "repository": "ndhuccc/claude-skills-pipelines",
+      "commit": "58d6fc14769b82867aa3e53a7bef6969ee9e8f8a"
+    },
+    "onlinequiz": {
+      "repository": "ndhuccc/OnlineQuiz-v2",
+      "commit": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17"
     }
   },
   "files": [
@@ -2746,6 +2754,56 @@
       "source_path": ".agents/skills/assignment-design/build_labtube_import.py",
       "source_blob_sha": "3897edaf4982fb096d5678b7b7f7aa73e7c9a23d",
       "destination": "profiles/idl/overrides/build_labtube_import.py"
+    },
+    {
+      "source_repository": "ndhuccc/claude-skills-pipelines",
+      "source_ref": "58d6fc14769b82867aa3e53a7bef6969ee9e8f8a",
+      "source_path": "skills/bloom-exam-designer/SKILL.md",
+      "source_blob_sha": "4cccc8386e934ad597776daa0ffb6516c692c573",
+      "destination": ".agents/skills/bloom-exam-designer/SKILL.md",
+      "bytes": 15788,
+      "preserved_source": "vendor/original-entries/bloom-exam-designer/SOURCE.md",
+      "adapted_sha256": "b6b4190c9861f351bca0f8a696ff321d048dee0cf4322dc5ba90742d7e252baa"
+    },
+    {
+      "source_repository": "ndhuccc/claude-skills-pipelines",
+      "source_ref": "58d6fc14769b82867aa3e53a7bef6969ee9e8f8a",
+      "source_path": "skills/bloom-exam-designer/references/bloom-taxonomy-guide.md",
+      "source_blob_sha": "5ea4ae0d1a3a463e510fc6b7034c8fb9324c56cf",
+      "destination": ".agents/skills/bloom-exam-designer/references/bloom-taxonomy-guide.md",
+      "bytes": 5621
+    },
+    {
+      "source_repository": "ndhuccc/claude-skills-pipelines",
+      "source_ref": "58d6fc14769b82867aa3e53a7bef6969ee9e8f8a",
+      "source_path": "skills/bloom-exam-designer/references/item-writing-techniques.md",
+      "source_blob_sha": "6bae5858a4adee8de51cf5b5ff9606e9dd841109",
+      "destination": ".agents/skills/bloom-exam-designer/references/item-writing-techniques.md",
+      "bytes": 6360
+    },
+    {
+      "source_repository": "ndhuccc/OnlineQuiz-v2",
+      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_path": "backend/quiz/services/schemas.py",
+      "source_blob_sha": "2bd3dcd9f86a994620740ad1d483f5ade6e00a1a",
+      "destination": "integrations/onlinequiz/upstream/schemas.py",
+      "bytes": 1911
+    },
+    {
+      "source_repository": "ndhuccc/OnlineQuiz-v2",
+      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_path": "backend/quiz/services/import_json.py",
+      "source_blob_sha": "0ec2d3bdb820735ed6681c58ba02a2fa4e5809bf",
+      "destination": "integrations/onlinequiz/upstream/import_json.py",
+      "bytes": 5931
+    },
+    {
+      "source_repository": "ndhuccc/OnlineQuiz-v2",
+      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_path": "backend/quiz/services/grading.py",
+      "source_blob_sha": "a1451a164729636e2dd79ce22f100dd3497676e2",
+      "destination": "integrations/onlinequiz/upstream/grading.py",
+      "bytes": 754
     }
   ],
   "personal_entries": [

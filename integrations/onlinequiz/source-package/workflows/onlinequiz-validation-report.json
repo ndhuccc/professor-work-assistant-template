@@ -1,0 +1,104 @@
+{
+  "verified_at": "2026-10-17T07:50:31+08:00",
+  "checks": [
+    {
+      "check": "Bloom array converts without changing answer positions",
+      "passed": true
+    },
+    {
+      "check": "Aligned legacy prefixes normalize",
+      "passed": true
+    },
+    {
+      "check": "Rejects swapped prefix letters",
+      "passed": true
+    },
+    {
+      "check": "Rejects nonexistent answer",
+      "passed": true
+    },
+    {
+      "check": "Rejects multiple answers on single-choice",
+      "passed": true
+    },
+    {
+      "check": "Rejects count mismatch",
+      "passed": true
+    },
+    {
+      "check": "Rejects duplicate stems",
+      "passed": true
+    },
+    {
+      "check": "Rejects boolean timer",
+      "passed": true
+    },
+    {
+      "check": "Rejects nonfinite score",
+      "passed": true
+    },
+    {
+      "check": "Rejects unpersisted metadata fields",
+      "passed": true
+    },
+    {
+      "check": "Rejects duplicate JSON keys",
+      "passed": true
+    },
+    {
+      "check": "Passes original upstream schema and row-validator code",
+      "passed": true
+    },
+    {
+      "check": "CLI preparation succeeds",
+      "passed": true
+    },
+    {
+      "check": "Reported output SHA matches actual bytes",
+      "passed": true
+    },
+    {
+      "check": "CLI explicitly reports not imported",
+      "passed": true
+    },
+    {
+      "check": "CLI refuses overwrite and preserves original bytes",
+      "passed": true
+    },
+    {
+      "check": "UTF-8 text intact: WORK_INSTRUCTIONS.md",
+      "passed": true
+    },
+    {
+      "check": "UTF-8 text intact: onlinequiz-question-bank.md",
+      "passed": true
+    },
+    {
+      "check": "UTF-8 text intact: prepare_onlinequiz_bank.py",
+      "passed": true
+    },
+    {
+      "check": "Upstream snapshot exact Git blob: SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "Upstream snapshot exact Git blob: references/bloom-taxonomy-guide.md",
+      "passed": true
+    },
+    {
+      "check": "Upstream snapshot exact Git blob: references/item-writing-techniques.md",
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "total": 22,
+  "not_executed": [
+    "full Django/Flask app",
+    "browser/KaTeX rendering",
+    "real topic question generation",
+    "production database import",
+    "ChatGPT project settings update",
+    "GitHub writes"
+  ],
+  "notes": "Original upstream schema and pure row validators executed in isolation. No ORM import or database write."
+}

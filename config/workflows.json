@@ -1,5 +1,5 @@
 {
-  "template_version": "0.2.0",
+  "template_version": "0.3.0",
   "workflows": [
     {
       "id": "W01",
@@ -127,6 +127,16 @@
       "example": "準備這批教材的 GitHub 變更與發布清單，先供我審閱。",
       "capabilities": [
         "github"
+      ]
+    },
+    {
+      "id": "W14",
+      "skill": "bloom-exam-designer",
+      "title": "Bloom 命題與 OnlineQuiz 題庫匯入",
+      "path": ".agents/skills/bloom-exam-designer/SKILL.md",
+      "example": "OnlineQuiz：根據這份教材，依 Bloom 層次設計 10 題，先提供命題藍圖與待審題庫。",
+      "capabilities": [
+        "private-output"
       ]
     }
   ],

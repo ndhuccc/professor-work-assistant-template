@@ -20,6 +20,9 @@ REQUIRED = (
     "scripts/bootstrap.py", "scripts/doctor.py", ".gitignore", ".gitattributes",
     "scripts/create_course.py", "scripts/verify_bundle.py", "scripts/validate_labtube.py",
     "config/source-bundle.json", "docs/PORTABILITY.md", "THIRD_PARTY_NOTICES.md",
+    "scripts/prepare_onlinequiz_bank.py", "scripts/validate_onlinequiz_bank.py",
+    "workflows/onlinequiz-question-bank.md", "integrations/onlinequiz/README.md",
+    "docs/ONLINEQUIZ-INTEGRATION.md",
 )
 ALLOWED_INTEGRATIONS = {"available", "unavailable", "unverified"}
 
@@ -261,7 +264,7 @@ def main() -> int:
         return 1
     errors, warnings = audit(Path(__file__).resolve().parent.parent, args.template)
     if args.capabilities:
-        for name in ('PIL','numpy','matplotlib','yaml','pypdf','playwright'):
+        for name in ('PIL','numpy','matplotlib','yaml','pypdf','playwright','pydantic'):
             print(f"MODULE {name}: " + ('available' if importlib.util.find_spec(name) else 'not installed'))
         if sys.version_info < (3,11):
             warnings.append('Python 3.11+ is needed by original semester/site utilities using tomllib')

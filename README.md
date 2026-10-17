@@ -1,7 +1,7 @@
 # Professor Work Assistant Template｜教授工作助理範本
 
 將 AI Agent 變成可依程序工作的課程與研究助理。下載後，先請 Agent 閱讀 [AGENTS.md](AGENTS.md)。
-本倉庫提供 13 組可直接閱讀的流程模組、設定樣板、驗證腳本與示例，不依賴原作者的 ChatGPT 對話或私人帳號。
+本倉庫提供 14 組可直接閱讀的流程模組、設定樣板、驗證腳本與示例，不依賴原作者的 ChatGPT 對話或私人帳號。
 
 ## 第一次使用
 
@@ -42,7 +42,7 @@ GitHub、信箱、雲端硬碟、行事曆、Notion、瀏覽器及生圖能力�
 | 路徑 | 用途 |
 |---|---|
 | [AGENTS.md](AGENTS.md) | Agent 啟動、路由、共同規範 |
-| [docs/WORKFLOWS.md](docs/WORKFLOWS.md) | 人可閱讀的 13 項程序 |
+| [docs/WORKFLOWS.md](docs/WORKFLOWS.md) | 人可閱讀的 14 項程序 |
 | [config/workflows.json](config/workflows.json) | Agent／腳本可讀取的流程清單 |
 | `.agents/skills/*/SKILL.md` | 每項任務的輸入、步驟、輸出與驗收 |
 | [docs/QUALITY.md](docs/QUALITY.md) | 來源、公式、版面與互動稽核 |
@@ -65,4 +65,12 @@ GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositori
 
 本範本自行撰寫內容採 [MIT 授權](LICENSE)，匯入來源的授權與適用範圍見 [第三方聲明](THIRD_PARTY_NOTICES.md)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。
 
-版本 0.2.0：13 組程序路由到原技能；共有 19 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
+版本 0.3.0：14 組程序路由到原技能；共有 20 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
+
+## OnlineQuiz 命題（W14）
+
+輸入主題、文本、PDF 或教材網址，Agent 讀取內附 bloom-exam-designer，產生命題藍圖、教師版、學生版、品質報告與匯入 JSON。原始技能、兩份參考文件、轉檔及離線原生格式驗證程式均已內附；不需另下載技能。
+
+例如：「OnlineQuiz：根據這份教材設計 10 題，偏重應用與分析，先提供命題藍圖。」
+
+首次使用先讀 [OnlineQuiz 整合說明](integrations/onlinequiz/README.md)。正式匯入需自己的教師站台與具體核准；GitHub Repo 是程式來源，不是線上題庫資料庫。版本範圍與驗證結果見 [整合報告](docs/ONLINEQUIZ-INTEGRATION.md)。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bloom 命題與 OnlineQuiz"
+  short_description: "依教材規劃 Bloom 試題、解析與品質報告，準備並驗證 OnlineQuiz 題庫"
+  default_prompt: "請使用 $bloom-exam-designer，先讀取指定教材及 OnlineQuiz 工作程序，產生命題藍圖，再依核准規格準備待審題庫。"

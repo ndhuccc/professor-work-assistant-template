@@ -1,5 +1,5 @@
 {
-  "template_version": "0.3.0",
+  "template_version": "0.3.1",
   "workflows": [
     {
       "id": "W01",

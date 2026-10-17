@@ -1,5 +1,5 @@
 {
-  "bundle_version": "0.3.0",
+  "bundle_version": "0.3.1",
   "sources": {
     "pr": {
       "repository": "ndhuccc/pr-2026-fall",
@@ -19,7 +19,7 @@
     },
     "onlinequiz": {
       "repository": "ndhuccc/OnlineQuiz-v2",
-      "commit": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17"
+      "commit": "32e27e422148e32c909f26a7b6f4cc5651bba5d4"
     }
   },
   "files": [
@@ -2783,27 +2783,27 @@
     },
     {
       "source_repository": "ndhuccc/OnlineQuiz-v2",
-      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_ref": "32e27e422148e32c909f26a7b6f4cc5651bba5d4",
       "source_path": "backend/quiz/services/schemas.py",
-      "source_blob_sha": "2bd3dcd9f86a994620740ad1d483f5ade6e00a1a",
+      "source_blob_sha": "4a75f0b0f1562518e8dec6a1d6b75dbe2da2ac8d",
       "destination": "integrations/onlinequiz/upstream/schemas.py",
       "bytes": 1911
     },
     {
       "source_repository": "ndhuccc/OnlineQuiz-v2",
-      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_ref": "32e27e422148e32c909f26a7b6f4cc5651bba5d4",
       "source_path": "backend/quiz/services/import_json.py",
-      "source_blob_sha": "0ec2d3bdb820735ed6681c58ba02a2fa4e5809bf",
+      "source_blob_sha": "9ae04cdf67e83cb5061dc1593b507bbbe3b8d410",
       "destination": "integrations/onlinequiz/upstream/import_json.py",
       "bytes": 5931
     },
     {
       "source_repository": "ndhuccc/OnlineQuiz-v2",
-      "source_ref": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17",
+      "source_ref": "32e27e422148e32c909f26a7b6f4cc5651bba5d4",
       "source_path": "backend/quiz/services/grading.py",
-      "source_blob_sha": "a1451a164729636e2dd79ce22f100dd3497676e2",
+      "source_blob_sha": "abec0b45c07bb8218dcd9d745af1ccf3dfc5fa84",
       "destination": "integrations/onlinequiz/upstream/grading.py",
-      "bytes": 754
+      "bytes": 1203
     }
   ],
   "personal_entries": [
@@ -2824,6 +2824,26 @@
       "preserved_source": "vendor/original-entries/mission-log/SOURCE.md",
       "source_sha256": "b8e066548ab2d9c1bd8f2c1abdc763e06e6b2d0c9ad3c761956f70d6ccf51bc4",
       "adaptation": "Account-specific routing and private destinations replaced by current-user configuration; unavailable historical references explicitly reconstructed."
+    }
+  ],
+  "source_history": [
+    {
+      "source": "onlinequiz",
+      "previous": {
+        "repository": "ndhuccc/OnlineQuiz-v2",
+        "commit": "5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17"
+      },
+      "template_version": "0.3.0",
+      "reason": "Preserve prior profile before scoring fix and 60-second defaults"
+    }
+  ],
+  "local_adaptations": [
+    {
+      "destination": "scripts/prepare_onlinequiz_bank.py",
+      "preserved_source": "integrations/onlinequiz/source-package/scripts/prepare_onlinequiz_bank.py",
+      "source_sha256": "5fe0d0820256c87756894fe3f5be66a506011525fb296edee10d211616d57f9c",
+      "adapted_sha256": "3a1e16534601ee5abe3be09e81be0f59be1bd303b92bc80b7f36b2e3be2981b5",
+      "reason": "Preserve attachment tool; update OnlineQuiz profile commit and default timer 90 -> 60 for v0.3.1"
     }
   ]
 }

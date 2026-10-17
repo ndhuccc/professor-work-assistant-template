@@ -7,3 +7,5 @@
 個人技能 references 的重建範圍詳 docs/PORTABILITY.md。公開發行前請擁有者核對混合來源的散布條款，本次不改可見度。
 
 0.3.0 增補：bloom-exam-designer 來自 ndhuccc/claude-skills-pipelines@58d6fc14769b82867aa3e53a7bef6969ee9e8f8a；三份原文與來源標示保留。OnlineQuiz 原 schema、純驗證及計分程式來自 ndhuccc/OnlineQuiz-v2@5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17。所取來源未提供可直接套用的獨立授權聲明，不將其宣稱為本範本 MIT，倉庫維持 Private。增補包由使用者提供，八個原檔完整保存；其中歷史驗證報告不當作本次驗證結果。
+
+0.3.1 同步：OnlineQuiz 的 schema、匯入及計分原碼快照改為 32e27e422148e32c909f26a7b6f4cc5651bba5d4，保留原始位元組並更新逐檔 Git blob SHA。轉檔工具僅適配來源版本與 60 秒預設，原增補包不改動；兩者 SHA-256 及改動原因記於 config/source-bundle.json 的 local_adaptations。

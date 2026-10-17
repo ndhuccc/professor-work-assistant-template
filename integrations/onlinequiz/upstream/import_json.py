@@ -156,7 +156,7 @@ def import_from_json_text(
     *,
     bank_name: str | None = None,
     default_points: float = 1.0,
-    default_timer_seconds: int = 90,
+    default_timer_seconds: int = 60,
 ) -> ImportResult:
     raw = json.loads(text)
     if isinstance(raw, list):

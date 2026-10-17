@@ -28,6 +28,13 @@ def verify(root):
         file=root/item['preserved_source']
         if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=item['source_sha256']:
             errors.append('Personal source entry mismatch: '+item['skill'])
+    for item in doc.get('local_adaptations',[]):
+        source=root/item['preserved_source']
+        active=root/item['destination']
+        if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest()!=item['source_sha256']:
+            errors.append('Preserved local source mismatch: '+item['preserved_source'])
+        if not active.is_file() or hashlib.sha256(active.read_bytes()).hexdigest()!=item['adapted_sha256']:
+            errors.append('Unrecorded adaptation: '+item['destination'])
     return errors,len(doc['files'])
 
 
@@ -38,7 +45,7 @@ def main():
     try: errors,count=verify(root)
     except (OSError,ValueError,KeyError) as e: errors,count=[str(e)],0
     for e in errors: print('FAIL: '+e)
-    if not errors: print(f'PASS: {count} pinned upstream assets and personal entry snapshots')
+    if not errors: print(f'PASS: {count} pinned upstream assets, personal entry snapshots, and local adaptations')
     return int(bool(errors))
 
 

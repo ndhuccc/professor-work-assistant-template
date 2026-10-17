@@ -65,7 +65,7 @@ GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositori
 
 本範本自行撰寫內容採 [MIT 授權](LICENSE)，匯入來源的授權與適用範圍見 [第三方聲明](THIRD_PARTY_NOTICES.md)。另附 [Private 範本建立腳本](scripts/publish-private-template.ps1)，使用方式見發布文件；預設只預覽，必須明確加上 `-Execute` 才執行。
 
-版本 0.3.0：14 組程序路由到原技能；共有 20 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
+版本 0.3.1：14 組程序路由到原技能；共有 20 個可讀技能入口（含六個相容別名），不再用通用摘要替代原技能。逐檔來源與改動見 config/source-bundle.json，三個個人技能的可攜化範圍及未取得歷史附件已明列。
 
 ## OnlineQuiz 命題（W14）
 
@@ -74,3 +74,5 @@ GitHub 官方說明：[建立範本倉庫](https://docs.github.com/en/repositori
 例如：「OnlineQuiz：根據這份教材設計 10 題，偏重應用與分析，先提供命題藍圖。」
 
 首次使用先讀 [OnlineQuiz 整合說明](integrations/onlinequiz/README.md)。正式匯入需自己的教師站台與具體核准；GitHub Repo 是程式來源，不是線上題庫資料庫。版本範圍與驗證結果見 [整合報告](docs/ONLINEQUIZ-INTEGRATION.md)。
+
+0.3.1 已同步 OnlineQuiz 計分修正與 60 秒預設：未作答 0 分，單選全對才得滿分，多選保留部分給分；詳整合說明。

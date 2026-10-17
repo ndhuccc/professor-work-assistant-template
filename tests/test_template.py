@@ -67,6 +67,12 @@ class TemplateTests(unittest.TestCase):
         errors,_=doctor.audit(self.root,template=True)
         self.assertTrue(any('Invalid compatibility alias' in e for e in errors))
 
+    def test_modified_onlinequiz_adaptation_is_rejected(self):
+        path = self.root/'scripts/prepare_onlinequiz_bank.py'
+        path.write_bytes(path.read_bytes() + b'\n# unrecorded change\n')
+        errors, _ = doctor.audit(self.root, template=True)
+        self.assertTrue(any('Unrecorded adaptation: scripts/prepare_onlinequiz_bank.py' in e for e in errors))
+
     def test_broken_relative_link_is_rejected(self):
         path = self.root / "README.md"
         with path.open("a", encoding="utf-8") as stream:

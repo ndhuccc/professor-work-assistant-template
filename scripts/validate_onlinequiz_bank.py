@@ -15,7 +15,7 @@ from types import SimpleNamespace
 from prepare_onlinequiz_bank import no_duplicate_keys, prepare
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = 'ndhuccc/OnlineQuiz-v2@5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17'
+PROFILE = 'ndhuccc/OnlineQuiz-v2@32e27e422148e32c909f26a7b6f4cc5651bba5d4'
 PURE_FUNCTIONS = {'normalize_option_text', 'parse_option_line', 'parse_correct_letters', 'validate_question_row'}
 PURE_CONSTANTS = {'LEGACY_LETTER_PREFIX_RE', 'FORMAT_TO_TYPE'}
 

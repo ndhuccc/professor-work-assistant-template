@@ -128,7 +128,61 @@ class OnlineQuizTests(unittest.TestCase):
             self.assertEqual(digest, item['source_blob_sha'])
         package = ROOT/'integrations/onlinequiz/source-package'
         self.assertEqual(len([p for p in package.rglob('*') if p.is_file()]), 8)
-        self.assertEqual((ROOT/'scripts/prepare_onlinequiz_bank.py').read_bytes(), (package/'scripts/prepare_onlinequiz_bank.py').read_bytes())
+        adaptation = next(x for x in manifest['local_adaptations'] if x['destination'] == 'scripts/prepare_onlinequiz_bank.py')
+        self.assertEqual(hashlib.sha256((ROOT/adaptation['preserved_source']).read_bytes()).hexdigest(), adaptation['source_sha256'])
+        self.assertEqual(hashlib.sha256((ROOT/adaptation['destination']).read_bytes()).hexdigest(), adaptation['adapted_sha256'])
+
+    @unittest.skipUnless(importlib.util.find_spec('pydantic'), 'Optional Pydantic unavailable')
+    def test_default_timer_and_profiles_match_updated_schema(self):
+        manifest = json.loads((ROOT/'config/source-bundle.json').read_text(encoding='utf-8'))
+        expected_profile = 'ndhuccc/OnlineQuiz-v2@' + manifest['sources']['onlinequiz']['commit']
+        self.assertEqual(prep.PROFILE, expected_profile)
+        self.assertEqual(native.PROFILE, expected_profile)
+        schema, _ = native.load_validators()
+        server_default = schema.model_validate({'name': 'Timer', 'questions': demo_questions()}).default_timer_seconds
+        bank, _ = prep.prepare(demo_questions(), name='Timer')
+        self.assertEqual(server_default, 60)
+        self.assertEqual(bank['default_timer_seconds'], server_default)
+        explicit, _ = prep.prepare(demo_questions(), name='Timer', seconds=150)
+        self.assertEqual(explicit['default_timer_seconds'], 150)
+
+    @staticmethod
+    def grading():
+        spec = importlib.util.spec_from_file_location('pinned_grading', ROOT/'integrations/onlinequiz/upstream/grading.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.grade_answer
+
+    def test_unanswered_is_zero_for_all_question_types(self):
+        grade = self.grading()
+        for n in (2, 4, 5, 10):
+            for correct in ({'A'}, {'A', 'B'}):
+                for multiple in (False, True, None):
+                    with self.subTest(n=n, correct=correct, multiple=multiple):
+                        self.assertEqual(grade(n_options=n, correct_letters=correct,
+                                              selected_letters=set(), points=10,
+                                              is_multiple=multiple), (0.0, False))
+
+    def test_single_choice_is_all_or_nothing(self):
+        grade = self.grading()
+        for selected, expected in (({'A'}, (10, True)), ({'B'}, (0, False)),
+                                   (set(), (0, False)), ({'A', 'B'}, (0, False))):
+            with self.subTest(selected=selected):
+                self.assertEqual(grade(n_options=4, correct_letters={'A'}, selected_letters=selected,
+                                       points=10, is_multiple=False), expected)
+
+    def test_multiple_choice_partial_credit_and_explicit_type(self):
+        grade = self.grading()
+        for selected, expected in (({'A','B','C'}, (10, True)), ({'A','B'}, (5, False)),
+                                   ({'A'}, (0, False)), (set(), (0, False))):
+            with self.subTest(selected=selected):
+                self.assertEqual(grade(n_options=4, correct_letters={'A','B','C'},
+                                       selected_letters=selected, points=10, is_multiple=True), expected)
+        # The question type remains authoritative even with only one correct answer.
+        self.assertEqual(grade(n_options=4, correct_letters={'A'}, selected_letters={'A','B'},
+                               points=10, is_multiple=True), (5, False))
+        self.assertEqual(grade(n_options=4, correct_letters={'A'}, selected_letters={'A','B'},
+                               points=10, is_multiple=False), (0, False))
 
 
 if __name__ == '__main__':

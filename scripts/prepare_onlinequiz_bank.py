@@ -12,7 +12,7 @@ from pathlib import Path
 TOP = {"name", "description", "default_points", "default_timer_seconds", "questions"}
 ROW = {"node", "question_type", "format", "question", "options", "correct_answer", "explanation"}
 TAGS = {"Knowledge", "Comprehension", "Calculation", "Implementation", "Analysis", "Evaluation", "Creation"}
-PROFILE = "ndhuccc/OnlineQuiz-v2@5f81609e0fb9ebaa1536384f6e4d58c9f2d90f17"
+PROFILE = "ndhuccc/OnlineQuiz-v2@32e27e422148e32c909f26a7b6f4cc5651bba5d4"
 
 def fail(message):
     raise ValueError(message)
@@ -55,7 +55,7 @@ def prepare(data, *, name=None, description=None, points=None, seconds=None, exp
             result[key] = value
     result.setdefault("description", "")
     result.setdefault("default_points", 1)
-    result.setdefault("default_timer_seconds", 90)
+    result.setdefault("default_timer_seconds", 60)
     text(result.get("name"), "name")
     if len(result["name"]) > 255:
         fail("name: maximum 255 characters")

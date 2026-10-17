@@ -54,5 +54,5 @@ class ImportPayload(BaseModel):
     name: str = Field(min_length=1, max_length=255)
     description: str = ""
     default_points: float = Field(default=1.0, gt=0)
-    default_timer_seconds: int = Field(default=90, ge=5, le=3600)
+    default_timer_seconds: int = Field(default=60, ge=5, le=3600)
     questions: list[ImportQuestionItem] = Field(min_length=1)

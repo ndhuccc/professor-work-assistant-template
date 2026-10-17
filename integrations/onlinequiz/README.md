@@ -7,7 +7,7 @@
 | 檔案 | 用途 |
 |---|---|
 | [bloom-exam-designer](../../.agents/skills/bloom-exam-designer/SKILL.md) | 原始命題正文與兩份參考文件，無須另安裝個人技能 |
-| [prepare_onlinequiz_bank.py](../../scripts/prepare_onlinequiz_bank.py) | 原增補包的轉檔與離線檢查；標準函式庫即可執行 |
+| [prepare_onlinequiz_bank.py](../../scripts/prepare_onlinequiz_bank.py) | 增補包轉檔工具的適配版；已同步新版來源與 60 秒預設，僅需標準函式庫 |
 | [validate_onlinequiz_bank.py](../../scripts/validate_onlinequiz_bank.py) | 執行固定版本的原 schema 與純逐題驗證碼；需 Pydantic 2 |
 | `upstream/` | OnlineQuiz 原 schema、匯入程式與計分程式，附來源雜湊；不啟動服務 |
 | `source-package/` | 使用者提供增補包的八個原檔，含歷史驗證報告 |
@@ -37,6 +37,16 @@ python scripts/validate_onlinequiz_bank.py onlinequiz-bank.json --expected-count
 
 推送 JSON 到 GitHub 不會寫入線上資料庫。此範本沒有自動上傳、登入或正式題庫資料；正常教師介面與站台由下載者提供。若只提供 repo 而沒有站台，完成離線成果並標「待匯入」。不修改 OnlineQuiz-v2 本身，也不開場施測。
 
-OnlineQuiz 目前計分與 Bloom 可選 HTML 不同：四選一、滿分 10 分時空白答案可得 5 分。此整合保留並揭露既有行為，沒有修改計分；正式施測前需教師決定是否接受或另行修正服務。學生純題目版不得在 HTML／JavaScript 包入正解；正式教師版及含答案 JSON 放私人位置。
+## v0.3.1 計分與計時
+
+快照來自 OnlineQuiz-v2@32e27e422148e32c909f26a7b6f4cc5651bba5d4：
+
+- 未作答或逾時空白：一律 0 分。
+- 單選：選答與正解完全一致得滿分，其他情況 0 分。
+- 多選：先排除空白，再依 max(0, (n - 2k)/n) × 配分部分給分；n 是全部選項數，k 是誤選加漏選的總數。這與 Bloom 可選 HTML 的算法仍不同。
+- 新版匯入與本範本轉檔預設為每題 60 秒；明確設定的 --seconds／default_timer_seconds 優先，例如上述命令仍為 150 秒。
+
+四選一滿分 10 分的空白答案現在為 0 分。正式施測前另核對實際站台的部署版本；複製快照不會更新站台。source-package/ 保留原增補包及舊報告，僅供歷史追溯。
+學生純題目版不得在 HTML／JavaScript 包入正解；正式教師版及含答案 JSON 放私人位置。
 
 來源固定版本、適配及驗證範圍見 [整合報告](../../docs/ONLINEQUIZ-INTEGRATION.md)。

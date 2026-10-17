@@ -1,6 +1,6 @@
 # 0.2.0 原始工作程序補齊報告
 
-查核時間：2026-10-17 07:36（Asia/Taipei）。本報告是本機可審閱版本；遠端同步狀態另行核實。
+本機查核時間：2026-10-17 07:36（Asia/Taipei）。使用者確認後已同步 GitHub，遠端核對結果見文末。
 
 ## 變更結果
 
@@ -55,7 +55,14 @@ python scripts/create_course.py --id DEMO --name Demo --demo
 
 然後請 Agent 閱讀 AGENTS.md，選定剛建立的 course_root 與對應原技能執行。DEMO 目錄已存在時換新 ID，不覆寫原有工作。
 
-## 待確認的外部更新
+## 已完成的遠端同步
 
 目標為 ndhuccc/professor-work-assistant-template，保持 Private 與 Template repository。本次不修改 PR、IDL、LabTube 或個人技能庫，不上傳學生或私人工作資料。
-待使用者確認這份具體變更後，才推送本版本並讀回遠端 commit、檔案與倉庫設定。
+使用者已確認本次更新，v0.2.0 已發布至主分支 main：
+
+- 發布提交：`6fe277167c4afacb7d24f66f1540ddfcab773c3f`。
+- 讀回的遠端檔案樹：`ef11f484e9508867fe6186e49d8921cc0466837a`，與通過驗證的本機版本完全一致。
+- 讀回倉庫設定：Private = true、Template repository = true、預設分支 = main。
+- 已讀回 README、流程索引與本報告，確認版本為 0.2.0。
+
+本報告的發布狀態以後續文件提交補記；上述雜湊對應完整產製資源發布時的版本。尚未實測的外部能力仍依本報告限制說明處理。
